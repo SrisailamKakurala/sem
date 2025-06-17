@@ -1,17 +1,17 @@
-# DEVOPS:
+# CD:
 
-## SAQ's: [click](./devops/saq.md)
+## SAQ's: [click](./cd/saq.md)
 
-## LAQ's:
+## LAQ's: [click](./cd/Laq/unit1.md.md)
 
-[UNIT-1](./devops/Laq/unit1.md)
+<!-- [UNIT-1](./cd/Laq/unit1.md)
 
-[UNIT-2](./devops/Laq/unit2.md)
+[UNIT-2](./cd/Laq/unit2.md)
 
-[UNIT-3](./devops/Laq/unit3.md)
+[UNIT-3](./cd/Laq/unit3.md)
 
-[UNIT-4](./devops/Laq/unit4.md)
+[UNIT-4](./cd/Laq/unit4.md)
 
-[UNIT-5](./devops/Laq/unit5.md)
+[UNIT-5](./cd/Laq/unit5.md) -->
 
 ---
