@@ -1766,3 +1766,592 @@ Implement garbage collection and stack frame management
 
 Let me know if you want this formatted as a presentation slide or summarized for revision!
 
+---
+
+### ✅ Common Subexpression Elimination (CSE) – Explained with Example
+
+---
+
+### 🔍 **What is Common Subexpression Elimination?**
+
+**Common Subexpression Elimination** is a compiler optimization technique that **identifies and removes repeated expressions** that compute the **same value**, avoiding redundant computation and improving efficiency.
+
+---
+
+### 📌 **Why is it Needed?**
+
+If a program evaluates the **same expression multiple times** and the variables involved **haven’t changed**, we can store the result in a temporary variable and reuse it.
+
+---
+
+### 💡 **Example (Before Optimization):**
+
+```c
+a = b + c;
+d = b + c;
+e = a + d;
+```
+
+Here, the expression `b + c` is computed **twice**.
+
+---
+
+### 🛠️ **After Common Subexpression Elimination:**
+
+```c
+t1 = b + c;
+a = t1;
+d = t1;
+e = a + d;
+```
+
+Now, `b + c` is computed **once** and reused — this saves computation and registers.
+
+---
+
+### ✅ **Key Notes:**
+
+* Works best in **basic blocks**.
+* The compiler must ensure that **variables involved in the expression haven't changed** in between.
+* Often used along with **DAG (Directed Acyclic Graph)** representations of basic blocks.
+
+---
+
+### 🧠 **In DAG:**
+
+In a DAG, the node for `b + c` would be shared by both `a` and `d`, visually showing it's the same computation.
+
+---
+
+### 📌 **Conclusion:**
+
+Common subexpression elimination helps **optimize code performance** by eliminating unnecessary repeated computations and is widely used in compilers during the code optimization phase.
+
+---
+
+### ✅ Live-Variable Analysis in Compiler Design – Explained with Example
+
+---
+
+### 🔍 **What is Live-Variable Analysis?**
+
+**Live-variable analysis** is a **data-flow analysis** technique used to determine **which variables hold values that may be needed in the future** (i.e., are “live”) at each point in a program.
+
+> A variable is **live** at a point **if its value will be used** before it is redefined.
+
+---
+
+### 📌 **Why is it important?**
+
+* To optimize **register allocation**
+* To enable **dead code elimination**
+* To avoid storing unused variables
+
+---
+
+### 💡 **Example:**
+
+Consider the following code:
+
+```c
+1: a = b + c;
+2: b = d + e;
+3: c = a + b;
+```
+
+Let’s analyze **liveness at the start of each line**:
+
+* **Line 3:**
+
+  * `a` and `b` are used → so they must be **live** before Line 3
+* **Line 2:**
+
+  * `d` and `e` are used → so they are **live** before Line 2
+  * `b` is **redefined**, so previous value of `b` is **not live**
+* **Line 1:**
+
+  * `b` and `c` are used → so they are **live** before Line 1
+
+---
+
+### 🧠 **Live-Variable Sets:**
+
+| Line | Live-In | Live-Out  |
+| ---- | ------- | --------- |
+| 1    | {b, c}  | {a, d, e} |
+| 2    | {d, e}  | {a, b}    |
+| 3    | {a, b}  | {}        |
+
+---
+
+### ✅ **Use Cases in Compiler:**
+
+* **Register allocation:** Assign registers only to live variables
+* **Dead code elimination:** Remove assignments to variables that are not live afterwards
+
+---
+
+### 📌 **Conclusion:**
+
+Live-variable analysis is crucial for identifying the **lifetime of variables**, enabling the compiler to perform **memory- and performance-efficient code generation**.
+
+
+---
+
+Let's solve Questions 32, 33, and 34 from Compiler Design (CD), step by step:
+
+---
+
+### ✅ **32. Matrix Multiplication Program - Analyze**
+
+```pascal
+begin
+  for i := 1 to n do
+    for j := 1 to n do
+      c[i, j] := 0;
+
+  for i := 1 to n do
+    for j := 1 to n do
+      for k := 1 to n do
+        c[i, j] := c[i, j] + a[i, k] * b[k, j]
+end
+```
+
+This is a **standard matrix multiplication** routine with **two nested loops**:
+
+* First loop initializes matrix `C`
+* Second performs `C = A × B`
+
+---
+
+### ✅ **33. Flow Graph and Number of Loops**
+
+#### 🔹 **Flow Graph Construction Steps:**
+
+Each loop nest/block of code becomes a node. We identify the **basic blocks** first.
+
+#### 💠 Basic Blocks:
+
+* **B1**: Initialization `for i := 1 to n`
+* **B2**: `for j := 1 to n`
+* **B3**: `c[i, j] := 0`
+* **B4**: Matrix multiplication loops: `i`, `j`, `k`
+* **B5**: Computation `c[i,j] := c[i,j] + a[i,k] * b[k,j]`
+
+#### 🔁 Flow Edges:
+
+* B1 → B2 → B3 → B2 (loop) → B1 (loop)
+* B1 → B4 → B5 → B4 (loop) → B1 (exit)
+
+> Note: Each `for` loop forms a **loop structure** in the flow graph.
+
+#### 🔢 **Number of Loops in Flow Graph:**
+
+* First nest: `i-j` loop → 1 loop
+* Second nest: `i-j-k` → 2 nested loops
+  → **Total = 3 loops**
+
+---
+
+### ✅ **34. Loop-Invariant Code Motion**
+
+> A **loop-invariant expression** is an expression that yields the same result regardless of the number of iterations, and it can be **moved outside** the loop to optimize performance.
+
+#### 📌 Code:
+
+```pascal
+for i := 1 to n do
+  for j := 1 to n do
+    for k := 1 to n do
+      c[i, j] := c[i, j] + a[i, k] * b[k, j]
+```
+
+#### 🔎 Loop-Invariant Computations:
+
+* In the innermost loop:
+
+  * `a[i, k]` and `b[k, j]` **do not change** with respect to the innermost body — only `k` varies.
+  * But since all are indexed by loop variables (`i`, `j`, `k`), there is **no invariant computation** across all loops.
+
+However, if any of the operands were constants or didn't depend on `k`, `i`, or `j`, **they could be hoisted** outside the respective loops.
+
+✅ **Conclusion**:
+In this case, **no expressions are loop-invariant** unless constant matrices or values are used.
+If known matrices `a` and `b` were **precomputed**, common subexpressions like `a[i, k] * b[k, j]` could be optimized.
+
+---
+
+Let me know if you want me to draw the **flow graph diagram** or convert this into **exam answer format**.
+
+
+---
+
+### ✅ Q45. A Flow Graph is Useful for Understanding Code Generation Algorithm — Justify with Example
+
+---
+
+### 🔷 **What is a Flow Graph?**
+
+A **flow graph** (also called a control flow graph or CFG) is a **graphical representation** of a program where:
+
+* **Nodes** = basic blocks (a sequence of instructions with one entry and one exit)
+* **Edges** = flow of control (jumps, branches, etc.)
+
+---
+
+### 🔶 **Importance in Code Generation:**
+
+1. **Helps in organizing basic blocks** before generating machine code.
+2. Allows analysis of:
+
+   * **Loops**
+   * **Dead code**
+   * **Dominator relationships**
+   * **Liveness of variables** (for register allocation)
+3. Facilitates **optimizations** like:
+
+   * Loop invariant code motion
+   * Common subexpression elimination
+   * Dead code elimination
+4. Assists in **instruction scheduling** and **register allocation**.
+
+---
+
+### 🧠 **Example:**
+
+```c
+if (a > b) {
+   x = a + b;
+} else {
+   x = a - b;
+}
+y = x * 2;
+```
+
+#### 🔹 Basic Blocks:
+
+* **B1**: `if (a > b)`
+* **B2**: `x = a + b`
+* **B3**: `x = a - b`
+* **B4**: `y = x * 2`
+
+#### 🔹 Flow Graph:
+
+```
+    B1
+   /  \
+  B2  B3
+   \  /
+    B4
+```
+
+* Helps the code generator understand **control flow paths**.
+* Identifies where to **merge** values (`x` from B2 and B3) before B4.
+* Used in **SSA (Static Single Assignment)** and **phi-functions** in compilers.
+
+---
+
+### ✅ **Conclusion:**
+
+A flow graph is essential for visualizing and optimizing control flow, aiding the compiler in generating efficient machine code. It simplifies complex control structures, enabling effective **code generation and optimization** strategies.
+
+
+---
+
+### ✅ Q37. Generate Optimal Machine Code for the C Program
+
+---
+
+### 🔷 **Given C Code:**
+
+```c
+main() {
+    int i, a[10];
+    while (i <= 10)
+        a[i] = 0;
+}
+```
+
+---
+
+### 🔶 **Assumptions:**
+
+* Array `a` is allocated in memory.
+* Variable `i` is stored in a register or memory.
+* Address of `a[i]` = `base_address_of_a + i * 4` (assuming 4 bytes per `int`)
+* Use of registers:
+
+  * `R1`: for `i`
+  * `R2`: for address calculation
+  * `R3`: holds the value `0`
+  * `R4`: holds limit value `10`
+
+---
+
+### 🔷 **Optimal Assembly-like Code (Pseudocode)**
+
+```asm
+MOV   R1, 0        ; i = 0
+MOV   R4, 10       ; upper bound = 10
+MOV   R3, 0        ; value to assign (a[i] = 0)
+
+LOOP:
+CMP   R1, R4       ; compare i with 10
+JG    END_LOOP     ; if i > 10, exit loop
+
+MUL   R2, R1, 4    ; R2 = i * 4 (offset in array)
+STORE R3, a(R2)    ; a[i] = 0
+
+ADD   R1, R1, 1    ; i = i + 1
+JMP   LOOP
+
+END_LOOP:
+HALT
+```
+
+---
+
+### 🔶 **Optimization Insights:**
+
+* **Preload constants** (`0`, `10`) to reduce repeated operations.
+* **Use of registers** reduces memory access.
+* **Strength reduction**: `i * 4` is optimized using shift operations (`SHL`) on real architectures.
+
+---
+
+### ✅ **Conclusion:**
+
+This is a simple, loop-based zero-initialization of an array with optimal register use and minimized instruction count. On real hardware, the assembly may vary, but the logic remains structurally similar.
+
+---
+
+### ✅ Q36. Generate the Intermediate Code for the Following C Statements
+
+In compiler design, **intermediate code generation** is a key phase that translates high-level source code into an intermediate representation (IR), such as **Three-Address Code (TAC)**, which is used for optimization and target code generation.
+
+Let’s generate TAC for each statement with explanation.
+
+---
+
+### 🔷 i. `x = f(a) + f(a) + f(a)`
+
+#### 🔸 Assumption:
+
+Each call to `f(a)` returns a different value (i.e., **f has side effects** or is not memoized).
+
+#### 🔸 Three-Address Code (TAC):
+
+```
+t1 = call f, a
+t2 = call f, a
+t3 = t1 + t2
+t4 = call f, a
+t5 = t3 + t4
+x  = t5
+```
+
+> **Explanation:**
+
+* Call `f(a)` three times.
+* Add the results in two stages using temporary variables `t3`, `t5`.
+* Assign final result to `x`.
+
+---
+
+### 🔷 ii. `x = f(a) / g(b, c)`
+
+#### 🔸 Three-Address Code (TAC):
+
+```
+t1 = call f, a
+t2 = call g, b, c
+t3 = t1 / t2
+x  = t3
+```
+
+> **Explanation:**
+
+* Evaluate `f(a)` and store result in `t1`.
+* Evaluate `g(b, c)` and store in `t2`.
+* Perform division and store result in `t3`.
+* Assign `t3` to `x`.
+
+---
+
+### 🔷 iii. `x = f(f(a))`
+
+#### 🔸 Three-Address Code (TAC):
+
+```
+t1 = call f, a
+t2 = call f, t1
+x  = t2
+```
+
+> **Explanation:**
+
+* Inner call: `f(a)` gives `t1`.
+* Outer call: `f(t1)` gives `t2`.
+* Assign `t2` to `x`.
+
+---
+
+### 🔷 iv. `x = ++f(a)`
+
+#### 🔸 Assumption:
+
+* `f(a)` returns a variable reference (e.g., a global/static variable or a pointer).
+
+#### 🔸 Three-Address Code (TAC):
+
+```
+t1 = call f, a
+t2 = t1 + 1
+x  = t2
+store t2, f(a)
+```
+
+> **Explanation:**
+
+* Get value from `f(a)` into `t1`.
+* Increment by 1 and assign to `x`.
+* Store updated value back to `f(a)` to reflect the increment (**side-effect**).
+
+---
+
+### ✅ Summary Table
+
+| Statement                | Key Intermediate Steps                                       |
+| ------------------------ | ------------------------------------------------------------ |
+| `x = f(a) + f(a) + f(a)` | Multiple function calls, use of temporaries for additions    |
+| `x = f(a) / g(b, c)`     | Two function calls, one division                             |
+| `x = f(f(a))`            | Nested function calls                                        |
+| `x = ++f(a)`             | Increment function return (with assumed reference semantics) |
+
+---
+
+### ✅ Conclusion:
+
+Intermediate code generation simplifies complex expressions into atomic steps. These steps help the optimizer and code generator work effectively. TAC makes expression evaluation and register allocation easier.
+
+---
+
+### ✅ Q35. Explain and Analyze Reducible and Non-Reducible Flow Graphs with an Example
+
+In **compiler design**, particularly during code optimization and control-flow analysis, **flow graphs** are used to represent the control flow between basic blocks of code. These are essential for optimizations like loop detection, dead code elimination, and register allocation.
+
+---
+
+### 🔷 Flow Graph:
+
+A **flow graph** (also known as a **Control Flow Graph (CFG)**) is a directed graph where:
+
+* **Nodes** represent basic blocks (a sequence of statements with no branches except at the end).
+* **Edges** represent control flow between blocks.
+
+---
+
+### 🔶 A) **Reducible Flow Graph**
+
+#### ✅ Definition:
+
+A flow graph is **reducible** if:
+
+* It has a **single entry point** to every loop.
+* The flow of control **"reduces"** to a single-entry structure without any unstructured jumps (like `goto` to random blocks).
+
+#### ✅ Properties:
+
+* All back edges (edges from a block to its dominator) form natural loops.
+* Can be easily analyzed and optimized.
+* **Most structured programs** generate reducible flow graphs.
+
+#### ✅ Example:
+
+```c
+for (i = 0; i < n; i++) {
+   if (a[i] > 0)
+      a[i] = 0;
+}
+```
+
+#### 🔸 Flow Graph:
+
+```
+[Start] --> [Loop Condition] --> [If a[i]>0] --> [a[i]=0] -->|
+            ^                              |                 |
+            |------------------------------|                 |
+            |-----------------------------------------------→|
+```
+
+* The loop has a single entry (`Loop Condition`).
+* All back edges (from bottom to top) point to a **dominator** node → Hence, **reducible**.
+
+---
+
+### 🔶 B) **Non-Reducible Flow Graph**
+
+#### ✅ Definition:
+
+A flow graph is **non-reducible** if:
+
+* It contains **multiple entry points** to loops.
+* It has **unstructured control flow**, like `goto` jumping into the middle of a loop.
+
+#### ✅ Properties:
+
+* Some back edges **do not point to a dominator**.
+* Hard to analyze or optimize.
+* Generated in code with excessive use of `goto`, exceptions, etc.
+
+#### ✅ Example (with GOTO):
+
+```c
+if (x > 0)
+   goto L1;
+...
+L1: if (y > 0)
+      goto L2;
+goto L1;
+L2: ...
+```
+
+#### 🔸 Flow Graph:
+
+```
+       +--------+
+       |  x>0   |
+       +--------+
+         |     |
+         v     |
+       [L1] <--+
+         |
+       y>0
+         |
+         v
+       [L2]
+```
+
+* The back edge `goto L1` does not point to a **dominator**.
+* Multiple entries to `[L1]` → **Non-reducible**.
+
+---
+
+### 🔷 Summary Table:
+
+| Feature                | Reducible Flow Graph | Non-Reducible Flow Graph  |
+| ---------------------- | -------------------- | ------------------------- |
+| Loop entry             | Single               | Multiple                  |
+| Back edge to dominator | Yes                  | Not always                |
+| Structured programs    | Yes                  | No (usually unstructured) |
+| Optimizations          | Easier               | Difficult                 |
+
+---
+
+### ✅ Conclusion:
+
+* **Reducible flow graphs** are structured and easier to optimize.
+* **Non-reducible flow graphs** arise from complex or unstructured code and present challenges for compiler optimizations.
+* Most modern languages and compilers encourage reducible control flow for better performance and analysis.
+
+---
