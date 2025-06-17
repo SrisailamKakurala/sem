@@ -2,7 +2,7 @@
 
 ## SAQ's: [click](./cd/saq.md)
 
-## LAQ's: [click](./cd/Laq/unit1.md.md)
+## LAQ's: [click](./cd/Laq/unit1.md)
 
 <!-- [UNIT-1](./cd/Laq/unit1.md)
 
