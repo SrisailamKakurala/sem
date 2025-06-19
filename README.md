@@ -1,6 +1,6 @@
 # CD:
 
-## SAQ's: [click](./cd/saq.md)
+<!-- ## SAQ's: [click](./cd/saq.md) -->
 
 ## LAQ's: [click](./cd/Laq/unit1.md)
 
