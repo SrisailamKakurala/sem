@@ -2,9 +2,9 @@
 
 <!-- ## SAQ's: [click](./cd/saq.md) -->
 
-## LAQ's: [click](./cd/Laq/unit1.md)
+## LAQ's:
 
-<!-- [UNIT-1](./cd/Laq/unit1.md)
+[UNIT-1](./cd/Laq/unit1.md)
 
 [UNIT-2](./cd/Laq/unit2.md)
 
@@ -12,6 +12,6 @@
 
 [UNIT-4](./cd/Laq/unit4.md)
 
-[UNIT-5](./cd/Laq/unit5.md) -->
+[UNIT-5](./cd/Laq/unit5.md)
 
 ---
