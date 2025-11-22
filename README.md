@@ -1,4 +1,4 @@
-# CD:
+# SEM:
 
 ## SAQ's: [click](./cd/saq.md)
 
