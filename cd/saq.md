@@ -1,453 +1,257 @@
-**UNIT – 1**
-
-1. **What is the difference between a learning algorithm and a traditional program?**
-   A traditional program follows fixed rules written by a programmer.
-   A learning algorithm *learns patterns from data* and improves its behavior automatically.
-
-2. **Define model capacity in machine learning.**
-   Model capacity is the model’s ability to learn different kinds of patterns.
-   High capacity → learns complex patterns; low capacity → learns only simple patterns.
-
-3. **What does it mean when a model is overfitting?**
-   Overfitting happens when a model memorizes the training data instead of learning general patterns.
-   It performs well on training data but poorly on new data.
-
-4. **Give one way to detect underfitting in a model.**
-   If both training and validation accuracy are low, the model is underfitting.
-   It means the model is too simple to learn the pattern.
-
-5. **What is a hyperparameter? Give an example.**
-   A hyperparameter is a setting chosen *before* training.
-   Example: learning rate, number of hidden layers.
-
-6. **Why do we need a validation set in model training?**
-   A validation set helps check how well the model performs on unseen data during training.
-   It guides tuning hyperparameters and prevents overfitting.
-
-7. **Differentiate between bias and variance in predictive models.**
-   Bias → error due to overly simple assumptions.
-   Variance → error due to being too sensitive to training data.
-   We aim for a balance between them.
-
-8. **What is the goal of Maximum Likelihood Estimation (MLE)?**
-   MLE finds the model parameters that make the observed data most probable.
-   It chooses the “best-fitting” parameters.
-
-9. **What does the “prior” represent in Bayesian statistics?**
-   The prior represents what we believe about a parameter *before* looking at new data.
-   It expresses our initial assumptions.
-
-10. **State one example of a supervised learning algorithm.**
-    Example: Linear Regression or Decision Tree.
-
-11. **State one example of an unsupervised learning algorithm.**
-    Example: K-Means Clustering.
-
-12. **Why is Stochastic Gradient Descent (SGD) often used for large datasets?**
-    It updates parameters using small batches, so it is much faster and memory-efficient.
-    It works well even when the dataset is huge.
-
-13. **List the main steps in building a machine learning algorithm.**
-    Collect data → preprocess → train model → validate → tune → test → deploy.
-
-14. **Why is the XOR problem important in the history of neural networks?**
-    XOR showed that single-layer networks are limited.
-    It proved that hidden layers are necessary for learning complex patterns.
-
-15. **What role do hidden units play in deep neural networks?**
-    Hidden units learn useful features from data.
-    They allow the network to represent complex patterns.
-
-16. **What does backpropagation compute during training?**
-    It calculates how much each weight contributed to the error.
-    Then it adjusts the weights to reduce future errors.
+Got it Sri — here are the **same questions, same format, but each answer is now 2–3 lines** and still very simple and easy to remember.
 
 ---
 
-**UNIT – 2**
+# **Unit–1 (CO1)**
 
-### **Regularization**
+### **1. What is the role of a learning algorithm in machine learning?**
 
-1. **What is the purpose of regularization in deep learning?**
-   To prevent overfitting by keeping the model simpler.
-   It helps the model generalize better.
+A learning algorithm finds patterns from data and adjusts model parameters automatically.
+It improves the model’s predictions as it sees more examples.
+Essentially, it converts raw data into useful knowledge.
 
-2. **Which parameter norm penalty encourages sparsity, L1 or L2?**
-   L1 encourages sparsity by pushing many weights to zero.
+### **2. Why do we use a validation set instead of only training and test sets?**
 
-3. **How can norm penalties be interpreted as constrained optimization?**
-   They restrict how large weights can grow.
-   The model learns within a “boundary” to avoid overfitting.
+A validation set helps tune hyperparameters without touching the test set.
+It shows when the model starts overfitting the training data.
+This keeps the final test accuracy honest and unbiased.
 
-4. **Give one example of dataset augmentation in computer vision.**
-   Flipping or rotating an image to create extra training samples.
+### **3. How is MLE related to fitting parameters in a probabilistic model?**
 
-5. **Why does adding noise to inputs or weights improve robustness?**
-   It teaches the model to handle small changes and not depend on exact values.
-   This reduces overfitting.
+MLE picks parameter values that make the observed data most likely under the model.
+It fits the model based on probability rather than simple error measures.
+This makes it widely useful for statistical learning.
 
-6. **What is semi-supervised learning?**
-   A method that uses both labeled and unlabeled data.
-   Helpful when labeled data is limited.
+### **4. What does bias represent in a model?**
 
-7. **How does multi-task learning improve generalization?**
-   The model learns multiple related tasks together.
-   Shared learning reduces overfitting and improves performance.
+Bias is the error caused by overly simple assumptions.
+High bias prevents a model from learning true patterns.
+It results in underfitting.
 
-8. **Define early stopping.**
-   Stopping training when validation performance stops improving.
-   Prevents the model from overfitting.
+### **5. Give one challenge that motivated deep learning.**
 
-9. **Where is parameter sharing most commonly used in neural networks?**
-   In CNNs, where the same filter is used across the image.
+Shallow models struggled with high-dimensional data like images and speech.
+They could not learn complex features automatically.
+Deep learning solved this by stacking multiple learned layers.
 
-10. **What does a sparse representation mean in deep learning?**
-    Only a few neurons are active at a time.
-    This makes the representation efficient and easier to interpret.
+### **6. How does Bayes’ theorem update probabilities?**
 
-11. **What is bagging in ensemble methods?**
-    Training many models on different samples and combining their predictions.
-    Reduces variance and improves stability.
+It revises an old belief (prior) after seeing new evidence (likelihood).
+The result is an updated belief called the posterior.
+This process forms the basis of Bayesian reasoning.
 
-12. **What does dropout do during training?**
-    Randomly turns off some neurons during training.
-    Prevents co-dependence and reduces overfitting.
+### **7. What determines the depth of a neural network?**
 
-13. **What is adversarial training?**
-    Training the model with slightly altered (attacked) inputs.
-    Teaches the model to be resistant to adversarial changes.
+The depth is the number of hidden layers between input and output.
+More layers allow learning of more abstract features.
+This increases modeling power but also training difficulty.
 
-14. **What problem does tangent distance aim to solve?**
-    It handles small distortions in images, such as rotation or slight movement.
+### **8. Why do hidden units allow neural networks to model complex functions?**
 
-15. **What does Tangent Prop encourage a model to learn?**
-    It trains the model to be stable under small transformations.
-    Helps improve generalization.
-
-16. **What is the role of the manifold tangent classifier?**
-    It keeps the model predictions smooth along the data manifold.
-    Reduces sensitivity to small changes.
+Hidden units apply nonlinear transformations to inputs.
+These nonlinearities allow combining features in powerful ways.
+As a result, networks learn highly complex relationships.
 
 ---
 
-### **Optimization**
+# **Unit–2 (CO2)**
 
-17. **How does training a deep model differ from pure optimization?**
-    We don’t search for an exact mathematical minimum.
-    We focus on finding a good-enough solution that generalizes well.
+### **9. What does L2 regularization penalize?**
 
-18. **Name one major challenge in neural network optimization.**
-    Deep models often get stuck in poor local minima or saddle points.
+It penalizes large weight values by pushing them toward smaller magnitudes.
+This makes the model smoother and less likely to overfit.
+It spreads importance across multiple features.
 
-19. **What is the simplest optimization algorithm used in training deep models?**
-    Gradient Descent (or SGD when using batches).
+### **10. Why does L1 regularization promote sparsity in parameters?**
 
-20. **Why is good parameter initialization important?**
-    Bad initialization can slow learning or prevent learning completely.
-    Good initialization helps faster and stable training.
+L1 encourages many weights to become exactly zero.
+This results in simpler, more interpretable models.
+It also helps when only a few features truly matter.
 
-21. **Give one example of an algorithm with adaptive learning rates.**
-    Adam, RMSProp, or Adagrad.
+### **11. What is the main purpose of regularization?**
 
----
+Regularization prevents models from memorizing training data.
+It restricts model complexity so patterns generalize well to new data.
+It is essential when training data is limited.
 
-**UNIT – 3**
+### **12. How does noise injection during training improve generalization?**
 
-1. **The Convolution Operation**
-   Convolution slides a small filter over an image and multiplies it with pixel values to extract features. It helps detect patterns like edges or textures.
+Noise forces the model to learn stable and robust patterns.
+It prevents the network from relying on exact input values.
+This results in better performance on unseen data.
 
-2. **What is a kernel (or filter) in convolution?**
-   A kernel is a small matrix that scans the image to detect specific features. Different kernels detect different patterns.
+### **13. What is the stopping criterion in early stopping?**
 
-3. **How does stride affect convolution?**
-   Stride is how many pixels the filter moves each step. Larger stride → smaller output and faster processing.
+Training stops when validation accuracy stops improving.
+This prevents the model from overfitting the training set.
+It acts as a natural regularizer.
 
-4. **What is the purpose of padding in convolution?**
-   Padding adds extra pixels around the image to keep the output size the same or to preserve edge information.
+### **14. Why are sparse representations efficient in neural networks?**
 
-5. **Why are CNNs preferred for image data?**
-   CNNs capture spatial patterns and reduce parameters, making them very effective for images.
+Sparse representations activate only a few neurons at once.
+This reduces computation and improves speed.
+They also generalize better because they avoid unnecessary complexity.
 
-6. **What property of CNNs reduces the number of parameters compared to fully connected networks?**
-   Weight sharing: the same filter is used across the whole image, reducing parameters.
+### **15. What does tangent distance measure?**
 
-7. **How does convolution help capture local patterns?**
-   The filter looks at only a small region at a time, allowing it to detect local details like corners or lines.
+It measures similarity between two images under small transformations.
+These include shifts, rotations, and slight distortions.
+It helps models become insensitive to small variations.
 
-8. **What does max pooling do?**
-   It selects the highest value in a region, keeping the strongest feature.
+### **16. Why do vanishing gradients hinder training of deep networks?**
 
-9. **How does average pooling differ from max pooling?**
-   Average pooling takes the average of the region, giving smoother outputs.
-
-10. **Why is pooling important for CNNs?**
-    Pooling reduces the size of feature maps, lowering computation and preventing overfitting.
-
-11. **What prior knowledge is encoded by convolution?**
-    The idea that nearby pixels are related and patterns can appear anywhere in the image.
-
-12. **How does pooling contribute to translation invariance?**
-    Small shifts in the image don’t change pooled values much, making features stable.
-
-13. **Why is convolution considered a strong inductive bias?**
-    It forces the model to focus on local patterns and reuse filters, guiding learning effectively.
-
-14. **What is a dilated convolution?**
-    A convolution where spaces are inserted between filter cells to capture wider context.
-
-15. **What is the purpose of depthwise separable convolution?**
-    To make convolution faster and lighter by splitting spatial and channel operations.
-
-16. **Which convolution type is used for upsampling in CNNs?**
-    Transposed convolution (also called deconvolution).
-
-17. **What is a structured output in CNNs?**
-    An output that contains multiple values arranged meaningfully, like a segmentation map.
-
-18. **Which task requires pixel-level output from a CNN?**
-    Image segmentation.
-
-19. **How do CNNs handle image segmentation differently from classification?**
-    Segmentation predicts a label for each pixel, while classification gives one label for the whole image.
-
-20. **What type of data is 1D convolution typically used for?**
-    Sequential data like audio or text sequences.
-
-21. **Which kind of data requires 3D convolution?**
-    Video data or 3D medical images with depth.
-
-22. **Can CNNs be applied to text data?**
-    Yes, by treating text as a sequence and applying 1D convolutions.
-
-23. **Why are efficient convolution algorithms necessary?**
-    They speed up training and reduce computation, especially in deep models.
-
-24. **Name one algorithm that speeds up convolution.**
-    FFT-based convolution or Winograd algorithm.
-
-25. **How do efficient algorithms affect training time?**
-    They reduce the number of operations, making training faster.
-
-26. **What is a random feature in CNNs?**
-    A feature learned from random initial filters before training.
-
-27. **Why are unsupervised features useful when labeled data is scarce?**
-    They allow models to learn basic patterns from unlabeled data.
-
-28. **How can unsupervised learning help CNN pretraining?**
-    A model first learns general features from unlabeled data, then fine-tunes on labeled data for better performance.
+Very small gradients cause layers near the input to learn almost nothing.
+As a result, deep networks fail to capture long-range information.
+Training becomes slow or completely ineffective.
 
 ---
 
-**UNIT – 4**
+# **Unit–3 (CO3)**
 
-1. **What does it mean to unfold a computational graph in RNNs?**
-   It means expanding the RNN across time steps to show repeated operations as a sequence.
+### **17. What does the convolution operation compute in CNNs?**
 
-2. **Which training algorithm relies on unfolding?**
-   Backpropagation Through Time (BPTT).
+It computes weighted sums over small local patches of an input.
+This helps detect features like edges, textures, and shapes.
+It works well for data with spatial structure.
 
-3. **Why is unfolding necessary for sequence models?**
-   It allows the model to compute gradients across all time steps.
+### **18. Why are CNNs suited for structured outputs like segmentation maps?**
 
-4. **What type of data are RNNs designed for?**
-   Sequential data like text, speech, or time series.
+CNNs maintain the spatial arrangement of pixels.
+This allows predicting labels for each pixel, not just the whole image.
+Thus they excel at tasks requiring detailed spatial understanding.
 
-5. **What is the role of the hidden state in RNNs?**
-   It stores past information and passes it to the next time step.
+### **19. What are random features in the context of convolutional networks?**
 
-6. **Why are RNNs considered “memory-based” models?**
-   Because they keep information from previous steps in their hidden state.
+They are fixed, randomly initialized filters used for early feature extraction.
+They provide generic patterns before learning begins.
+Useful when labeled data is very limited.
 
-7. **How does a bidirectional RNN differ from a standard RNN?**
-   It processes data both forward and backward for more context.
+### **20. How are FFT-based methods used for efficient convolution?**
 
-8. **Which tasks benefit most from bidirectional RNNs?**
-   Tasks where full context helps, such as translation or sentiment analysis.
+FFT converts convolution into easier frequency-domain multiplication.
+This speeds up large kernel operations significantly.
+It is especially beneficial for big images or big filters.
 
-9. **Why can’t bidirectional RNNs be used for real-time prediction?**
-   They need future input, which is unavailable in real-time settings.
+### **21. Why is convolution preferred over fully connected layers for image data?**
 
-10. **What are the two main parts of a seq2seq model?**
-    Encoder and decoder.
+Convolution captures local patterns using fewer parameters.
+It reduces memory and computation dramatically.
+It also matches the natural structure of images.
 
-11. **What is the role of the encoder in seq2seq architectures?**
-    It converts the input sequence into a meaningful representation.
+### **22. What kind of prior do convolution and pooling impose on data?**
 
-12. **Which type of problem is encoder-decoder architecture commonly used for?**
-    Machine translation, summarization, and chatbots.
+They assume nearby pixels are related and patterns repeat across positions.
+This is known as a spatial locality and translation-invariance prior.
+It simplifies learning and improves generalization.
 
-13. **What makes an RNN “deep”?**
-    Using multiple stacked RNN layers.
+### **23. How is depthwise separable convolution more efficient than standard convolution?**
 
-14. **Why might stacking multiple RNN layers be beneficial?**
-    It allows learning more complex patterns.
-
-15. **What is one challenge of training deep RNNs?**
-    They often suffer from vanishing or exploding gradients.
-
-16. **What data structure do recursive neural networks work on?**
-    Tree structures.
-
-17. **Which NLP task commonly uses recursive neural networks?**
-    Sentence parsing or sentiment analysis.
-
-18. **How do recursive networks differ from recurrent networks?**
-    Recursive networks follow tree structures; recurrent networks follow sequences.
-
-19. **What is the vanishing gradient problem?**
-    Gradients become very small, slowing or stopping learning.
-
-20. **Why do RNNs struggle with long-term dependencies?**
-    Gradients fade over long sequences, losing old information.
-
-21. **What happens when gradients “explode” during training?**
-    Very large gradients make the model unstable and weights blow up.
-
-22. **What is the “reservoir” in an echo state network?**
-    A large, fixed recurrent layer with random connections.
-
-23. **Which part of an ESN is trained?**
-    Only the output layer.
-
-24. **How do ESNs simplify training compared to traditional RNNs?**
-    They avoid training the recurrent weights, making training extremely fast.
-
-25. **What is a leaky unit in RNNs?**
-    A unit that keeps part of its previous state while updating slowly.
-
-26. **Why are multiple time scales useful in sequence modeling?**
-    They help capture both short and long-term patterns.
-
-27. **How do leaky units help capture long-term patterns?**
-    They update gradually, allowing memory to last longer.
-
-28. **Which gates are used in an LSTM cell?**
-    Input gate, forget gate, and output gate.
-
-29. **What does the forget gate in LSTM do?**
-    It decides what old information to erase from memory.
-
-30. **How do GRUs differ from LSTMs?**
-    GRUs have fewer gates and a simpler structure but similar performance.
-
-31. **Which optimization issue arises in long RNN sequences?**
-    Vanishing and exploding gradients.
-
-32. **What is gradient clipping used for?**
-    To prevent gradients from getting too large.
-
-33. **Why does careful weight initialization matter in RNNs?**
-    Bad initialization can worsen gradient problems.
-
-34. **What is explicit memory in neural networks?**
-    A separate memory component outside the main network.
-
-35. **Name one model that uses explicit memory.**
-    Neural Turing Machines or Memory Networks.
-
-36. **How does explicit memory differ from implicit memory in RNNs?**
-    Explicit memory stores information separately; implicit memory stores it in hidden states.
+It splits filtering into channel-wise convolution and channel mixing.
+This reduces computation and parameters by a large margin.
+It is widely used in mobile and lightweight models.
 
 ---
 
-**UNIT – 5**
+# **Unit–4 (CO4)**
 
-1. **What performance metric would you use for a binary classification problem with imbalanced data, and why?**
-   Use **F1-score or AUC-ROC** because accuracy can be misleading when one class dominates.
+### **24. What does it mean to “unfold” an RNN into a computational graph?**
 
-2. **How does cross-entropy loss differ from accuracy as a performance measure?**
-   Accuracy checks if predictions are correct, while cross-entropy measures how confident and close the predicted probabilities are to the true label.
+It means expanding the RNN across time steps like a chain.
+Each time step becomes one layer in the unrolled graph.
+This is required for backpropagation through time.
 
-3. **Why is it important to evaluate models with multiple metrics instead of just one?**
-   Different metrics highlight different weaknesses. One metric alone may hide issues like imbalance or poor confidence.
+### **25. How does an RNN differ from a feedforward neural network for sequential data?**
 
-4. **What is a baseline model, and why is it useful?**
-   A baseline model is a simple reference model. It helps check if advanced models are actually improving performance.
+An RNN keeps a memory of past inputs through hidden states.
+A feedforward network treats every input independently.
+Thus RNNs are better for sequences like text and audio.
 
-5. **Give an example of a simple baseline model for text classification.**
-   Predicting the most frequent class for all inputs.
+### **26. What is the key structural difference between a unidirectional and bidirectional RNN?**
 
-6. **How do baseline models help in identifying whether a complex model is actually useful?**
-   If the complex model doesn’t outperform the baseline, it signals poor learning or issues in data.
+A unidirectional RNN reads input only forward in time.
+A bidirectional RNN reads both forward and backward.
+This gives better context for tasks like sentiment analysis.
 
-7. **What signs indicate that a model might benefit from more training data?**
-   High variance between training and validation scores or unstable predictions.
+### **27. Why is the encoder–decoder framework useful for machine translation?**
 
-8. **How can a learning curve help decide whether to gather additional data?**
-   If validation error keeps decreasing as data increases, more data will likely improve performance.
+The encoder compresses the whole input sentence into a representation.
+The decoder generates the translated sentence from this representation.
+This handles variable-length sequences smoothly.
 
-9. **Why is more data not always the best solution for poor performance?**
-   The issue might be the model design, poor features, or bad hyperparameters—not data size.
+### **28. What type of data structure do recursive neural networks process?**
 
-10. **What is the role of hyperparameters in deep learning models?**
-    They control how the model learns, such as learning speed, structure, and regularization strength.
+They process tree-like structures, such as parse trees in NLP.
+Each node represents a substructure combining its children.
+This helps understand hierarchical relationships in data.
 
-11. **Name three common hyperparameters that need tuning in neural networks.**
-    Learning rate, number of layers, and batch size.
+### **29. What is the role of leaky units in recurrent architectures?**
 
-12. **Why is random search sometimes more effective than grid search for hyperparameter selection?**
-    Random search explores a wider range of possibilities, while grid search wastes time on less important combinations.
+Leaky units retain information slowly over time.
+This helps capture medium-range dependencies.
+They also stabilize training by preventing sudden forgetting.
 
-13. **What can overfitting tell you about your model or dataset?**
-    The model is too complex or the dataset is too small for the patterns it's trying to learn.
+### **30. What three gates are used in the standard LSTM?**
 
-14. **Why is it useful to test a model on a small subset of data during debugging?**
-    It helps catch basic bugs quickly without waiting for long training cycles.
+The input gate controls new information.
+The forget gate decides what to remove.
+The output gate produces the next hidden state.
 
-15. **How can gradient checking help debug neural networks?**
-    By comparing computed gradients with numerical estimates to detect mistakes in backpropagation.
+### **31. How do specialized initialization strategies help RNNs learn long-term dependencies?**
 
-16. **Why is multi-digit number recognition more challenging than single-digit recognition?**
-    The model must understand multiple positions, shapes, and combinations simultaneously.
+They prevent gradients from exploding or vanishing.
+Good initialization keeps signal strength stable across time.
+This makes long sequence learning much easier.
 
-17. **Which deep learning architecture is often used for digit recognition tasks?**
-    Convolutional Neural Networks (CNNs).
+---
 
-18. **What preprocessing step is important for recognizing handwritten digits?**
-    Normalizing or resizing images to a fixed size.
+# **Unit–5 (CO5)**
 
-19. **Why do large-scale datasets make deep learning models more effective?**
-    More data helps models learn richer patterns and reduces overfitting.
+### **32. What is the difference between accuracy and precision?**
 
-20. **What is distributed training, and why is it important in large-scale deep learning?**
-    It trains models across multiple machines to handle huge datasets faster.
+Accuracy measures how often the model is correct overall.
+Precision measures how many predicted positives are actually correct.
+Precision is especially important for imbalanced problems.
 
-21. **Give an example of an application that relies on large-scale deep learning.**
-    Self-driving cars using massive image datasets.
+### **33. How can learning curves indicate if more data will improve performance?**
 
-22. **What are convolutional neural networks (CNNs) primarily used for in computer vision?**
-    They detect patterns in images for tasks like classification and segmentation.
+If training and validation curves are far apart, the model is overfitting.
+More data can close this gap and improve generalization.
+If both curves are high-error, more data won’t help.
 
-23. **Why is transfer learning important in vision applications?**
-    It allows using pre-trained models to save time and perform well with less data.
+### **34. What is the purpose of checking gradients?**
 
-24. **Give an example of a real-world computer vision application.**
-    Face recognition in smartphones.
+To ensure backpropagation is calculating correct updates.
+Gradient errors can lead to unstable or incorrect learning.
+Checking avoids silent failures during training.
 
-25. **What type of neural networks are often used for speech recognition tasks?**
-    RNNs, LSTMs, or Transformers.
+### **35. How does distributed training enable scaling of deep models?**
 
-26. **Why is handling variable-length input important in speech recognition?**
-    People speak at different speeds, and speech signals vary in duration.
+It splits work across many GPUs or machines.
+This allows training huge models that wouldn’t fit on one device.
+It also speeds up training dramatically.
 
-27. **Give an example of a modern speech recognition system.**
-    Google Assistant, Siri, or Alexa.
+### **36. What type of neural network is most commonly used in computer vision?**
 
-28. **What is word embedding in NLP, and why is it useful?**
-    A method to represent words as vectors so models can understand meaning and similarity.
+CNNs dominate computer vision tasks.
+They efficiently capture spatial patterns in images.
+Their parameter sharing makes them fast and scalable.
 
-29. **Which deep learning models are widely used for NLP tasks today?**
-    Transformers like BERT, GPT, and T5.
+### **37. How can reinforcement learning extend deep learning beyond supervised learning?**
 
-30. **Give an example of an NLP application powered by deep learning.**
-    Machine translation like Google Translate.
+It enables learning by trial-and-error instead of labeled data.
+The agent learns policies based on rewards.
+This is used in robotics, gaming, and decision-making.
 
-31. **How is deep learning applied in healthcare?**
-    Used for diagnosing diseases from scans, predicting risks, and analyzing medical records.
+### **38. What input representation is typically used in speech recognition?**
 
-32. **Give an example of a deep learning application in recommendation systems.**
-    Netflix or YouTube recommending personalized content.
+Spectrograms or MFCCs represent audio frequency patterns.
+They convert raw sound into visual-like grids.
+This makes them compatible with CNNs and RNNs.
 
-33. **Why is interpretability important in sensitive deep learning applications like finance or medicine?**
-    Decisions must be transparent so users can trust the system and understand why predictions were made.
+### **39. Why are convolutional layers well-suited for image processing?**
+
+They detect edges, textures, and patterns using local filters.
+They reuse the same filter across the image, reducing parameters.
+This makes them efficient and highly accurate for images.
+
+---
