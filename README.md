@@ -14,23 +14,3 @@
 [UNIT-4](./cd/Laq/unit4.md)
 
 [UNIT-5](./cd/Laq/unit5.md)
-
-
-
----
-# SEM:
-
-## SAQ's: [click](./cd/saq.md)
-
-## LAQ's:
-
-
-[UNIT-1](./DL/Laq/unit1.md)
-
-[UNIT-2](./DL/Laq/unit2.md)
-
-[UNIT-3](./DL/Laq/unit3.md)
-
-[UNIT-4](./DL/Laq/unit4.md)
-
-[UNIT-5](./DL/Laq/unit5.md)
