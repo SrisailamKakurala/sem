@@ -1,319 +1,273 @@
-# Network Security - 100 Short Answer Questions (1 Mark)
-
-## UNIT I - Security Concepts & Cryptography Basics (20 Questions)
-
-**Q1. What is information security?**
-A: Information security is the practice of protecting information from unauthorized access, use, disclosure, disruption, modification, or destruction.
-
-**Q2. What are the three main security goals (CIA triad)?**
-A: Confidentiality, Integrity, and Availability.
-
-**Q3. Define Confidentiality.**
-A: Confidentiality ensures that information is accessible only to authorized individuals or systems.
-
-**Q4. Define Integrity.**
-A: Integrity ensures that information remains accurate, complete, and unaltered by unauthorized parties.
-
-**Q5. Define Availability.**
-A: Availability ensures that information and resources are accessible to authorized users when needed.
-
-**Q6. What is a passive attack?**
-A: A passive attack monitors or eavesdrops on communications without modifying data, such as traffic analysis or message interception.
-
-**Q7. What is an active attack?**
-A: An active attack involves modification of data or creation of false data streams, such as masquerading, replay, or denial of service.
-
-**Q8. What is cryptography?**
-A: Cryptography is the science of securing communication by transforming information into an unreadable format using mathematical techniques.
-
-**Q9. What is plaintext?**
-A: Plaintext is the original readable message or data before encryption.
-
-**Q10. What is ciphertext?**
-A: Ciphertext is the encrypted, unreadable form of plaintext after applying an encryption algorithm.
-
-**Q11. What is encryption?**
-A: Encryption is the process of converting plaintext into ciphertext using an algorithm and a key.
-
-**Q12. What is decryption?**
-A: Decryption is the process of converting ciphertext back into plaintext using an algorithm and a key.
-
-**Q13. What is a substitution cipher?**
-A: A substitution cipher replaces each character in plaintext with another character according to a fixed system.
-
-**Q14. What is a transposition cipher?**
-A: A transposition cipher rearranges the positions of characters in plaintext without changing the characters themselves.
-
-**Q15. What is symmetric key cryptography?**
-A: Symmetric key cryptography uses the same key for both encryption and decryption.
-
-**Q16. What is asymmetric key cryptography?**
-A: Asymmetric key cryptography uses a pair of keys - a public key for encryption and a private key for decryption.
-
-**Q17. What is a security service?**
-A: A security service is a processing or communication service that enhances the security of data processing systems and information transfers.
-
-**Q18. What is authentication?**
-A: Authentication is the process of verifying the identity of a user, device, or system.
-
-**Q19. What is non-repudiation?**
-A: Non-repudiation prevents a sender from denying that they sent a message or performed an action.
-
-**Q20. What is access control?**
-A: Access control restricts access to resources based on the identity and authorization level of users.
+Here you go, bro — **ALL SAQs from ALL 4 SETS** answered in **simple, clean, 1–3 line**, exam-perfect format.
+No jargon. No confusion. Just direct answers.
 
 ---
 
-## UNIT II - Symmetric & Asymmetric Ciphers (20 Questions)
+# ✅ **SET – 1 (SAQs)**
 
-**Q21. What is a block cipher?**
-A: A block cipher encrypts data in fixed-size blocks (typically 64 or 128 bits) using a symmetric key.
+### **1.a) Define Robotic Process Automation (RPA).**
 
-**Q22. What does DES stand for?**
-A: DES stands for Data Encryption Standard.
+RPA is the use of software robots to automate repetitive tasks that humans normally do.
 
-**Q23. What is the key size of DES?**
-A: DES uses a 56-bit key (64 bits including parity bits).
+### **1.b) List any two components of the UiPath platform.**
 
-**Q24. What is the block size of DES?**
-A: DES operates on 64-bit blocks of data.
+UiPath Studio and UiPath Robot.
 
-**Q25. What does AES stand for?**
-A: AES stands for Advanced Encryption Standard.
+### **1.c) What is a Sequence in UiPath?**
 
-**Q26. What are the key sizes supported by AES?**
-A: AES supports key sizes of 128, 192, and 256 bits.
+Sequence is a simple workflow structure that runs activities step-by-step in order.
 
-**Q27. What is the block size of AES?**
-A: AES operates on 128-bit blocks of data.
+### **1.d) Name two types of loops available in UiPath workflows.**
 
-**Q28. What is a stream cipher?**
-A: A stream cipher encrypts data one bit or byte at a time using a keystream.
+For Each loop and While loop.
 
-**Q29. What is the main advantage of stream ciphers?**
-A: Stream ciphers are faster and more suitable for real-time applications with continuous data streams.
+### **1.e) What is debugging in UiPath?**
 
-**Q30. Name one popular stream cipher.**
-A: RC4 is a popular stream cipher (though now considered insecure).
+Debugging is the process of finding and fixing errors in a workflow.
 
-**Q31. What is the Feistel structure?**
-A: The Feistel structure is a symmetric cipher design where encryption operates on half the data block in each round, used in DES.
+### **1.f) State any two techniques for debugging workflows in UiPath.**
 
-**Q32. How many rounds does DES have?**
-A: DES has 16 rounds of processing.
+Breakpoints and Step-Into/Step-Over.
 
-**Q33. How many rounds does AES have for 128-bit keys?**
-A: AES has 10 rounds for 128-bit keys.
+### **1.g) What is meant by ‘system managing techniques’ in RPA?**
 
-**Q34. What is public key cryptography?**
-A: Public key cryptography uses a pair of mathematically related keys where one key encrypts and the other decrypts.
+These are methods robots use to handle system events, logs, and exceptions.
 
-**Q35. Who developed the RSA algorithm?**
-A: RSA was developed by Rivest, Shamir, and Adleman in 1977.
+### **1.h) Mention two methods to improve reusability in UiPath workflows.**
 
-**Q36. What mathematical problem is RSA based on?**
-A: RSA is based on the difficulty of factoring large prime numbers.
+Using separate reusable workflows and using arguments.
 
-**Q37. What is the Diffie-Hellman algorithm used for?**
-A: Diffie-Hellman is used for secure key exchange over an insecure channel.
+### **1.i) What is process automation?**
 
-**Q38. What is the main advantage of asymmetric cryptography?**
-A: It eliminates the need for secure key exchange as the public key can be freely distributed.
+It is automating a business task or process using technology like UiPath.
 
-**Q39. What is the main disadvantage of asymmetric cryptography?**
-A: It is significantly slower than symmetric cryptography.
+### **1.j) State the role of Orchestrator in process automation.**
 
-**Q40. What is IDEA?**
-A: IDEA (International Data Encryption Algorithm) is a symmetric block cipher that operates on 64-bit blocks with a 128-bit key.
+It manages, schedules, monitors, and controls robots from a central platform.
 
 ---
 
-## UNIT III - Hash Functions & Key Management (20 Questions)
+# ✅ **SET – 2 (SAQs)**
 
-**Q41. What is a cryptographic hash function?**
-A: A hash function takes input data of any size and produces a fixed-size output called a hash or digest.
+### **1.a) What is the role of UiPath Studio in the UiPath platform?**
 
-**Q42. What are the main properties of a good hash function?**
-A: One-way (irreversible), collision-resistant, and deterministic output for the same input.
+Studio is the design tool where workflows are created and edited.
 
-**Q43. What does MD5 stand for?**
-A: MD5 stands for Message Digest Algorithm 5.
+### **1.b) List any two types of robots available in UiPath.**
 
-**Q44. What is the output size of MD5?**
-A: MD5 produces a 128-bit (16-byte) hash value.
+Attended robots and Unattended robots.
 
-**Q45. Is MD5 still considered secure?**
-A: No, MD5 is considered cryptographically broken and unsuitable for security applications.
+### **1.c) Define ‘Flowchart’ in UiPath.**
 
-**Q46. What does SHA stand for?**
-A: SHA stands for Secure Hash Algorithm.
+A flowchart visually represents workflows using branches and decisions.
 
-**Q47. What is the output size of SHA-512?**
-A: SHA-512 produces a 512-bit (64-byte) hash value.
+### **1.d) What purpose do ‘Variables’ serve in workflow design?**
 
-**Q48. What is message authentication?**
-A: Message authentication verifies that a message has not been altered and confirms the sender's identity.
+Variables store data that workflows need while running.
 
-**Q49. What does MAC stand for?**
-A: MAC stands for Message Authentication Code.
+### **1.e) Define ‘finding the control’ in automation.**
 
-**Q50. What is HMAC?**
-A: HMAC (Hash-based Message Authentication Code) is a MAC that uses a cryptographic hash function with a secret key.
+It means identifying UI elements like buttons or text boxes before interacting with them.
 
-**Q51. What is a digital signature?**
-A: A digital signature is a cryptographic mechanism that provides authentication, integrity, and non-repudiation using asymmetric cryptography.
+### **1.f) What does ‘attaching windows’ mean in UiPath?**
 
-**Q52. How does a digital signature work?**
-A: The sender encrypts a message hash with their private key; the receiver decrypts it with the sender's public key to verify.
+It means linking activities to a specific application window so automation runs correctly.
 
-**Q53. What is key distribution?**
-A: Key distribution is the process of securely delivering cryptographic keys to authorized parties.
+### **1.g) Define a system event trigger.**
 
-**Q54. What is a Key Distribution Center (KDC)?**
-A: A KDC is a trusted third party that manages and distributes secret keys to users in a network.
+It starts a workflow when a system action happens, like a file being created.
 
-**Q55. What is Kerberos?**
-A: Kerberos is a network authentication protocol that uses symmetric key cryptography and a trusted third party (KDC).
+### **1.h) What is an assistant bot?**
 
-**Q56. What is X.509?**
-A: X.509 is a standard that defines the format of public key certificates for authentication.
+A bot that works with the user and triggers tasks when needed.
 
-**Q57. What is a digital certificate?**
-A: A digital certificate is an electronic document that binds a public key to an entity's identity, signed by a trusted authority.
+### **1.i) What is meant by ‘nesting workflows’ in UiPath?**
 
-**Q58. What is PKI?**
-A: PKI (Public Key Infrastructure) is a framework for managing digital certificates and public-private key pairs.
+Placing one workflow inside another to create modular automation.
 
-**Q59. What is a Certificate Authority (CA)?**
-A: A CA is a trusted entity that issues, manages, and revokes digital certificates.
+### **1.j) What is project organization in UiPath?**
 
-**Q60. What is certificate revocation?**
-A: Certificate revocation is the process of invalidating a certificate before its expiration date due to compromise or other reasons.
+Structuring files and workflows clearly so the project is easy to understand and maintain.
 
 ---
 
-## UNIT IV - IP Security (20 Questions)
+# ✅ **SET – 3 (SAQs)**
 
-**Q61. What is IPSec?**
-A: IPSec (Internet Protocol Security) is a protocol suite for securing IP communications through authentication and encryption.
+### **1.a) Define Robotic Process Automation (RPA).**
 
-**Q62. At which OSI layer does IPSec operate?**
-A: IPSec operates at the Network Layer (Layer 3).
+RPA is software that copies human actions to automate routine tasks.
 
-**Q63. What are the two main protocols in IPSec?**
-A: Authentication Header (AH) and Encapsulating Security Payload (ESP).
+### **1.b) List any two components of UiPath.**
 
-**Q64. What does AH provide?**
-A: AH provides data integrity, authentication, and anti-replay protection but not confidentiality.
+Studio and Orchestrator.
 
-**Q65. What does ESP provide?**
-A: ESP provides confidentiality, data integrity, authentication, and anti-replay protection.
+### **1.c) Differentiate between Sequence and Flowchart in UiPath.**
 
-**Q66. What are the two modes of IPSec operation?**
-A: Transport mode and Tunnel mode.
+Sequence runs tasks in a straight line; Flowchart handles branching and decisions.
 
-**Q67. What is Transport mode in IPSec?**
-A: Transport mode encrypts only the payload of the IP packet, leaving the original IP header intact.
+### **1.d) What is the purpose of Arguments in UiPath?**
 
-**Q68. What is Tunnel mode in IPSec?**
-A: Tunnel mode encrypts the entire IP packet and adds a new IP header, commonly used for VPNs.
+Arguments transfer data between workflows.
 
-**Q69. What is a Security Association (SA)?**
-A: An SA is a one-way logical connection that defines security parameters between two communicating parties in IPSec.
+### **1.e) What is OCR in UiPath and when is it used?**
 
-**Q70. What is the Security Parameter Index (SPI)?**
-A: SPI is a unique identifier used to identify a specific Security Association in IPSec.
+OCR extracts text from images or scanned documents when normal selectors can't be used.
 
-**Q71. What is IKE?**
-A: IKE (Internet Key Exchange) is a protocol used to establish and manage Security Associations in IPSec.
+### **1.f) List any two plugins or extensions supported in UiPath.**
 
-**Q72. What are the two phases of IKE?**
-A: Phase 1 establishes a secure channel (ISAKMP SA), and Phase 2 negotiates IPSec SAs for data protection.
+Chrome extension and SAP extension.
 
-**Q73. What port does IKE use?**
-A: IKE uses UDP port 500.
+### **1.g) What are Assistant Bots? Give an example.**
 
-**Q74. What is anti-replay protection?**
-A: Anti-replay protection prevents attackers from capturing and retransmitting packets by using sequence numbers.
+Bots that help users interactively, like filling forms when a hotkey is pressed.
 
-**Q75. Can AH and ESP be used together?**
-A: Yes, AH and ESP can be combined to provide both authentication and encryption.
+### **1.h) Explain the importance of Exception Handling in RPA.**
 
-**Q76. What is the IPSec Security Policy Database (SPD)?**
-A: SPD defines the security policies that determine how IP packets are processed (protected, bypassed, or discarded).
+It prevents automation from failing unexpectedly and ensures smooth execution.
 
-**Q77. What is the Security Association Database (SAD)?**
-A: SAD stores information about active Security Associations including keys, algorithms, and parameters.
+### **1.i) What is a State Machine in UiPath?**
 
-**Q78. What is Perfect Forward Secrecy (PFS)?**
-A: PFS ensures that compromising one session key does not compromise past or future session keys.
+A workflow model that moves between states based on conditions and triggers.
 
-**Q79. What is NAT-T in IPSec?**
-A: NAT-T (NAT Traversal) allows IPSec traffic to pass through Network Address Translation devices.
+### **1.j) Why is workflow reusability important in UiPath projects?**
 
-**Q80. Why is NAT-T needed for IPSec?**
-A: NAT modifies IP headers which breaks IPSec's integrity checks; NAT-T encapsulates IPSec in UDP to solve this.
+It reduces development time and makes automation easier to maintain.
 
 ---
 
-## UNIT V - Web Security (20 Questions)
+# ✅ **SET – 4 (SAQs)**
 
-**Q81. What are the main web security threats?**
-A: Main threats include eavesdropping, data modification, identity spoofing, and denial of service attacks.
+### **1.a) What are UiPath Studio Projects?**
 
-**Q82. What does PGP stand for?**
-A: PGP stands for Pretty Good Privacy.
+They are structured folders that contain all files required for automation.
 
-**Q83. What is PGP used for?**
-A: PGP is used for encrypting and decrypting emails, files, and directories, and for digital signatures.
+### **1.b) Write any two advantages of using UiPath Stack.**
 
-**Q84. What type of encryption does PGP use?**
-A: PGP uses hybrid encryption combining symmetric and asymmetric cryptography.
+It is easy to use and provides end-to-end automation tools.
 
-**Q85. What does S/MIME stand for?**
-A: S/MIME stands for Secure/Multipurpose Internet Mail Extensions.
+### **1.c) What is the use of activities in UiPath?**
 
-**Q86. What is S/MIME used for?**
-A: S/MIME is used for sending digitally signed and encrypted email messages.
+Activities perform actions like clicking, typing, reading files, etc.
 
-**Q87. What does SSL stand for?**
-A: SSL stands for Secure Sockets Layer.
+### **1.d) Define variable scope with an example.**
 
-**Q88. What does TLS stand for?**
-A: TLS stands for Transport Layer Security.
+Variable scope decides where a variable can be used, like inside a sequence or the full workflow.
 
-**Q89. What is the relationship between SSL and TLS?**
-A: TLS is the successor to SSL, providing improved security; they are often used interchangeably.
+### **1.e) What is the use of Terminal Plugin?**
 
-**Q90. At which OSI layer does SSL/TLS operate?**
-A: SSL/TLS operates between the Transport Layer and Application Layer (Session Layer).
+It helps automate legacy terminal-based applications.
 
-**Q91. What port does HTTPS use?**
-A: HTTPS uses TCP port 443.
+### **1.f) Explain one method to handle events.**
 
-**Q92. What is the SSL/TLS handshake?**
-A: The handshake is a process where client and server negotiate encryption parameters, authenticate, and establish session keys.
+Using event triggers like mouse click or file creation triggers.
 
-**Q93. What does SET stand for?**
-A: SET stands for Secure Electronic Transaction.
+### **1.g) Define exception handling.**
 
-**Q94. What is SET used for?**
-A: SET is a protocol for securing credit card transactions over the internet.
+It is the method of catching errors and handling them without stopping automation.
 
-**Q95. What are the main components of SSL/TLS?**
-A: The Handshake Protocol, Record Protocol, Alert Protocol, and Change Cipher Spec Protocol.
+### **1.h) List two common exceptions in UiPath.**
 
-**Q96. What is a digital certificate's role in SSL/TLS?**
-A: Digital certificates authenticate the server's identity to the client during the SSL/TLS handshake.
+Selector Not Found and Timeout Exception.
 
-**Q97. What is session resumption in SSL/TLS?**
-A: Session resumption allows clients to reconnect to a server using previously negotiated security parameters without a full handshake.
+### **1.i) What is a nested workflow?**
 
-**Q98. What is the purpose of the SSL/TLS Record Protocol?**
-A: The Record Protocol fragments, compresses, encrypts, and authenticates data for transmission.
+A workflow inside another workflow used to structure automation.
 
-**Q99. What is a man-in-the-middle attack?**
-A: An attack where an attacker intercepts and possibly alters communications between two parties without their knowledge.
+### **1.j) Define project organization in UiPath.**
 
-**Q100. How does SSL/TLS prevent man-in-the-middle attacks?**
-A: Through server authentication using digital certificates signed by trusted Certificate Authorities and encrypted key exchange.
+Arranging workflows, folders, and files properly to keep the project clean and understandable.
+
+---
+
+# RPA Short Answer Questions - CO1
+
+**1. What is Robotic Process Automation (RPA) and why is it needed?**
+RPA is a technology that uses software robots to automate repetitive, rule-based business processes. It is needed to reduce manual effort, minimize human errors, increase operational efficiency, and free up employees for higher-value tasks.
+
+**2. Define RPA and list its key characteristics.**
+RPA is the use of software bots to mimic human actions and automate repetitive tasks. Key characteristics include: rule-based automation, non-invasive integration, scalability, and ability to work 24/7 without human intervention.
+
+**3. How does RPA differ from traditional automation?**
+RPA works at the user interface level without requiring code changes to existing systems, while traditional automation requires backend integration and coding. RPA is faster to deploy, non-invasive, and can work across multiple applications seamlessly.
+
+**4. List and briefly explain any four benefits of RPA.**
+(i) Cost Reduction - Reduces operational costs by automating manual tasks; (ii) Accuracy - Eliminates human errors; (iii) Productivity - Enables 24/7 operations; (iv) Scalability - Easy to scale up or down based on business needs.
+
+**5. What are the different types of RPA bots?**
+The main types are: (i) Attended bots - Work alongside humans and require human trigger; (ii) Unattended bots - Work independently without human intervention; (iii) Hybrid bots - Combine features of both attended and unattended bots.
+
+---
+
+# UiPath Basics Short Answer Questions - CO2
+
+**1. List any four key features of UiPath.**
+(i) Visual drag-and-drop interface; (ii) Recorder functionality for capturing user actions; (iii) Extensive activity library; (iv) Integration with multiple applications and technologies; (v) Orchestrator for centralized management.
+
+**2. What are the panels available in UiPath Studio?**
+UiPath Studio has: Activities Panel (contains all automation activities), Properties Panel (displays activity properties), Output Panel (shows execution messages), and Project Panel (displays project files and dependencies).
+
+**3. What are arguments in UiPath? How are they different from variables?**
+Arguments are used to pass data between workflows, while variables store data within a workflow. Arguments have directions (In, Out, In/Out) and enable data exchange between parent and child workflows, whereas variables have scope limited to their workflow.
+
+**4. Explain any two data types used in UiPath.**
+(i) String - Stores text data enclosed in quotes; (ii) Int32 - Stores integer values from -2,147,483,648 to 2,147,483,647; (iii) Boolean - Stores True or False values.
+
+**5. What is the use of 'Assign' activity in UiPath?**
+The Assign activity is used to assign values to variables. It takes two parameters: the variable name on the left side and the value/expression to be assigned on the right side, enabling data manipulation within workflows.
+
+---
+
+# Control Flow & Exception Handling Short Answer Questions - CO3
+
+**1. What is exception handling in RPA?**
+Exception handling is a mechanism to handle runtime errors and unexpected situations during bot execution. It helps maintain workflow stability by catching errors and executing alternative logic to prevent complete failure.
+
+**2. What is the use of try-catch block in UiPath?**
+The Try-Catch block captures exceptions that occur in the Try section and handles them in the Catch section. It prevents workflow termination by providing alternative error-handling logic and ensuring graceful error recovery.
+
+**3. List various activities available for control flow in UiPath.**
+Control flow activities include: If, Else If, Switch, While, Do While, For Each, Break, and Flow Decision. These activities help control the execution sequence and implement conditional logic in workflows.
+
+**4. Write a short note on decision making using 'If' activity.**
+The If activity evaluates a Boolean condition and executes different branches based on True or False results. It contains Then section (executed when condition is True) and Else section (executed when condition is False).
+
+**5. How do you handle validation errors in UiPath?**
+Validation errors can be handled using Try-Catch blocks to capture exceptions, using If conditions to validate data before processing, implementing Retry Scope for transient failures, and logging errors for analysis and debugging.
+
+---
+
+# UI Automation & Selectors Short Answer Questions - CO4
+
+**1. What are selectors in UiPath?**
+Selectors are XML strings that identify UI elements on screen for automation. They store attributes of UI elements like name, id, class, and enable UiPath to locate and interact with specific elements during execution.
+
+**2. Differentiate between full and partial selectors.**
+Full selectors contain complete information including top-level window details and work independently. Partial selectors rely on container activities for top-level window information and contain only element-specific attributes, making them more flexible.
+
+**3. List screen scraping techniques used in UiPath.**
+Screen scraping techniques include: Full Text method (fast, accurate with hidden text), Native method (works well with desktop apps), OCR (Optical Character Recognition for images), and Data Scraping (for structured data extraction from tables).
+
+**4. What are recording types available in UiPath?**
+Recording types include: Basic Recording (for single activities), Desktop Recording (for desktop applications), Web Recording (for browser automation), Image Recording (for virtual environments), and Citrix Recording (for virtual machines).
+
+**5. Explain the role of anchor base in automation.**
+Anchor Base uses a stable UI element (anchor) as reference point to locate another nearby element whose position may vary. It improves reliability by finding target elements relative to fixed anchors when selectors are unstable.
+
+---
+
+# Orchestrator Short Answer Questions - CO5
+
+**1. What is UiPath Orchestrator?**
+UiPath Orchestrator is a web-based centralized platform for managing, monitoring, and deploying RPA robots. It provides features like robot scheduling, queue management, asset storage, and logging for enterprise-level automation management.
+
+**2. What is the role of queues in UiPath Orchestrator?**
+Queues store transaction items that need to be processed by robots in a FIFO manner. They enable load distribution across multiple robots, provide transaction status tracking, and support exception handling for failed items.
+
+**3. What is the use of assets in Orchestrator?**
+Assets store shared variables and credentials (text, boolean, integer, credential types) centrally in Orchestrator. They enable secure storage of sensitive data, easy updates without modifying workflows, and shared access across multiple robots.
+
+**4. Define scheduling in Orchestrator.**
+Scheduling allows administrators to configure when and how often robots should execute specific processes. It enables time-based automation, recurring executions, and optimal resource utilization by running bots during off-peak hours.
+
+**5. Mention any two key components of Orchestrator dashboard.**
+(i) Jobs - Displays execution status of running and completed processes; (ii) Robots - Shows connected robot status and availability; (iii) Queues - Monitors transaction processing and pending items.
