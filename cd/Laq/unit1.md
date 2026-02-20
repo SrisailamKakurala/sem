@@ -1,1115 +1,552 @@
-Love the consistency Sri 🙌🔥
-Let’s make this **super simple NLP notes**, beginner-friendly, 5-mark style, no heavy jargon (and if I use a term, I’ll explain it clearly).
+Got it Sri 👍 no images, no extra stuff — just simple, clean, easy-to-remember notes for exam writing.
 
----
-
-# 📘 NLP Simple Notes
-
----
-
-# **1️⃣ Morphological Models & Their Importance in NLP**
-
-## ✅ What is Morphology?
-
-Morphology is the study of **how words are formed** from smaller units.
-
-Example:
-
-* “Unhappiness” = Un + Happy + Ness
-
-  * *Un* → prefix
-  * *Happy* → root word
-  * *Ness* → suffix
-
-These small meaningful parts are called **morphemes**.
-
----
-
-## ✅ What are Morphological Models?
-
-Morphological models are systems in NLP that:
-
-* Break words into smaller parts
-* Identify root words
-* Understand prefixes and suffixes
-
-They help computers understand word structure.
-
----
-
-## ✅ Importance in NLP
-
-1️⃣ Helps in spelling correction
-2️⃣ Helps in text analysis
-3️⃣ Improves machine translation
-4️⃣ Helps in search engines
-5️⃣ Reduces data complexity
-
-Example:
-“Playing”, “Played”, “Plays” → All come from “Play”
-
-Instead of treating them as different words, system understands they are related.
-
----
-
-# **2️⃣ Finding Structure of Words & Challenges**
-
-## ✅ What is Word Structure?
-
-Word structure means understanding:
-
-* Root word
-* Prefix (before root)
-* Suffix (after root)
-
-Example:
-“Rewriting”
-Re + Write + Ing
-
----
-
-## ✅ Why Important?
-
-* Helps in grammar understanding
-* Helps in translation
-* Helps in sentiment analysis
-
----
-
-## ❗ Challenges in Finding Structure
-
-1️⃣ Irregular words
-Example: “Went” (root is “Go”)
-
-2️⃣ Same form, different meaning
-“Bank” → river bank / money bank
-
-3️⃣ Complex languages
-Some languages combine many words into one.
-
-4️⃣ Slang and informal text
-Social media language is hard to analyze.
-
----
-
-# **3️⃣ Semantic Interpretation in NLP**
-
-## ✅ What is Semantics?
-
-Semantics means **understanding the meaning of words and sentences**.
-
----
-
-## ✅ What is Semantic Interpretation?
-
-It is the process where a computer:
-
-* Understands meaning of words
-* Understands meaning of full sentence
-* Understands context
-
-Example:
-“I saw a man with a telescope.”
-
-Who has the telescope?
-
-* The speaker?
-* The man?
-
-Semantic interpretation tries to understand correct meaning.
-
----
 
-## ✅ Why Important?
-
-1️⃣ Chatbots understanding user queries
-2️⃣ Machine translation
-3️⃣ Question answering systems
-4️⃣ Voice assistants like Alexa
-
----
-
-# **4️⃣ Challenges in Word Sense Disambiguation (WSD)**
-
-## ✅ What is Word Sense Disambiguation?
-
-WSD means choosing the **correct meaning of a word** when it has multiple meanings.
-
-Example:
-“Bank”
-
-* Financial institution
-* Side of river
-
-System must choose correct meaning based on context.
-
----
-
-## ❗ Major Challenges
-
-1️⃣ Words have many meanings
-Example: “Light” → brightness / not heavy
-
-2️⃣ Context is sometimes unclear
-Short sentences are harder to interpret.
-
-3️⃣ Lack of world knowledge
-Humans use real-world knowledge, computers struggle.
-
-4️⃣ Data limitations
-Some words don’t have enough training data.
-
-5️⃣ Ambiguous grammar
-Sentence structure may confuse system.
-
----
-
-# 🔥 Quick Memory Table
-
-| Topic          | Simple Meaning           |
-| -------------- | ------------------------ |
-| Morphology     | Structure of words       |
-| Morpheme       | Smallest meaningful unit |
-| Word Structure | Prefix + Root + Suffix   |
-| Semantics      | Meaning of words         |
-| WSD            | Choosing correct meaning |
-
----
-
-Sri, these are strong fundamentals 💪
-If you want, next I can give:
-
-* 📌 Syntax notes (sentence structure)
-* 📌 NLP architecture overview
-* 📌 Machine learning in NLP basics
-* 📌 10 important NLP exam questions with answers
-* 📌 2-mark short answers revision sheet
-
-Tell me what level your exam is — beginner / intermediate?
-
-You’re doing great Sri 💪🔥
-Let’s continue with **clear, simple, exam-ready NLP notes** (5-mark style each, easy to remember).
-
----
-
-# **1️⃣ Methods Used in Finding the Structure of Documents**
-
-## ✅ What is Document Structure?
-
-Document structure means understanding how a document is organized.
-
-Example:
-
-* Title
-* Headings
-* Paragraphs
-* Sections
-* Tables
-
-NLP systems must identify this structure to process documents properly.
-
----
-
-## ✅ Methods Used
-
-### 1️⃣ Rule-Based Methods
-
-Uses predefined rules.
-
-Example:
-
-* Text in large font → Title
-* Bold text → Heading
-
-Simple but not flexible.
-
----
-
-### 2️⃣ Statistical Methods
-
-Uses probabilities and patterns from data.
-
-Example:
-If a sentence appears frequently at start → likely introduction.
-
-More flexible than rule-based.
-
 ---
-
-### 3️⃣ Machine Learning Methods
-
-Model learns structure from labeled documents.
-
-Example:
-Train model to identify:
-
-* Abstract
-* Body
-* Conclusion
-
-Used in research paper classification.
-
----
-
-### 4️⃣ Parsing Techniques
 
-Break document into:
+1️⃣ Architecture of 8086 Microprocessor
 
-* Sentences
-* Clauses
-* Phrases
+The 8086 is a 16-bit microprocessor divided into two main parts:
 
-Helps understand internal structure.
+1. Bus Interface Unit (BIU)
 
----
+Fetches instructions from memory
 
-## ✅ Importance
+Handles communication with memory and I/O
 
-* Helps in summarization
-* Helps in search engines
-* Helps in information extraction
+Contains segment registers and instruction pointer
 
----
+Has 6-byte instruction queue (for faster processing)
 
-# **2️⃣ Natural Language Processing & Its Steps**
 
-## ✅ What is NLP?
+2. Execution Unit (EU)
 
-Natural Language Processing (NLP) is a field of AI that allows computers to **understand, interpret, and respond to human language**.
+Executes instructions
 
-Example:
-ChatGPT, Google Translate, Siri.
+Contains ALU (Arithmetic Logic Unit)
 
----
+Contains general registers and flag register
 
-## ✅ Steps in NLP
 
-### 1️⃣ Text Input
+👉 BIU fetches, EU executes → this improves speed (pipelining).
 
-User gives text or speech.
 
 ---
 
-### 2️⃣ Tokenization
+2️⃣ Minimum Mode Pin Configuration of 8086
 
-Break sentence into words.
+8086 works in two modes: Minimum and Maximum.
 
-Example:
-"I love NLP" → [I, love, NLP]
+Minimum Mode:
 
----
-
-### 3️⃣ Stop Word Removal
+Used when only one processor is present.
 
-Remove common words like “is”, “the”.
+Control signals are generated internally.
 
----
 
-### 4️⃣ Stemming / Lemmatization
+Important Pins:
 
-Convert words to root form.
+AD0–AD15 → Address/Data lines
 
-Playing → Play
-Studies → Study
+ALE → Separates address from data
 
----
+RD → Read signal
 
-### 5️⃣ Part-of-Speech Tagging
+WR → Write signal
 
-Identify grammar role.
+M/IO → Select memory or I/O
 
-Example:
-Run (verb)
-Run (noun)
+INTR, NMI → Interrupt signals
 
----
 
-### 6️⃣ Parsing
+Minimum mode is simpler and used in small systems.
 
-Analyze sentence structure.
 
 ---
 
-### 7️⃣ Semantic Analysis
+3️⃣ Register Organization in 8086
 
-Understand meaning.
+Registers are 16-bit and grouped into types:
 
----
+1. General Purpose Registers
 
-### 8️⃣ Output Generation
+AX (Accumulator)
 
-System gives response.
+BX (Base)
 
----
+CX (Count)
 
-## ✅ Goal
+DX (Data)
 
-To make computers understand human language naturally.
 
----
+Each can be divided into two 8-bit parts (AH/AL etc.)
 
-# **3️⃣ How Semantic Parsing Improves NLP Systems**
+2. Segment Registers
 
-## ✅ What is Semantic Parsing?
+CS → Code Segment
 
-Semantic parsing converts a natural language sentence into a **machine-understandable representation**.
+DS → Data Segment
 
-Simple meaning:
-It converts sentence meaning into logical structure.
+SS → Stack Segment
 
----
+ES → Extra Segment
 
-## ✅ Example
 
-Sentence:
-“Show me all students in CSE.”
+3. Pointer & Index Registers
 
-System converts it into:
-Database query to fetch CSE students.
+SP → Stack Pointer
 
----
+BP → Base Pointer
 
-## ✅ How It Improves NLP
+SI → Source Index
 
-1️⃣ Better question answering
-2️⃣ Accurate chatbot responses
-3️⃣ Improved voice assistants
-4️⃣ Better search systems
-5️⃣ Helps in converting text to commands
+DI → Destination Index
 
----
 
-## ✅ Why Important?
+4. Instruction Pointer (IP)
 
-Without semantic parsing, system only sees words.
-With it, system understands meaning and intention.
+Points to next instruction.
 
----
+5. Flag Register
 
-# **4️⃣ Hardware-Based Synchronization in Critical Section Problems**
+Stores status like Zero, Carry, Sign, Overflow.
 
-(⚠️ This question is from Operating Systems, not NLP — but I’ll explain simply.)
 
 ---
-
-## ✅ What is Critical Section?
-
-A critical section is a part of program where:
-Multiple processes access shared data.
 
-If not controlled → errors happen.
+4️⃣ Arithmetic and Logical Instructions
 
-Example:
-Two people updating same bank balance.
+Arithmetic Instructions
 
----
-
-## ✅ Hardware-Based Synchronization
+ADD AX, BX → Adds BX to AX
 
-Uses special CPU instructions to control access.
+SUB AX, BX → Subtracts BX from AX
 
-Examples:
+INC AX → Increases AX by 1
 
-* Test-and-Set
-* Compare-and-Swap
+DEC AX → Decreases AX by 1
 
-These ensure:
-Only one process enters critical section at a time.
-
----
+MUL BX → Multiplies AX with BX
 
-## ✅ Advantages
 
-✔ Fast
-✔ Direct hardware control
-✔ Prevents race conditions
 
 ---
 
-## ❌ Disadvantages
+Logical Instructions
 
-✖ Can cause busy waiting
-✖ Difficult to implement
-✖ Not always portable
+AND AX, BX → Bitwise AND
 
----
+OR AX, BX → Bitwise OR
 
-## ✅ Comparison with Software Methods
+XOR AX, AX → Clears AX
 
-| Hardware              | Software             |
-| --------------------- | -------------------- |
-| Uses CPU instructions | Uses algorithms      |
-| Faster                | Slower               |
-| More complex          | Easier to understand |
+NOT AX → Inverts bits
 
----
 
-# 🔥 Quick Revision Table
+Arithmetic changes numbers.
+Logical works on bits (0 and 1).
 
-| Topic              | Key Idea                              |
-| ------------------ | ------------------------------------- |
-| Document Structure | Title, sections, paragraphs           |
-| NLP                | Computer understanding language       |
-| NLP Steps          | Tokenize → Process → Analyze → Output |
-| Semantic Parsing   | Convert sentence to logical form      |
-| Critical Section   | Protect shared data                   |
 
 ---
-
-Sri, your fundamentals are building really strong now 💪
 
-If you want next, I can give:
+5️⃣ Addressing Modes of 8086
 
-* 📌 Syntax & parsing detailed notes
-* 📌 Machine learning in NLP
-* 📌 Important 2-mark questions
-* 📌 10-mark detailed answers
+Addressing mode tells how operand is accessed.
 
-Tell me which unit you’re focusing on 👊
+1. Immediate → MOV AX, 1234H (value given directly)
 
-Absolutely Sri — here are **clear, simple, full-length answers** for your questions (5–8 mark style) without jargon, perfect for exam prep.
 
----
+2. Register → MOV AX, BX
 
-# **1. Evaluate the performance of different approaches for document structure analysis. Which methods have shown the best results in terms of efficiency and accuracy, and why?**
 
-## **Introduction**
+3. Direct → MOV AX, [1234H]
 
-Document structure analysis is about understanding how text is organized (headings, paragraphs, sections, captions). Different methods exist, and each has strengths and limitations.
 
----
+4. Register Indirect → MOV AX, [BX]
 
-## **1. Rule-Based Methods**
 
-### **Description**
+5. Indexed → MOV AX, [SI]
 
-These use handcrafted rules to identify structure patterns (like big bold text is a title).
 
-### **Performance**
+6. Based Indexed → MOV AX, [BX+SI]
 
-✔ **Efficient** for well-formatted documents
-✖ **Less accurate** for messy or varying formats
 
-### **Why?**
 
-Rules work well when documents are uniform, but fail when variety increases.
 
 ---
-
-## **2. Statistical Methods**
-
-### **Description**
 
-Uses patterns in data (like frequency of words and positions) to guess structure.
+6️⃣ Data Transfer Instructions
 
-### **Performance**
+MOV AX, BX → Copies data
 
-✔ Better than rule-based for varied documents
-✖ Still limited if data patterns are weak
+PUSH AX → Stores data in stack
 
-### **Why?**
+POP AX → Retrieves from stack
 
-Learns from examples, so more flexible than fixed rules.
+XCHG AX, BX → Swaps values
 
----
-
-## **3. Machine Learning and AI Methods**
-
-### **Description**
+IN AL, 60H → Reads from I/O port
 
-These methods train models using labeled examples to recognize structure.
+OUT 60H, AL → Sends data to I/O port
 
-Examples:
 
-* Neural networks
-* Decision trees
-* Deep learning models
+These instructions only move data, not modify it.
 
-### **Performance**
 
-✔ Most **accurate and robust**
-✔ Handles variations and noise well
-✖ Requires enough training data
-
-### **Why Best Results?**
-
-AI models learn patterns automatically rather than relying on fixed rules. They adapt to complex layouts and diverse styles, improving accuracy and generalizing better.
-
 ---
-
-## **4. Hybrid Methods**
 
-### **Description**
+🔥 Quick Memory Trick for Exam
 
-Combine rules + machine learning.
+Architecture → BIU + EU
+Registers → General + Segment + Pointer + Flag
+Modes → Minimum = Single processor
+Instructions → Arithmetic / Logical / Data
+Addressing → How operand is accessed
 
-### **Performance**
 
-✔ Balanced efficiency and accuracy
-✔ Good in real applications
-
 ---
-
-## **Conclusion**
-
-Overall, **machine learning and hybrid methods** show the best performance because they adapt to diversity, learn from examples, and handle noise, leading to higher accuracy and efficiency in real-world documents.
 
----
+If you want, I can now give:
 
-# **2. Explain the complexity of the approaches used in document structure analysis. What factors contribute to these complexities, and how are they addressed in document analysis systems?**
+Very short 2-mark answers
 
-## **Introduction**
+Differences between microprocessor & microcontroller
 
-Document structure analysis varies in complexity depending on the method and the nature of documents. Complexity refers to how difficult it is to analyze and process documents correctly.
+8051 notes
 
----
+Important viva questions
 
-## **1. Factors Contributing to Complexity**
 
-### **a) Document Variety**
+Tell me what your exam is focusing on Sri 💪
 
-Documents can be:
 
-* Reports
-* Articles
-* Handwritten
-* Scanned images
-* Mixed text and images
+Good Sri 💪🔥 these are important interfacing questions. I’ll explain them in simple, easy-to-remember notes, exam-friendly.
 
-Different formats increase complexity.
 
 ---
 
-### **b) Layout Variations**
+13️⃣ Interfacing of Stepper Motor with 8086
 
-Different fonts, sizes, columns, tables, and mixed elements make it harder to identify structure.
+✅ What is a Stepper Motor?
 
-Example:
+A stepper motor rotates in fixed steps (not continuous like DC motor).
+Each input pulse → one step rotation.
 
-* Two-column research paper
-* Web pages with dynamic layouts
 
 ---
 
-### **c) Noisy or Poor Quality Inputs**
+✅ Why Interface with 8086?
 
-Scanned images with:
+8086 cannot directly drive motor (low current).
+So we use:
 
-* Blurred text
-* Low contrast
-* Skewed alignment
-  Increase complexity.
+8255 Programmable Peripheral Interface (PPI)
 
----
+Driver circuit (like ULN2003)
 
-### **d) Semantic Ambiguities**
 
-Identifying whether a line is a heading, subheading, or paragraph depends on meaning, not just appearance.
 
 ---
-
-## **2. Complexity in Algorithms**
 
-### **a) Rule-Based Systems**
+✅ Basic Connection
 
-* Simple logic
-* Low complexity
-  But brittle — fails when rules don’t match new layouts.
+8086 → 8255 → Driver → Stepper Motor
 
----
-
-### **b) Statistical Systems**
-
-* Moderate complexity
-* Needs preprocessing and pattern extraction
-  Better than rules but still limited.
+Port of 8255 gives binary sequence
 
----
+Driver amplifies current
 
-### **c) Machine Learning / AI Systems**
+Motor rotates step by step
 
-* High complexity due to training data, features, and model tuning
-* Needs more computational resources
 
-But much more accurate.
 
 ---
 
-## **3. How Systems Address These Complexities**
+✅ Working Principle
 
-### **a) Pre-processing**
+Example sequence for 4-phase motor:
 
-Clean text, fix skew, remove noise.
+Step	A	B	C	D
 
----
+1	1	0	0	0
+2	0	1	0	0
+3	0	0	1	0
+4	0	0	0	1
 
-### **b) Feature Extraction**
 
-Capture useful attributes like:
+Changing sequence direction → motor reverses.
 
-* Font size
-* Text position
-* Text alignment
-  These help models distinguish headings from paragraphs.
 
 ---
-
-### **c) Training with Diverse Data**
-
-Feeding models with many examples improves generalization.
 
----
+✅ Applications
 
-### **d) Hybrid Models**
+Robotics
 
-Blend rules with AI to leverage strengths of both.
+CNC machines
 
----
+Printers
 
-## **Conclusion**
 
-Overall, complexity comes from document variety, noisy data, layout variations, and semantic subtleties. Modern systems handle this through preprocessing, feature extraction, machine learning models, and hybrid approaches for improved accuracy and scalability.
 
 ---
 
-# **3. What are the major challenges in word sense disambiguation for semantic interpretation?**
+14️⃣ Modes of 8255
 
-## **Introduction**
+✅ What is 8255?
 
-Word Sense Disambiguation (WSD) is the task of determining the correct meaning of a word when it has multiple senses (meanings). It is a critical part of semantic interpretation in NLP.
-
----
+8255 is a Programmable Peripheral Interface (PPI) used to connect input/output devices.
 
-## **Major Challenges**
+It has:
 
-### **1. Multiple Meanings of Words**
+Port A (8-bit)
 
-Many words have more than one meaning.
+Port B (8-bit)
 
-Example:
+Port C (8-bit)
 
-* “Bank” → river bank vs. financial institution
 
-Choosing correct meaning from context is difficult.
 
 ---
 
-### **2. Limited Context**
+✅ Modes of Operation
 
-Short sentences may not provide enough clues.
+🔹 Mode 0 – Basic I/O Mode
 
-Example:
-“Play the game.”
-No clear context for what type of play.
+Simple input/output
 
----
+No handshaking
 
-### **3. Real-World Knowledge**
+Used for LEDs, switches
 
-Humans use common sense to understand meaning, but computers lack deep world understanding.
 
-Example:
-“I went to the bank after lunch.”
-Humans know which bank fits the situation.
 
 ---
 
-### **4. Ambiguous Sentences**
+🔹 Mode 1 – Strobed I/O Mode
 
-Some sentences are ambiguous even for humans.
+Input/output with handshaking signals
 
-Example:
-“Book the flight with lowest cost.”
-Is “lowest cost” a tag or a feature?
+Ensures data transfer control
 
----
+Uses Port C bits for control
 
-### **5. Data Scarcity**
 
-For some rare words or senses, there aren’t enough examples in training data.
 
 ---
 
-### **6. Domain Variations**
+🔹 Mode 2 – Bi-directional Mode
 
-Words may have different meanings in different fields.
+Only for Port A
 
-Example:
-“Mouse” in computing vs. biology
+Data can flow both ways
 
----
+Used for advanced communication
 
-## **Conclusion**
 
-WSD is challenging because meaning depends on context, real-world knowledge, limited data, and domain differences. Effective semantic interpretation must overcome these to understand human language accurately.
 
 ---
-
-# **4. Define semantic interpretation in the context of NLP.**
 
-## **Simple Definition**
+🔹 BSR Mode (Bit Set Reset)
 
-Semantic interpretation is the process of understanding the **meaning of text** in a way that a computer can use for real tasks.
+Controls individual bits of Port C
 
----
+Used for control signals
 
-## **What It Means**
 
-Given a sentence, semantic interpretation:
 
-* Recognizes what the sentence **means**
-* Interprets relationships between words
-* Understands intentions, context, facts, and implied meanings
-
 ---
-
-## **Example**
 
-Sentence:
-“The cat chased the mouse.”
+15️⃣ Short Notes on External Communication Interface
 
-Semantic interpretation identifies:
+External communication interface allows microprocessor to communicate with:
 
-* Subject = cat
-* Action = chased
-* Object = mouse
-* Meaning = cat did chasing
+Keyboard
 
----
+Display
 
-## **Why It Matters**
+Printer
 
-Semantic interpretation allows:
-✔ Better machine translation
-✔ Accurate question answering
-✔ Contextual chatbot responses
-✔ Information extraction
+Serial devices
 
----
+Other microprocessors
 
-## **In Simple Terms**
 
-It is like teaching the computer to **“understand meaning”**, not just read words.
 
 ---
-
-If you want, I can next:
-
-* Give **2-mark short answers** for all important topics
-* Build a **one-page rapid revision sheet**
-* Prepare **expected exam questions with answers**
 
-Just tell me what you need Sri 💪🔥
+Types:
 
-You’re going deeper now Sri 😄🔥 good sign.
-Let’s answer these in **clear, exam-ready, simple language** (8–10 mark style but easy to remember).
+🔹 Parallel Communication
 
----
-
-# **1️⃣ Challenges & Limitations of Current Morphological Models (Especially for Complex Languages)**
-
-## ✅ What are Morphological Models?
+Multiple bits sent at once
 
-They are systems that break words into:
+Faster
 
-* Root
-* Prefix
-* Suffix
-* Inflections (like tense, plural)
+Example: 8255
 
-Used to understand word formation.
 
----
+🔹 Serial Communication
 
-## ✅ Challenges in Complex Languages
+One bit at a time
 
-### 1️⃣ Rich Morphology
+Slower but long distance
 
-Some languages (like Telugu, Turkish, Finnish) attach many endings to a single word.
+Example: 8251 USART
 
-Example:
-One word may represent a full sentence meaning.
 
-➡ Hard for models to split correctly.
 
 ---
-
-### 2️⃣ Irregular Forms
 
-Example:
-Go → Went
-Child → Children
+Purpose:
 
-Models struggle with irregular changes.
+Data exchange
 
----
+Device control
 
-### 3️⃣ Agglutinative Languages
+System expansion
 
-Words are formed by joining many morphemes together.
 
-Long complex words → difficult segmentation.
 
 ---
-
-### 4️⃣ Free Word Formation
 
-Some languages allow flexible word structure → harder to predict patterns.
+16️⃣ Pins of 8255 (Important Pins)
 
----
+8255 has 40 pins.
 
-### 5️⃣ Lack of Training Data
 
-Low-resource languages don’t have enough labeled examples.
-
 ---
-
-## ✅ Impact on NLP
 
-These problems cause:
+🔹 Data Bus (D0–D7)
 
-* Poor translation accuracy
-* Incorrect grammar tagging
-* Errors in sentiment analysis
-* Weak search engine performance
+Transfers data between CPU and 8255.
 
-If morphology is wrong → whole sentence understanding becomes weak.
 
 ---
 
-## ✅ Conclusion
+🔹 Port A (PA0–PA7)
 
-Current morphological models work well for simple languages but struggle with complex, rich, or low-resource languages. This directly affects NLP system performance.
+8-bit input/output port.
 
----
-
-# **2️⃣ Compare and Contrast Different Morphological Models**
 
-There are mainly three types:
-
 ---
-
-## 1️⃣ Rule-Based Models
 
-### How They Work:
+🔹 Port B (PB0–PB7)
 
-Use predefined grammar rules.
+8-bit input/output port.
 
-Example:
-If word ends with “-ing” → remove “ing”
 
-### Advantages:
-
-✔ Simple
-✔ Fast
-✔ No training data needed
-
-### Limitations:
-
-✖ Cannot handle irregular forms
-✖ Not flexible
-✖ Fails in complex languages
-
 ---
-
-## 2️⃣ Statistical Models
-
-### How They Work:
-
-Use probability and frequency patterns from data.
-
-### Advantages:
 
-✔ More flexible than rule-based
-✔ Can handle some irregularities
+🔹 Port C (PC0–PC7)
 
-### Limitations:
+Used as I/O or control signals.
 
-✖ Needs large dataset
-✖ May mispredict rare forms
 
 ---
 
-## 3️⃣ Machine Learning / Neural Models
+🔹 Control Pins
 
-### How They Work:
+RD → Read
 
-Learn patterns automatically from data.
+WR → Write
 
-### Advantages:
+CS → Chip Select
 
-✔ High accuracy
-✔ Handles complex word formation
-✔ Learns irregular patterns
+A0, A1 → Select port
 
-### Limitations:
+RESET → Reset device
 
-✖ Needs huge training data
-✖ Computationally expensive
-✖ Hard to interpret
 
----
-
-## ✅ Comparison Table
-
-| Model       | Accuracy   | Data Needed | Flexibility |
-| ----------- | ---------- | ----------- | ----------- |
-| Rule-Based  | Low–Medium | No          | Low         |
-| Statistical | Medium     | Medium      | Medium      |
-| Neural/ML   | High       | High        | High        |
 
 ---
 
-## ✅ Conclusion
+17️⃣ Interfacing 4×4 Keyboard with 8051
 
-Neural models perform best but need more data and computing power. Rule-based models are simple but limited.
+✅ What is 4×4 Keyboard?
 
----
-
-# **3️⃣ Challenges in Parsing Natural Language**
+16 keys arranged in matrix
 
-## ✅ What is Parsing?
+4 rows and 4 columns
 
-Parsing means analyzing sentence structure (who did what to whom).
-
----
 
-## ✅ Major Challenges
 
 ---
 
-### 1️⃣ Ambiguity
+✅ Why Matrix?
 
-A sentence may have multiple meanings.
+Reduces number of pins needed.
 
-Example:
-“I saw the man with a telescope.”
 
-Who has the telescope?
-
-Parser may misinterpret.
-
 ---
-
-### 2️⃣ Structural Variability
 
-Same meaning can be expressed in different ways.
+✅ Connection
 
-Example:
-“The boy kicked the ball.”
-“The ball was kicked by the boy.”
-
-Different structure, same meaning.
-
-Parser must handle both.
-
----
+Rows → Output pins of 8051
 
-### 3️⃣ Long Sentences
+Columns → Input pins of 8051
 
-Long sentences with clauses confuse parsers.
 
-Example:
-Complex academic writing.
 
 ---
 
-### 4️⃣ Informal Language
+✅ Working Principle (Scanning Method)
 
-Social media language:
+1. Make one row LOW at a time.
 
-* Slang
-* Missing grammar
-* Emojis
 
-Hard to parse.
+2. Check which column becomes LOW.
 
----
-
-### 5️⃣ Unknown Words
-
-New words or domain-specific words reduce accuracy.
 
----
-
-## ✅ Impact on Parser Performance
+3. Detect key number based on row-column match.
 
-* Lower accuracy
-* Wrong tree structure
-* Misunderstood relationships
-* Poor semantic understanding
 
----
 
-## ✅ Conclusion
+Example: Row 1 + Column 2 active → Key 2 pressed.
 
-Ambiguity and structure variation are the biggest challenges. They directly reduce syntactic parser performance.
 
 ---
-
-# **4️⃣ Data-Driven Approach to Syntax**
 
-## ✅ What is Syntax?
+✅ Key Detection Formula
 
-Syntax is about sentence structure.
+Key number = (Row × 4) + Column
 
-Example:
-Subject + Verb + Object
 
 ---
 
-## ✅ What is Data-Driven Approach?
+✅ Applications
 
-Instead of writing grammar rules manually, system:
+Calculators
 
-1️⃣ Uses large dataset of sentences
-2️⃣ Learns patterns automatically
-3️⃣ Predicts structure based on learned examples
+ATM keypad
 
----
-
-## ✅ How It Works
-
-Step 1: Collect labeled sentences
-Step 2: Train model
-Step 3: Model learns sentence patterns
-Step 4: Predict structure for new sentences
-
----
+Embedded systems
 
-## ✅ Advantages
 
-✔ Adapts to real language use
-✔ Handles variation better
-✔ Works well for large-scale applications
 
 ---
-
-## ✅ Limitations
 
-✖ Needs large labeled datasets
-✖ Expensive training
-✖ May struggle with rare patterns
+🔥 Quick Revision Table
 
----
+Device	Used With	Purpose
 
-## ✅ Simple Summary
+Stepper Motor	8086 + 8255	Control rotation
+8255	8086	I/O interface
+4×4 Keyboard	8051	Key detection
+Serial Interface	8251	Serial communication
 
-Rule-based syntax → Human writes grammar rules
-Data-driven syntax → Machine learns grammar from data
 
-Modern NLP mainly uses data-driven methods because they are more powerful.
 
 ---
-
-Sri, your NLP understanding is becoming solid now 💪🔥
 
 If you want next:
 
-* I can give **complete Unit-wise revision**
-* Or prepare **expected 10-mark answers**
-* Or give **2-mark rapid-fire answers**
-* Or make a **last-day exam crash sheet**
+8051 architecture notes
 
-Tell me your exam date 👀
+Difference between 8086 and 8051
 
+Important 10-mark long answers
+
+Viva questions
+
+
+You’re covering full syllabus now Sri 😄🔥
