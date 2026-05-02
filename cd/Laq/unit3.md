@@ -1,352 +1,869 @@
-Below are **full-length, clear, easy-to-understand 10-mark answers** for **Unit-3 (Exception Handling in UiPath)**.
-No jargon, no unnecessary complexity — perfect for exam writing.
+Here are **simple, structured, beginner-friendly 10-mark answers** for Unit–III.
 
 ---
 
-# **1. Discuss exception handling in UiPath using Try–Catch and Rethrow activities.**
-
-*(10 Marks – Simple, comprehensive)*
+# **27(a) Explain the PAXOS Algorithm in detail (6M)**
 
 ## **Introduction**
 
-Exception handling ensures that a UiPath workflow does not crash when something unexpected happens (like missing files, slow applications, or wrong inputs). UiPath provides **Try–Catch** and **Rethrow** activities to manage such situations smoothly.
+PAXOS is a **distributed consensus algorithm** used to ensure that multiple nodes agree on a single value, even if some nodes fail.
 
 ---
 
-## **1. Try–Catch Activity**
+## **Basic Idea**
 
-The Try–Catch activity works like a safety guard.
-
-### **Try Block**
-
-* Contains the main actions that may raise errors.
-* Example: Reading Excel, clicking a button, downloading a file.
-
-### **Catch Block**
-
-* Executes only when an error occurs in the Try section.
-* You can catch different types of errors such as:
-
-  * FileNotFoundException
-  * NullReferenceException
-  * TimeoutException
-  * ApplicationException
-
-### **Example:**
-
-Try → Read Excel
-If Excel file missing → Catch → Show message “File not found”
+* Many nodes (computers) must agree on one decision
+* Works even if some nodes are unreliable
 
 ---
 
-## **2. Using Multiple Catch Blocks**
+## **Roles in PAXOS**
 
-You can add multiple Catches to handle each error differently.
-Example:
+### **1️⃣ Proposer**
 
-* If Excel not found → create a new file
-* If selector fails → retry the action
-* If timeout → notify the user
+* Suggests a value
 
-This makes workflows more stable.
+### **2️⃣ Acceptor**
+
+* Accepts or rejects the proposal
+
+### **3️⃣ Learner**
+
+* Learns the final agreed value
 
 ---
 
-## **3. Rethrow Activity**
+## **Working of PAXOS (Steps)**
 
-The Rethrow activity is used when you want to catch an error, do some local handling, **and still pass the error up** for final handling.
+### **Step 1: Prepare Phase**
 
-### **Why use Rethrow?**
+* Proposer sends a proposal request with a number
 
-* When partial handling is done but the workflow should still stop.
-* Useful in layered workflows like:
+---
 
-  * Sub-workflows
-  * Reusable components
-  * Nested Try–Catch blocks
+### **Step 2: Promise Phase**
 
-### **Example:**
+* Acceptors promise not to accept smaller proposals
 
-Catch logs the error → Rethrow sends it to parent workflow for final action.
+---
+
+### **Step 3: Accept Request**
+
+* Proposer sends value to acceptors
+
+---
+
+### **Step 4: Accepted**
+
+* Acceptors accept the value
+
+---
+
+### **Step 5: Learning**
+
+* Learners receive final agreed value
+
+---
+
+## **Key Features**
+
+* Fault tolerant
+* Works in distributed systems
+* Ensures consistency
 
 ---
 
 ## **Conclusion**
 
-Try–Catch helps in **catching and controlling errors**, while Rethrow helps in **passing the error upward after a partial fix**. Together, they make UiPath automations reliable, stable, and production-ready.
+PAXOS ensures reliable agreement among nodes, even in the presence of failures.
 
 ---
 
-# **2. Explain how to implement nested decision logic using Switch and Flowchart.**
-
-*(10 Marks – Easy & structured)*
+# **27(b) Explain CAP Theorem in Distributed Systems (4M)**
 
 ## **Introduction**
 
-Complex automations often require multi-level decisions. UiPath supports nested logic using **Switch** and **Flowchart**, which allow the bot to choose actions based on different conditions.
+CAP theorem explains the limitations of distributed systems.
 
 ---
 
-## **1. Nested Logic Using Switch Activity**
+## **Three Properties**
 
-### **What is Switch?**
+### **1️⃣ Consistency (C)**
 
-A Switch allows multiple branches based on a value (like text or numbers).
-
-### **How to use nested Switch:**
-
-1. Create a Switch for the first-level condition
-2. Inside one of the cases, add another Switch for second-level condition
-
-### **Example:**
-
-Email Processing System
-
-* Switch 1: Email type
-
-  * Case “Billing” → Switch 2: Payment status
-
-    * Pending → Send reminder
-    * Completed → Close ticket
-  * Case “Technical” → Send troubleshooting steps
-  * Case “General” → Auto reply
-
-This makes multi-layered decisions easy to manage.
+* All nodes see the same data
 
 ---
 
-## **2. Nested Logic Using Flowchart**
+### **2️⃣ Availability (A)**
 
-### **Why Flowchart?**
+* System always responds
 
-Best for visual representation and branching logic.
+---
 
-### **How it works:**
+### **3️⃣ Partition Tolerance (P)**
 
-1. Add **Flow Decision** nodes
-2. Each decision leads to another decision or action
-3. Complex logic becomes easy to visualize
+* System works despite network failures
 
-### **Example:**
+---
 
-Loan approval system:
+## **Rule**
 
-* Flow Decision 1: Is customer eligible?
+* A system can provide only **two out of three** properties at a time
 
-  * Yes → Flow Decision 2: Is credit score high?
+---
 
-    * Yes → Approve loan
-    * No → Manual review
-  * No → Reject loan
+## **Examples**
 
-### **Benefits:**
-
-* Easy debugging
-* Clear process paths
-* Suitable for real-world workflows with many conditions
+* CP system: consistency + partition tolerance
+* AP system: availability + partition tolerance
 
 ---
 
 ## **Conclusion**
 
-Switch is best for value-based branching, while Flowchart is best for multi-path, visual decision trees. Both support nesting to handle complicated decision-making smoothly.
+CAP theorem helps design trade-offs in distributed systems.
 
 ---
 
-# **3. Create a workflow that handles file-not-found exception gracefully.**
-
-*(10 Marks – Practical and simple)*
+# **28(a) Explain Hyperledger Fabric Architecture and its Components (6M)**
 
 ## **Introduction**
 
-File-handling errors are extremely common in automation. A bot should not crash if a file is missing. Instead, it should handle the situation smoothly.
+Hyperledger Fabric is a **permissioned blockchain platform** used by enterprises for secure and controlled applications.
 
 ---
 
-## **Step-by-Step Workflow Design**
+## **Main Components**
 
-### **1. Use a Try–Catch Activity**
+### **1️⃣ Peers**
 
-Place the file-reading action in the Try block.
-
-### **2. Inside Try Block**
-
-* Add an activity such as “Read Text File” or “Read Range”.
-* Input: `C:\Data\Report.xlsx`
-
-### **3. Catch Block (FileNotFoundException)**
-
-Inside Catch:
-
-* Display a message: “File not found. Creating a new file…”
-* Use “Create File” or “Write Text File” to generate a new file.
-* Log the error in a log file.
-
-### **4. Add Finally Block (optional)**
-
-Perform cleanup tasks like closing applications.
+* Nodes that store ledger and run smart contracts
 
 ---
 
-## **Output Behavior**
+### **2️⃣ Orderer (Ordering Service)**
 
-* If file exists → bot reads it normally.
-* If file missing → bot creates file and continues without crashing.
-
----
-
-## **Conclusion**
-
-This workflow shows how UiPath manages missing files gracefully using Try–Catch, improving stability and user experience.
+* Orders transactions
+* Ensures correct sequence
 
 ---
 
-# **4. Describe a real-world scenario where exception handling is critical in automation.**
+### **3️⃣ Channels**
 
-*(10 Marks – Realistic, easy-to-write)*
-
-## **Scenario: Invoice Processing Automation**
-
-A company uses RPA to extract invoice data from incoming emails and enter it into an ERP system.
+* Private communication between selected members
 
 ---
 
-## **Why Exception Handling Is Critical**
+### **4️⃣ Chaincode**
 
-### **1. Missing Attachment (File Not Found)**
-
-User forgets to attach an invoice.
-Bot must:
-
-* Catch the error
-* Send alert to user
-* Move email to “Error” folder
+* Smart contracts in Fabric
 
 ---
 
-### **2. Wrong File Format**
+### **5️⃣ Ledger**
 
-User attaches JPG instead of PDF/Excel.
-Bot must:
+* Stores transaction records
+* Has two parts:
 
-* Identify format issue
-* Log error
-* Notify accounting team
-
----
-
-### **3. ERP Application Not Responding**
-
-ERP might freeze or have slow response.
-Bot must:
-
-* Retry after short delay
-* If still failing → escalate to IT
+  * Blockchain (history)
+  * World state (current data)
 
 ---
 
-### **4. Data Extraction Errors**
+### **6️⃣ Membership Service Provider (MSP)**
 
-If invoice has missing fields, bot should:
-
-* Catch NullReferenceException
-* Store incomplete data in “Exception Queue”
-* Send for manual review
+* Manages identities and permissions
 
 ---
 
-### **5. Network Issues**
+## **Working Flow (Simple)**
 
-If internet disconnects while uploading invoice:
-
-* Bot catches timeout
-* Retries
-* Logs event
+1. Client sends transaction
+2. Peers validate
+3. Orderer orders transactions
+4. Block created and added to ledger
 
 ---
 
 ## **Conclusion**
 
-In real business processes, unexpected events are common. Exception handling prevents workflow failure, maintains accuracy, ensures smooth continuation, and keeps the organization’s operations stable.
+Hyperledger Fabric provides a secure, scalable, and enterprise-friendly blockchain system.
 
 ---
 
-# **5. Discuss the significance of logging and debugging during exception handling.**
-
-*(10 Marks – Very easy & exam-friendly)*
+# **28(b) Explain the workflow of ICO model (4M)**
 
 ## **Introduction**
 
-Logging and debugging are essential tools that help identify, understand, and solve issues in UiPath workflows. They make exception handling more effective and reliable.
+ICO (Initial Coin Offering) is a method to raise funds using cryptocurrency.
 
 ---
 
-# **1. Significance of Logging**
+## **Workflow of ICO**
 
-### **1. Helps Track Errors**
+### **Step 1: Project Idea**
 
-Logs show what the bot was doing when the error occurred.
-
-### **2. Improves Troubleshooting**
-
-Developers can review logs to find:
-
-* Faulty activity
-* Incorrect selector
-* Missing file
-
-### **3. Helps in Production Monitoring**
-
-Orchestrator logs allow support teams to monitor bots in real time.
-
-### **4. Creates Audit Trails**
-
-Logs record every important action, useful for compliance and auditing.
+* Company creates a blockchain project
 
 ---
 
-# **2. Significance of Debugging**
+### **Step 2: Whitepaper Release**
 
-### **1. Identify Root Cause Before Deployment**
-
-Debug mode highlights the activity where the error occurs.
-
-### **2. Step-by-Step Execution**
-
-Features like:
-
-* Step Into
-* Step Out
-* Breakpoints
-
-help test workflow flow carefully.
-
-### **3. Helps Validate Data**
-
-Locals panel shows the value of every variable during execution.
-
-### **4. Avoids Runtime Failures**
-
-Debugging catches small mistakes early, preventing production crashes.
+* Explains project details and goals
 
 ---
 
-# **3. Logging + Debugging During Exception Handling**
+### **Step 3: Token Creation**
 
-### **Why both are important together:**
+* Digital tokens are created
 
-* Logging records what happened
-* Debugging shows why it happened
+---
 
-Example:
-If a "Click" failed, logs show the failure, debugging shows that selector value was wrong.
+### **Step 4: Fundraising**
+
+* Investors buy tokens using cryptocurrency
+
+---
+
+### **Step 5: Token Distribution**
+
+* Tokens given to investors
+
+---
+
+### **Step 6: Project Development**
+
+* Funds used to build the project
 
 ---
 
 ## **Conclusion**
 
-Logging and debugging are essential parts of exception handling. They help diagnose problems, improve workflow quality, and ensure stable automation in production environments.
+ICO helps startups raise funds quickly but involves risks, so investors must be careful.
 
 ---
 
-If you want, I can continue with **Unit-4 or Unit-5** 10-mark answers.
+Here are **simple, structured, beginner-friendly 10-mark answers** for Unit–III.
+
+---
+
+# **29(a) Explain RAFT Consensus Algorithm (6M)**
+
+## **Introduction**
+
+RAFT is a **distributed consensus algorithm** designed to be easier to understand than Paxos. It ensures all nodes agree on the same data.
+
+---
+
+## **Basic Idea**
+
+* One node acts as **leader**
+* Others act as **followers**
+* Leader manages all updates
+
+---
+
+## **States in RAFT**
+
+### **1️⃣ Leader**
+
+* Handles client requests
+* Sends updates to followers
+
+---
+
+### **2️⃣ Follower**
+
+* Receives updates from leader
+* Does not initiate actions
+
+---
+
+### **3️⃣ Candidate**
+
+* Becomes leader if election starts
+
+---
+
+## **Working of RAFT**
+
+### **Step 1: Leader Election**
+
+* Followers wait for leader signal
+* If no signal → become candidate
+* Voting happens → leader selected
+
+---
+
+### **Step 2: Log Replication**
+
+* Leader receives client request
+* Sends data to followers
+* Followers store the data
+
+---
+
+### **Step 3: Commit**
+
+* Once majority agrees
+* Data is committed
+
+---
+
+## **Key Features**
+
+* Simple and easy to implement
+* Fault tolerant
+* Ensures consistency
+
+---
+
+## **Conclusion**
+
+RAFT simplifies consensus using leader-based control, making it reliable and easier to understand.
+
+---
+
+# **29(b) Explain State Machine Replication (4M)**
+
+## **Introduction**
+
+State Machine Replication ensures multiple systems behave the same way.
+
+---
+
+## **Concept**
+
+* Each node runs the same program
+* Same inputs → same outputs
+
+---
+
+## **Working**
+
+1. Client sends request
+2. Request is ordered (using consensus)
+3. All nodes execute it in same order
+4. All nodes reach same state
+
+---
+
+## **Benefits**
+
+* High reliability
+* Fault tolerance
+* Consistent data
+
+---
+
+## **Conclusion**
+
+It ensures all nodes stay synchronized and consistent in distributed systems.
+
+---
+
+# **30(a) Explain Hyperledger Fabric Transaction Phases (6M)**
+
+## **Introduction**
+
+Transactions in Hyperledger Fabric follow a structured process to ensure correctness and security.
+
+---
+
+## **Transaction Phases**
+
+### **1️⃣ Proposal Phase**
+
+* Client sends transaction proposal to peers
+
+---
+
+### **2️⃣ Endorsement Phase**
+
+* Peers simulate transaction
+* Provide endorsement (approval)
+
+---
+
+### **3️⃣ Ordering Phase**
+
+* Orderer collects transactions
+* Arranges them in order
+
+---
+
+### **4️⃣ Validation Phase**
+
+* Peers check:
+
+  * Endorsement policy
+  * Transaction correctness
+
+---
+
+### **5️⃣ Commit Phase**
+
+* Valid transactions added to ledger
+
+---
+
+## **Conclusion**
+
+Fabric ensures secure and consistent transactions through multiple validation steps.
+
+---
+
+# **30(b) Explain ICO vs IPO (4M)**
+
+## **Introduction**
+
+ICO and IPO are methods of raising funds but differ in approach and regulation.
+
+---
+
+## **Comparison**
+
+| Feature         | ICO (Initial Coin Offering) | IPO (Initial Public Offering) |
+| --------------- | --------------------------- | ----------------------------- |
+| Type            | Cryptocurrency tokens       | Company shares                |
+| Regulation      | Less regulated              | Highly regulated              |
+| Platform        | Blockchain                  | Stock market                  |
+| Risk            | High                        | Lower                         |
+| Investor rights | Limited                     | Shareholder rights            |
+
+---
+
+## **Conclusion**
+
+ICO is faster and less regulated but risky, while IPO is safer and more controlled.
+
+---
+
+Here are **simple, structured, beginner-friendly 10-mark answers** for Unit–III.
+
+---
+
+# **31(a) Explain Practical Byzantine Fault Tolerance (pBFT) (6M)**
+
+## **Introduction**
+
+pBFT is a consensus algorithm used in distributed systems to handle faulty or malicious nodes and still reach agreement.
+
+---
+
+## **Basic Idea**
+
+* Some nodes may behave incorrectly (Byzantine faults)
+* System should still work correctly
+
+---
+
+## **Key Roles**
+
+* **Primary (Leader):** Coordinates process
+* **Replicas (Nodes):** Verify and agree
+
+---
+
+## **Working of pBFT**
+
+### **Step 1: Request**
+
+* Client sends request to primary node
+
+---
+
+### **Step 2: Pre-Prepare**
+
+* Primary broadcasts request to all nodes
+
+---
+
+### **Step 3: Prepare**
+
+* Nodes verify and share agreement
+
+---
+
+### **Step 4: Commit**
+
+* Nodes confirm the transaction
+
+---
+
+### **Step 5: Reply**
+
+* Final response sent to client
+
+---
+
+## **Key Features**
+
+* Tolerates faulty nodes
+* Fast compared to PoW
+* Used in permissioned blockchains
+
+---
+
+## **Conclusion**
+
+pBFT ensures reliable consensus even when some nodes act maliciously.
+
+---
+
+# **31(b) Explain three requirements of consensus algorithm (4M)**
+
+## **Introduction**
+
+Consensus algorithms ensure all nodes agree on the same data.
+
+---
+
+## **Three Requirements**
+
+### **1️⃣ Agreement**
+
+* All honest nodes must agree on same value
+
+---
+
+### **2️⃣ Validity**
+
+* Agreed value must be correct
+
+---
+
+### **3️⃣ Termination**
+
+* All nodes must reach decision in finite time
+
+---
+
+## **Conclusion**
+
+These requirements ensure consistency, correctness, and completion in distributed systems.
+
+---
+
+# **32(a) Explain Hyperledger Fabric Components (6M)**
+
+## **Introduction**
+
+Hyperledger Fabric is a permissioned blockchain with multiple components working together.
+
+---
+
+## **Main Components**
+
+### **1️⃣ Peer Nodes**
+
+* Maintain ledger
+* Execute smart contracts
+
+---
+
+### **2️⃣ Ordering Service**
+
+* Orders transactions
+* Creates blocks
+
+---
+
+### **3️⃣ Channels**
+
+* Private communication between members
+
+---
+
+### **4️⃣ Chaincode**
+
+* Smart contracts in Fabric
+
+---
+
+### **5️⃣ Ledger**
+
+* Stores transactions and state
+
+---
+
+### **6️⃣ Membership Service Provider (MSP)**
+
+* Manages identities and access
+
+---
+
+## **Conclusion**
+
+Each component plays a role in ensuring security, privacy, and proper functioning.
+
+---
+
+# **32(b) Explain ICO Token Economics (4M)**
+
+## **Introduction**
+
+Token economics (tokenomics) refers to how tokens are created, distributed, and used in an ICO.
+
+---
+
+## **Key Aspects**
+
+### **1️⃣ Token Supply**
+
+* Total number of tokens created
+
+---
+
+### **2️⃣ Distribution**
+
+* Tokens allocated to investors, team, and others
+
+---
+
+### **3️⃣ Pricing**
+
+* Initial price of token during ICO
+
+---
+
+### **4️⃣ Utility**
+
+* Purpose of token in project
+
+---
+
+### **5️⃣ Incentives**
+
+* Rewards for users and investors
+
+---
+
+## **Conclusion**
+
+Strong token economics ensures project sustainability and investor trust.
+
+---
+
+Here are **simple, structured, beginner-friendly 10-mark answers** for Unit–III.
+
+---
+
+# **33(a) Explain Paxos Duelling Proposers Problem (6M)**
+
+## **Introduction**
+
+In Paxos, multiple proposers may try to suggest values at the same time. This can lead to a conflict called the **duelling proposers problem**.
+
+---
+
+## **What is the Problem?**
+
+* Two or more proposers send proposals simultaneously
+* Each tries to get its value accepted
+* Causes repeated conflicts and delays
+
+---
+
+## **How the Problem Occurs**
+
+1. Proposer A sends proposal
+2. Proposer B sends another proposal at same time
+3. Acceptors receive mixed messages
+4. No single proposal gets majority
+5. Process keeps repeating
+
+---
+
+## **Effects**
+
+* Slower consensus
+* Increased message overhead
+* System inefficiency
+
+---
+
+## **Solution**
+
+### **1️⃣ Use Higher Proposal Numbers**
+
+* New proposals must have higher numbers
+
+---
+
+### **2️⃣ Leader Selection**
+
+* Choose one proposer as leader
+* Only leader sends proposals
+
+---
+
+### **3️⃣ Backoff Mechanism**
+
+* Proposers wait before retrying
+
+---
+
+## **Conclusion**
+
+The duelling proposers problem affects performance, but can be solved using leader-based control and proper coordination.
+
+---
+
+# **33(b) Explain RAFT Leader Election Process (4M)**
+
+## **Introduction**
+
+RAFT uses a leader-based system where one node manages the network. Leader election ensures a new leader is chosen if the current one fails.
+
+---
+
+## **Leader Election Steps**
+
+### **1️⃣ Timeout**
+
+* Followers wait for leader signal
+* If no signal → election starts
+
+---
+
+### **2️⃣ Candidate State**
+
+* Node becomes candidate
+* Requests votes from others
+
+---
+
+### **3️⃣ Voting**
+
+* Each node votes for one candidate
+
+---
+
+### **4️⃣ Leader Selection**
+
+* Candidate with majority votes becomes leader
+
+---
+
+### **5️⃣ Heartbeat**
+
+* Leader sends regular signals to followers
+
+---
+
+## **Conclusion**
+
+RAFT ensures smooth functioning by quickly electing a leader when needed.
+
+---
+
+# **34(a) Explain Hyperledger Fabric Channels (6M)**
+
+## **Introduction**
+
+Channels in Hyperledger Fabric provide **private communication** between specific participants.
+
+---
+
+## **What are Channels?**
+
+* Logical sub-networks
+* Allow only selected members to access data
+
+---
+
+## **Features**
+
+### **1️⃣ Privacy**
+
+* Only channel members can see transactions
+
+---
+
+### **2️⃣ Data Isolation**
+
+* Separate ledger for each channel
+
+---
+
+### **3️⃣ Security**
+
+* Sensitive data remains protected
+
+---
+
+## **Working**
+
+1. Channel is created
+2. Members are added
+3. Transactions happen only within channel
+4. Data stored separately
+
+---
+
+## **Example**
+
+* Bank A and Bank B share data privately
+* Other banks cannot access it
+
+---
+
+## **Conclusion**
+
+Channels improve privacy and security in enterprise blockchain systems.
+
+---
+
+# **34(b) Explain ICO Regulatory Aspects (4M)**
+
+## **Introduction**
+
+ICO regulations are rules that control how ICOs operate to protect investors.
+
+---
+
+## **Key Regulatory Aspects**
+
+### **1️⃣ Legal Compliance**
+
+* Must follow government laws
+
+---
+
+### **2️⃣ Investor Protection**
+
+* Prevent fraud and scams
+
+---
+
+### **3️⃣ KYC/AML Requirements**
+
+* Verify identity of investors
+
+---
+
+### **4️⃣ Taxation**
+
+* ICO earnings may be taxed
+
+---
+
+### **5️⃣ Disclosure**
+
+* Provide clear project details (whitepaper)
+
+---
+
+## **Conclusion**
+
+Regulation ensures transparency and reduces risks in ICO investments.
+
+---
+
+
+
+
+
+
