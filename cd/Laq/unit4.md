@@ -1,495 +1,866 @@
-Below are **full, long, simple, exam-ready 10-mark answers** for **Unit-4 (UiPath – Web Automation, Scraping, Recording, Selectors)**.
-All answers are **easy to understand**, **no jargon**, and written in scoring format.
+Here are **simple, structured, beginner-friendly 10-mark answers** for Unit–IV.
 
 ---
 
-# **1. Explain the process of automating a web-based application using UiPath.**
-
-*(10 Marks – Clear, comprehensive, beginner-friendly)*
+# **35(a) Explain applications of blockchain in banking sector (6M)**
 
 ## **Introduction**
 
-Web automation is one of the most common uses of UiPath. It allows bots to open browsers, fill forms, click buttons, extract data, download files, and complete long web tasks automatically. UiPath provides dedicated browser activities and selector-based automation to interact with web elements accurately.
+Blockchain helps banks improve security, reduce costs, and speed up transactions by removing intermediaries.
 
 ---
 
-## **1. Launching the Web Application**
+## **Applications in Banking**
 
-Automation starts by opening a browser like Chrome, Edge, or Firefox.
+### **1️⃣ Cross-Border Payments**
 
-### **Activities Used**
-
-* **Open Browser**
-* **Use Application/Browser**
-
-### **What bot does:**
-
-* Opens the URL
-* Loads the webpage
-* Prepares the environment for the next steps
+* Faster international transfers
+* No need for multiple banks
 
 ---
 
-## **2. Identifying UI Elements**
+### **2️⃣ Fraud Prevention**
 
-UiPath identifies webpage elements using **selectors**.
-Each element (textbox, button, dropdown) has an internal HTML structure.
-
-### **Example elements bot can detect:**
-
-* Username field
-* Search box
-* Submit button
-* Product link
-
-Selectors allow accurate interaction even in complex websites.
+* Transactions are immutable (cannot be changed)
+* Reduces fraud risks
 
 ---
 
-## **3. Performing Actions on Web Elements**
+### **3️⃣ Smart Contracts**
 
-### **Common Activities:**
-
-* **Type Into** → enter username/password
-* **Click** → click login button
-* **Select Item** → choose from dropdown
-* **Get Text** → read values
-
-### **Example task:**
-
-Filling a login form:
-
-1. Type Into → username
-2. Type Into → password
-3. Click → Login button
+* Automate loan approvals and payments
+* Reduce manual work
 
 ---
 
-## **4. Handling Delays and Page Loads**
+### **4️⃣ Digital Identity Verification**
 
-Webpages may load slowly. UiPath handles this using:
-
-* Delay
-* Timeout settings
-* Wait for Element
-* Retry Scope
-
-These ensure the bot does not click too early and fail.
+* Secure storage of customer data
+* Reduces duplication
 
 ---
 
-## **5. Extracting Data from Web Pages**
+### **5️⃣ Clearing and Settlement**
 
-Bots can scrape product information, tables, prices, or user details using:
-
-* Data Scraping Wizard
-* Screen Scraping
-* Get Text activities
+* Faster settlement of transactions
+* Reduces delays from days to minutes
 
 ---
 
-## **6. Closing the Browser**
+### **6️⃣ Trade Finance**
 
-After completing tasks, bot uses:
-
-* **Close Tab**
-* **Close Application**
-
-This prevents memory usage and keeps the system clean.
+* Transparent tracking of documents
+* Improves trust between parties
 
 ---
 
 ## **Conclusion**
 
-Web automation in UiPath involves opening a browser, interacting with web elements using selectors, performing actions, extracting required information, and closing the browser. With these steps, UiPath delivers fast and reliable web-based task automation.
+Blockchain makes banking faster, safer, and more transparent.
 
 ---
 
-# **2. Describe how to perform data scraping in UiPath with a suitable use case.**
-
-*(10 Marks – Simple, exam-friendly)*
+# **35(b) Explain KYC using blockchain technology (4M)**
 
 ## **Introduction**
 
-Data scraping allows UiPath to extract **structured data** from web pages, PDFs, and applications. Structured data means tables, lists, grids, product catalogs, etc. UiPath provides a built-in **Data Scraping Wizard** for this purpose.
+KYC (Know Your Customer) is a process used by banks to verify customer identity.
 
 ---
 
-# **Steps to Perform Data Scraping**
+## **KYC using Blockchain**
 
-## **1. Launch the Target Application**
+### **Working**
 
-Open the website or software where data is present.
-
-Example site:
-Flipkart/Amazon product list.
-
----
-
-## **2. Open Data Scraping Wizard**
-
-In UiPath Studio:
-**Home → Data Scraping**
-
-The wizard guides the user step-by-step.
+1. Customer uploads identity details
+2. Data stored securely on blockchain
+3. Verified once and reused by multiple banks
 
 ---
 
-## **3. Select First and Last Element**
+## **Advantages**
 
-Bot needs to know the pattern in the data.
+### **1️⃣ Data Security**
 
-Example:
-If scraping product names:
-
-1. Click on first product name
-2. Click on second product name
-
-UiPath understands the repeating pattern.
+* Encrypted and tamper-proof
 
 ---
 
-## **4. Extract Additional Fields**
+### **2️⃣ Reduced Cost**
 
-You can also extract:
-
-* Price
-* Rating
-* Description
-
-Wizard allows multiple fields.
+* No repeated verification
 
 ---
 
-## **5. Configure Pagination**
+### **3️⃣ Faster Process**
 
-If data spans multiple pages:
-
-* Bot clicks “Next Page”
-* Wizard repeats extraction
-
-This allows large data scraping.
+* Instant access to verified data
 
 ---
 
-## **6. Output to DataTable**
+### **4️⃣ User Control**
 
-The extracted data is automatically stored in a **DataTable**.
-
-Bot can then:
-
-* Write to Excel
-* Filter data
-* Process records
-
----
-
-# **Use Case Example: Product Price Scraping**
-
-### **Goal:**
-
-Extract product name, price, and rating from Amazon.
-
-### **Steps:**
-
-1. Open browser → Navigate to Amazon
-2. Use Data Scraping Wizard
-3. Select first product name → second name
-4. Extract price and rating
-5. Enable pagination
-6. Write DataTable to Excel
-
-**Outcome:**
-You get a neatly organized Excel sheet with hundreds of products in seconds.
+* Customer controls their data
 
 ---
 
 ## **Conclusion**
 
-Data scraping is a powerful UiPath feature that extracts structured data quickly and accurately. It is widely used for e-commerce, finance, reporting, and analytics tasks.
+Blockchain-based KYC improves efficiency, security, and reduces duplication.
 
 ---
 
-# **3. Explain recording features and differences between types.**
-
-*(10 Marks – Clear classification)*
+# **36(a) Discuss scalability issues and transaction processing limitations in blockchain (6M)**
 
 ## **Introduction**
 
-Recording helps UiPath capture user actions automatically. Instead of dragging activities manually, the recorder tracks clicks, typing, and selections to generate a workflow.
-
-UiPath provides four major recording types.
+Scalability means handling large numbers of transactions efficiently. Blockchain faces challenges in scaling.
 
 ---
 
-# **1. Basic Recording**
+## **Scalability Issues**
 
-### **Features:**
+### **1️⃣ Limited Transactions per Second (TPS)**
 
-* Simple and fast
-* Captures clicks and typing
-* Good for small, linear tasks
-
-### **Use Case:**
-
-Filling a login form.
-
-### **Limitation:**
-
-Less accurate selectors, not ideal for complex apps.
+* Bitcoin/Ethereum process fewer transactions compared to traditional systems
 
 ---
 
-# **2. Desktop Recording**
+### **2️⃣ Block Size Limit**
 
-### **Features:**
-
-* Best for automating desktop applications
-* Strong, reliable selectors
-* Supports multiple windows
-* Efficient for large workflows
-
-### **Use Case:**
-
-Automating tasks in Excel, ERP, legacy applications.
+* Fixed block size restricts number of transactions
 
 ---
 
-# **3. Web Recording**
+### **3️⃣ Network Congestion**
 
-### **Features:**
-
-* Specially designed for browsers
-* Handles links, text fields, drop-downs
-* Captures browser-specific operations
-
-### **Use Case:**
-
-Form filling, submitting data, flipping through pages.
+* More users → slower processing
 
 ---
 
-# **4. Image Recording**
+### **4️⃣ High Energy Consumption**
 
-### **Features:**
-
-* Used when application has no reliable selectors
-* Works with images and OCR
-* Suitable for virtual machines (Citrix)
-
-### **Use Case:**
-
-Automation on remote desktops and Citrix environments.
+* Especially in Proof-of-Work systems
 
 ---
 
-# **Key Differences Table**
+## **Transaction Processing Limitations**
 
-| Recording Type | Best For               | Selector Quality   | Speed  | Example             |
-| -------------- | ---------------------- | ------------------ | ------ | ------------------- |
-| Basic          | Simple tasks           | Low                | Fast   | Login form          |
-| Desktop        | Complex desktop apps   | High               | Medium | Excel automation    |
-| Web            | Browser actions        | High               | Medium | Online registration |
-| Image          | No selectors available | None (image-based) | Slow   | Citrix window       |
+### **1️⃣ Delay in Confirmation**
+
+* Takes time to confirm transactions
+
+---
+
+### **2️⃣ High Transaction Fees**
+
+* Fees increase during congestion
+
+---
+
+### **3️⃣ Storage Issues**
+
+* Blockchain size keeps increasing
 
 ---
 
 ## **Conclusion**
 
-Recording allows fast workflow creation. Choosing the right recording type improves accuracy, efficiency, and reliability of automation.
+Scalability is a major challenge, requiring solutions like sharding and Layer-2 systems.
 
 ---
 
-# **4. Develop a workflow using screen scraping and partial selector.**
-
-*(10 Marks – Practical, simple explanation)*
+# **36(b) Explain major security challenges in blockchain (4M)**
 
 ## **Introduction**
 
-Screen scraping is used when data cannot be selected normally. Partial selectors are used inside containers like **Attach Browser**, helping UiPath identify elements accurately.
+Although blockchain is secure, it still faces some risks and challenges.
 
 ---
 
-# **Workflow Steps**
+## **Security Challenges**
 
-## **1. Use “Open Browser” Activity**
+### **1️⃣ 51% Attack**
 
-* Open website
-* Example: [https://weather.com](https://weather.com)
-
----
-
-## **2. Use “Attach Browser”**
-
-This container ensures all activities inside share a **common selector** (partial selector).
-
-### **Why partial selector?**
-
-* It removes repetitive browser information
-* Makes automation stable
-* Faster execution
+* If majority controls network, they can manipulate transactions
 
 ---
 
-## **3. Add Screen Scraping Wizard**
+### **2️⃣ Smart Contract Bugs**
 
-Choose type:
-
-* **Full Text** (fastest)
-* **Native** (accurate)
-* **OCR** (for images)
+* Errors in code can lead to losses
 
 ---
 
-## **4. Select the Text Element to Scrape**
+### **3️⃣ Private Key Theft**
 
-Example: Extracting temperature from weather website.
-
-UiPath shows preview and extracts text.
+* If keys are stolen, funds can be lost
 
 ---
 
-## **5. Store Extracted Text in Variable**
+### **4️⃣ Double Spending**
 
-Example variable: `temperature`
-
----
-
-## **6. Display Output in Message Box**
-
-Message Box → “Current temperature: ” + temperature
+* Same cryptocurrency used twice
 
 ---
 
-## **Final Workflow Structure**
+### **5️⃣ Phishing Attacks**
 
-```
-Open Browser
-   Attach Browser (partial selector)
-       Screen Scrape
-       Assign scrapedText
-       Message Box
-```
+* Users tricked into giving credentials
 
 ---
 
 ## **Conclusion**
 
-This workflow demonstrates how screen scraping and partial selectors ensure stable automation even when normal selectors fail or data is in non-standard format.
+Blockchain is secure by design, but proper implementation and user awareness are essential.
 
 ---
 
-# **5. Analyze limitations and solutions when dealing with dynamic selectors.**
 
-*(10 Marks – High scoring, easy to understand)*
+
+Here are **simple, structured, beginner-friendly 10-mark answers** for Unit–IV.
+
+---
+
+# **37(a) Explain blockchain applications in healthcare sector (6M)**
 
 ## **Introduction**
 
-Dynamic selectors are selectors whose attributes keep changing (like IDs, classes, or indexes). Bots may fail if selectors are not handled correctly.
+Blockchain helps healthcare systems manage data securely, improve transparency, and reduce errors.
 
 ---
 
-# **Limitations of Dynamic Selectors**
+## **Applications in Healthcare**
 
-## **1. Changing Element IDs**
+### **1️⃣ Electronic Health Records (EHR)**
 
-Websites often generate new IDs every time.
-
-### **Impact:**
-
-Bot cannot click the element → selector not found.
+* Patient records stored securely
+* Accessible by authorized doctors only
 
 ---
 
-## **2. Page Layout Changes**
+### **2️⃣ Data Security & Privacy**
 
-If UI layout shifts, the bot may click the wrong area.
-
----
-
-## **3. Dynamic Text or Values**
-
-Buttons like “Next 1”, “Next 2” change dynamically.
+* Data is encrypted and tamper-proof
+* Reduces data breaches
 
 ---
 
-## **4. Slow or Asynchronous Loading**
+### **3️⃣ Drug Supply Chain Management**
 
-If page loads slowly, the element may not exist when bot tries to click.
-
----
-
-## **5. Multiple Elements with Similar Selectors**
-
-Bot becomes confused which element to choose.
+* Tracks medicines from manufacturer to patient
+* Prevents fake drugs
 
 ---
 
-# **Solutions to Dynamic Selector Problems**
+### **4️⃣ Medical Research**
 
-## **1. Use Wildcards (*, ?)**
-
-Wildcards replace the changing part of the selector.
-
-Example:
-`id='text123'` → `id='text*'`
+* Secure sharing of research data
+* Improves collaboration
 
 ---
 
-## **2. Anchor Base**
+### **5️⃣ Insurance Claims**
 
-Use a nearby stable element as a reference point.
-
-Example:
-Anchor on “Username” label → Type Into field next to it.
+* Automated claim processing using smart contracts
+* Faster approvals
 
 ---
 
-## **3. Fuzzy Selectors**
+### **6️⃣ Remote Patient Monitoring**
 
-UiPath’s modern feature that matches approximate elements.
-
----
-
-## **4. Use “Wait for Element”**
-
-Ensures the element appears before the bot clicks.
-
----
-
-## **5. Use Regular Expressions in Selectors**
-
-To capture patterns instead of exact values.
-
----
-
-## **6. Use UI Frameworks**
-
-Change UI framework (Default → Active Accessibility → UI Automation) when selectors are unstable.
-
----
-
-## **7. Use Stable Attributes**
-
-Instead of ID, rely on:
-
-* Name
-* Class
-* Title
-* Inner text
-
----
-
-## **8. Use Computer Vision (CV Activities)**
-
-When selectors are completely unreliable.
+* Stores data from wearable devices securely
 
 ---
 
 ## **Conclusion**
 
-Dynamic selectors can break automations, but using advanced UiPath techniques—wildcards, anchor base, fuzzy matching, delays, and UI frameworks—ensures stable and robust web and desktop automation.
+Blockchain improves healthcare by making systems secure, transparent, and efficient.
 
 ---
 
-If you want, I can now prepare **Unit-5 (Bots, Orchestrator, Deployment)** long answers.
+# **37(b) Explain supply chain traceability using blockchain (4M)**
+
+## **Introduction**
+
+Traceability means tracking a product from origin to final consumer.
+
+---
+
+## **How Blockchain Helps**
+
+### **Step 1: Recording Data**
+
+* Every stage (production, transport, delivery) is recorded
+
+---
+
+### **Step 2: Shared Ledger**
+
+* All participants can view data
+
+---
+
+### **Step 3: Real-Time Tracking**
+
+* Products tracked at every step
+
+---
+
+## **Advantages**
+
+### **1️⃣ Transparency**
+
+* Full visibility of product journey
+
+---
+
+### **2️⃣ Fraud Prevention**
+
+* Hard to manipulate records
+
+---
+
+### **3️⃣ Quality Control**
+
+* Easy to detect defects
+
+---
+
+## **Conclusion**
+
+Blockchain ensures reliable and transparent supply chain tracking.
+
+---
+
+# **38(a) Explain governance and regulatory issues in blockchain (6M)**
+
+## **Introduction**
+
+Governance and regulation define how blockchain systems are managed and controlled.
+
+---
+
+## **Governance Issues**
+
+### **1️⃣ Decentralization**
+
+* No central authority → difficult decision-making
+
+---
+
+### **2️⃣ Protocol Updates**
+
+* Hard to upgrade system without agreement
+
+---
+
+### **3️⃣ Dispute Resolution**
+
+* No clear authority to resolve conflicts
+
+---
+
+## **Regulatory Issues**
+
+### **1️⃣ Lack of Legal Framework**
+
+* Many countries don’t have clear laws
+
+---
+
+### **2️⃣ Compliance Issues**
+
+* Difficulty in following regulations (KYC, AML)
+
+---
+
+### **3️⃣ Privacy vs Transparency**
+
+* Balancing user privacy with open data
+
+---
+
+### **4️⃣ Taxation**
+
+* Unclear tax policies on crypto
+
+---
+
+## **Conclusion**
+
+Proper governance and regulation are needed for safe and widespread adoption of blockchain.
+
+---
+
+# **38(b) Explain energy consumption issues (4M)**
+
+## **Introduction**
+
+Blockchain, especially Proof-of-Work systems, consumes a large amount of energy.
+
+---
+
+## **Reasons for High Energy Use**
+
+### **1️⃣ Mining Process**
+
+* Requires powerful hardware
+* Continuous computations
+
+---
+
+### **2️⃣ Competition Among Miners**
+
+* Many miners solving same problem
+
+---
+
+### **3️⃣ Large Networks**
+
+* More nodes → more power usage
+
+---
+
+## **Problems**
+
+### **1️⃣ Environmental Impact**
+
+* High carbon emissions
+
+---
+
+### **2️⃣ High Cost**
+
+* Expensive electricity usage
+
+---
+
+## **Solutions**
+
+### **1️⃣ Proof-of-Stake**
+
+* Uses less energy
+
+---
+
+### **2️⃣ Green Energy**
+
+* Use renewable energy sources
+
+---
+
+## **Conclusion**
+
+Energy consumption is a major concern, and efficient alternatives are needed.
+
+---
+
+Here are **simple, structured, beginner-friendly 10-mark answers** for Unit–IV.
+
+---
+
+# **39(a) Explain blockchain in real-estate sector (6M)**
+
+## **Introduction**
+
+Blockchain can improve real-estate by making property transactions **transparent, secure, and faster**.
+
+---
+
+## **Applications in Real-Estate**
+
+### **1️⃣ Property Registration**
+
+* Ownership records stored on blockchain
+* Tamper-proof and permanent
+
+---
+
+### **2️⃣ Fraud Prevention**
+
+* Reduces fake documents and duplicate ownership
+
+---
+
+### **3️⃣ Smart Contracts**
+
+* Automate buying/selling process
+* No need for intermediaries
+
+---
+
+### **4️⃣ Faster Transactions**
+
+* Reduces paperwork and delays
+
+---
+
+### **5️⃣ Transparent Records**
+
+* Buyers can verify property history easily
+
+---
+
+### **6️⃣ Cost Reduction**
+
+* Less involvement of brokers and agents
+
+---
+
+## **Conclusion**
+
+Blockchain makes real-estate transactions more secure, efficient, and trustworthy.
+
+---
+
+# **39(b) Explain Tokenization of Property (4M)**
+
+## **Introduction**
+
+Tokenization means converting real-world assets into digital tokens on blockchain.
+
+---
+
+## **How It Works**
+
+1. Property value is divided into small units
+2. Each unit is represented as a digital token
+3. Investors can buy/sell tokens
+
+---
+
+## **Advantages**
+
+### **1️⃣ Fractional Ownership**
+
+* Multiple people can own one property
+
+---
+
+### **2️⃣ Easy Investment**
+
+* Lower cost entry
+
+---
+
+### **3️⃣ Liquidity**
+
+* Tokens can be traded easily
+
+---
+
+## **Conclusion**
+
+Tokenization makes real-estate investment more accessible and flexible.
+
+---
+
+# **40(a) Explain Limited Scalability Issues (6M)**
+
+## **Introduction**
+
+Scalability refers to the ability of a system to handle increasing transactions. Blockchain has limited scalability.
+
+---
+
+## **Scalability Issues**
+
+### **1️⃣ Low Throughput**
+
+* Processes fewer transactions per second
+
+---
+
+### **2️⃣ Block Size Limit**
+
+* Limits number of transactions in each block
+
+---
+
+### **3️⃣ Slow Block Creation**
+
+* Time delay in adding new blocks
+
+---
+
+### **4️⃣ Network Congestion**
+
+* High usage slows down system
+
+---
+
+### **5️⃣ Storage Growth**
+
+* Blockchain size increases continuously
+
+---
+
+## **Solutions**
+
+### **1️⃣ Sharding**
+
+* Splitting network into smaller parts
+
+---
+
+### **2️⃣ Layer-2 Solutions**
+
+* Off-chain processing
+
+---
+
+### **3️⃣ Improved Consensus**
+
+* Faster algorithms like PoS
+
+---
+
+## **Conclusion**
+
+Scalability is a major limitation, but new techniques are improving performance.
+
+---
+
+# **40(b) Discuss Transaction Processing Limitations (4M)**
+
+## **Introduction**
+
+Transaction processing refers to how quickly and efficiently transactions are handled.
+
+---
+
+## **Limitations**
+
+### **1️⃣ Slow Confirmation**
+
+* Takes time to validate transactions
+
+---
+
+### **2️⃣ High Fees**
+
+* Fees increase during heavy usage
+
+---
+
+### **3️⃣ Limited Capacity**
+
+* Only fixed number of transactions per block
+
+---
+
+### **4️⃣ Delay in Finality**
+
+* Multiple confirmations required
+
+---
+
+## **Conclusion**
+
+Transaction processing is slower compared to traditional systems, requiring improvements.
+
+---
+
+Here are **simple, structured, beginner-friendly 10-mark answers** for Unit–IV.
+
+---
+
+# **41(a) Explain blockchain in energy sector (6M)**
+
+## **Introduction**
+
+Blockchain helps the energy sector become more **efficient, transparent, and decentralized**, especially with renewable energy.
+
+---
+
+## **Applications in Energy Sector**
+
+### **1️⃣ Peer-to-Peer Energy Trading**
+
+* Users can sell excess solar energy directly to others
+* No need for intermediaries
+
+---
+
+### **2️⃣ Energy Tracking**
+
+* Tracks energy production and usage
+* Ensures transparency
+
+---
+
+### **3️⃣ Renewable Energy Certificates**
+
+* Verifies green energy production
+* Prevents fake claims
+
+---
+
+### **4️⃣ Smart Billing**
+
+* Automatic billing using smart contracts
+
+---
+
+### **5️⃣ Grid Management**
+
+* Helps manage electricity distribution efficiently
+
+---
+
+### **6️⃣ Reduced Costs**
+
+* Eliminates middlemen and reduces operational costs
+
+---
+
+## **Conclusion**
+
+Blockchain supports a cleaner, smarter, and decentralized energy system.
+
+---
+
+# **41(b) Explain Smart Grid Concept (4M)**
+
+## **Introduction**
+
+A smart grid is an advanced electricity network that uses digital technology to manage energy efficiently.
+
+---
+
+## **Key Features**
+
+### **1️⃣ Two-Way Communication**
+
+* Power and data flow in both directions
+
+---
+
+### **2️⃣ Automation**
+
+* Automatic monitoring and control
+
+---
+
+### **3️⃣ Real-Time Data**
+
+* Tracks energy usage instantly
+
+---
+
+### **4️⃣ Integration with Renewable Energy**
+
+* Supports solar and wind energy
+
+---
+
+## **Benefits**
+
+* Efficient energy usage
+* Reduced power loss
+* Better reliability
+
+---
+
+## **Conclusion**
+
+Smart grids improve energy distribution using digital and automated systems.
+
+---
+
+# **42(a) Explain Major Security Challenges in Blockchain (6M)**
+
+## **Introduction**
+
+Blockchain is secure, but still faces several security challenges.
+
+---
+
+## **Major Challenges**
+
+### **1️⃣ 51% Attack**
+
+* One group controls majority power
+* Can manipulate transactions
+
+---
+
+### **2️⃣ Smart Contract Vulnerabilities**
+
+* Bugs in code can be exploited
+
+---
+
+### **3️⃣ Private Key Theft**
+
+* If keys are stolen, assets are lost
+
+---
+
+### **4️⃣ Phishing Attacks**
+
+* Users tricked into sharing credentials
+
+---
+
+### **5️⃣ Double Spending**
+
+* Same digital currency used twice
+
+---
+
+### **6️⃣ Sybil Attack**
+
+* One user creates many fake nodes
+
+---
+
+## **Conclusion**
+
+Security risks exist, but can be minimized with proper practices.
+
+---
+
+# **42(b) Suggest Solutions for Scalability Issues (4M)**
+
+## **Introduction**
+
+Scalability problems limit blockchain performance, but several solutions exist.
+
+---
+
+## **Solutions**
+
+### **1️⃣ Sharding**
+
+* Divides network into smaller parts
+* Processes transactions in parallel
+
+---
+
+### **2️⃣ Layer-2 Solutions**
+
+* Off-chain transactions (e.g., Lightning Network)
+
+---
+
+### **3️⃣ Proof-of-Stake**
+
+* Faster and energy-efficient than PoW
+
+---
+
+### **4️⃣ Increasing Block Size**
+
+* Allows more transactions per block
+
+---
+
+## **Conclusion**
+
+Using these solutions, blockchain systems can handle more users and transactions efficiently.
+
+---
+
+
