@@ -11,7 +11,7 @@
 
 [UNIT-3](./cd/Laq/unit3.md)
 
-[half](./cd/laq/hlaf-unit3.md)
+[half](./cd/laq/half-unit3.md)
 
 [UNIT-4](./cd/Laq/unit4.md)
 
