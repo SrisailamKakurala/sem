@@ -1,211 +1,145 @@
-Here are **1–2 line, simple, exam-ready answers** for all 1-mark questions:
+Here are **40 short answer questions (SAQs)** from your full syllabus.
+Each has a **clear question followed by a 1–3 line answer**.
 
 ---
 
-**Q1. Define Blockchain.**
-**A:** Blockchain is a digital ledger that stores data in blocks linked together securely and permanently.
+# UNIT I – Photogrammetry
+
+Q: What is photogrammetry?
+A: Photogrammetry is the science of obtaining measurements and information about objects using photographs, especially aerial images.
+
+Q: What are aerial photographs?
+A: Aerial photographs are images of the Earth taken from aircraft or drones to study surface features.
+
+Q: What are the types of aerial photographs?
+A: Vertical and oblique photographs are the main types based on camera angle.
+
+Q: What is scale in aerial photography?
+A: Scale is the ratio between distance on the photograph and actual ground distance.
+
+Q: What is relief displacement?
+A: It is the shift of objects from their true position in an image due to height differences.
+
+Q: What is stereoscopy?
+A: Stereoscopy is the technique of viewing two images together to get a 3D view.
+
+Q: What are fiducial points?
+A: Fiducial points are reference marks on aerial photographs used for measurement and alignment.
+
+Q: What is parallax?
+A: Parallax is the apparent shift in position of an object when viewed from different angles.
 
 ---
 
-**Q2. What is Distributed Ledger Technology (DLT)?**
-**A:** DLT is a system where data is shared and stored across multiple computers instead of a single central place.
+# UNIT II – Remote Sensing
+
+Q: What is remote sensing?
+A: Remote sensing is the process of collecting information about Earth without direct contact using satellites or sensors.
+
+Q: What is remote sensing data?
+A: It is information collected from sensors in the form of images or digital values.
+
+Q: What is the remote sensing process?
+A: It involves energy emission, interaction with objects, detection by sensors, and data analysis.
+
+Q: What are advantages of remote sensing?
+A: It covers large areas, saves time, and allows repeated observations.
+
+Q: What are limitations of remote sensing?
+A: It can be costly and affected by weather conditions like clouds.
+
+Q: What is electromagnetic spectrum?
+A: It is the range of all types of electromagnetic radiation used in sensing.
+
+Q: What is resolution in remote sensing?
+A: Resolution refers to the level of detail captured in an image.
+
+Q: What is False Color Composite?
+A: It is an image where colors are assigned differently to highlight features like vegetation.
 
 ---
 
-**Q3. Define nonce in blockchain.**
-**A:** Nonce is a number used in mining to generate a valid hash for a block.
+# UNIT III – GIS
+
+Q: What is GIS?
+A: GIS is a system used to collect, store, analyze, and display geographic data.
+
+Q: What are components of GIS?
+A: Hardware, software, data, people, and methods.
+
+Q: What is spatial data?
+A: Spatial data represents the location and shape of geographic features.
+
+Q: What is attribute data?
+A: Attribute data provides descriptive information about spatial features.
+
+Q: What is GIS data input?
+A: It is the process of entering spatial and attribute data into GIS.
+
+Q: What is GIS data analysis?
+A: It involves processing data to extract useful information.
+
+Q: What is Geographic Coordinate System?
+A: It uses latitude and longitude to locate positions on Earth.
+
+Q: What is map projection?
+A: It is a method of representing the curved Earth surface on a flat map.
 
 ---
 
-**Q4. What is Proof-of-Work (PoW)?**
-**A:** PoW is a method where miners solve complex problems to validate transactions and add blocks.
+# UNIT IV – Vector Data Model
+
+Q: What is vector data model?
+A: It represents data using points, lines, and polygons.
+
+Q: What is a point feature?
+A: It represents a single location like a well or tree.
+
+Q: What is topology?
+A: Topology defines spatial relationships between features.
+
+Q: What is a shapefile?
+A: It is a common format used to store vector data in GIS.
+
+Q: What is coverage data structure?
+A: It is an older format that stores spatial data with topology.
+
+Q: What are composite features?
+A: Features made by combining multiple simple features.
+
+Q: What is object-based model?
+A: It represents data as objects with properties and relationships.
+
+Q: What is Geobase data model?
+A: It is a structured system to store and manage spatial data efficiently.
 
 ---
 
-**Q5. Define Smart Contract.**
-**A:** A smart contract is a self-executing program that runs automatically when conditions are met.
+# UNIT V – Raster Data Model
+
+Q: What is raster data model?
+A: It represents data as a grid of cells or pixels.
+
+Q: What is a pixel?
+A: It is the smallest unit in raster data representing a value.
+
+Q: What are types of raster data?
+A: Continuous and discrete data.
+
+Q: What is raster data structure?
+A: It is a grid-based storage of data using rows and columns.
+
+Q: What is data conversion in GIS?
+A: It is the process of changing data from one format to another.
+
+Q: What is digitizing?
+A: It is converting maps or images into digital format.
+
+Q: What is scanning?
+A: It is converting paper maps into digital images.
+
+Q: What is metadata?
+A: Metadata is data that describes other data.
 
 ---
 
-**Q6. What is Merkle Root?**
-**A:** It is a single hash value that represents all transactions in a block.
-
----
-
-**Q7. Define RAFT consensus algorithm.**
-**A:** RAFT is a consensus method where one leader manages and coordinates all nodes.
-
----
-
-**Q8. What is Hyperledger Fabric?**
-**A:** It is a permissioned blockchain platform used for enterprise applications.
-
----
-
-**Q9. What is ICO?**
-**A:** ICO is a method of raising funds by selling digital tokens to investors.
-
----
-
-**Q10. Mention one scalability issue of blockchain.**
-**A:** Low transaction processing speed.
-
----
-
-**Q11. Define cryptocurrency.**
-**A:** Cryptocurrency is a digital currency secured by cryptography.
-
----
-
-**Q12. What is hard fork?**
-**A:** A hard fork is a major update that creates a new version of blockchain incompatible with the old one.
-
----
-
-**Q13. Define consensus protocol.**
-**A:** It is a method used by nodes to agree on a common data value.
-
----
-
-**Q14. What is Gas in Ethereum?**
-**A:** Gas is the fee required to execute transactions or smart contracts in Ethereum.
-
----
-
-**Q15. Define DAO.**
-**A:** DAO is an organization run by smart contracts without a central authority.
-
----
-
-**Q16. What is Byzantine fault?**
-**A:** It is a condition where some nodes fail or act maliciously in a network.
-
----
-
-**Q17. Define Hyperledger Indy.**
-**A:** It is a blockchain platform focused on digital identity management.
-
----
-
-**Q18. What is STO?**
-**A:** STO is a method of fundraising using security tokens that represent real assets.
-
----
-
-**Q19. What is tokenization?**
-**A:** Tokenization is converting real-world assets into digital tokens on blockchain.
-
----
-
-**Q20. What is phishing?**
-**A:** Phishing is a fraud where users are tricked into giving sensitive information.
-
----
-
-**Q21. Define full node.**
-**A:** A full node stores the complete blockchain and verifies transactions.
-
----
-
-**Q22. What is Proof-of-Stake (PoS)?**
-**A:** PoS selects validators based on the amount of cryptocurrency they hold.
-
----
-
-**Q23. Define Ether.**
-**A:** Ether is the native cryptocurrency of Ethereum.
-
----
-
-**Q24. What is Multisig in Bitcoin?**
-**A:** Multisig requires multiple signatures to approve a transaction.
-
----
-
-**Q25. Define DApp.**
-**A:** A DApp is a decentralized application running on a blockchain.
-
----
-
-**Q26. What is Paxos?**
-**A:** Paxos is a consensus algorithm used to achieve agreement in distributed systems.
-
----
-
-**Q27. What is Corda?**
-**A:** Corda is a blockchain platform designed for business and financial applications.
-
----
-
-**Q28. Define IEO.**
-**A:** IEO is a token sale conducted through a cryptocurrency exchange.
-
----
-
-**Q29. What is provenance tracking?**
-**A:** It is tracking the origin and history of a product using blockchain.
-
----
-
-**Q30. What is spoofing?**
-**A:** Spoofing is pretending to be someone else to gain unauthorized access.
-
----
-
-**Q31. Define public blockchain.**
-**A:** A public blockchain is open to anyone to join and participate.
-
----
-
-**Q32. What is Merkle Tree?**
-**A:** It is a tree structure used to organize and verify transactions efficiently.
-
----
-
-**Q33. Define cold wallet.**
-**A:** A cold wallet stores cryptocurrency offline for better security.
-
----
-
-**Q34. What is Ethash?**
-**A:** Ethash is the Proof-of-Work algorithm used by Ethereum.
-
----
-
-**Q35. Define Oracle in smart contracts.**
-**A:** An oracle provides external data to smart contracts.
-
----
-
-**Q36. What is Multi-Paxos?**
-**A:** Multi-Paxos is an optimized version of Paxos for repeated consensus.
-
----
-
-**Q37. What is Hyperledger Sawtooth?**
-**A:** It is a modular blockchain platform for building scalable applications.
-
----
-
-**Q38. Define IDO.**
-**A:** IDO is a token offering conducted on decentralized exchanges.
-
----
-
-**Q39. What is peer-to-peer trading?**
-**A:** It is direct trading between users without intermediaries.
-
----
-
-**Q40. What is human error in blockchain?**
-**A:** Mistakes made by users, like losing keys or sending wrong transactions.
-
----
-
-If you want, I can:
-
-* Turn these into **ultra-short revision cheatsheet**
-* Highlight **most important 1-mark questions**
-* Give **quick recall tricks**
-
-Just tell 👍
