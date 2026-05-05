@@ -1,901 +1,824 @@
-Here are **clear, beginner-friendly, structured 10-mark answers** for Unit–II.
+Here are **simple, detailed, easy-to-remember 10-mark answers** for Unit–II basics.
 
 ---
 
-# **19(a) Explain the components of Bitcoin block structure (6M)**
+# **1. What is Remote Sensing? Explain its Basic Concept and Process (10M)**
 
 ## **Introduction**
 
-A Bitcoin block is a unit of data in the blockchain that stores transactions securely. Each block is linked to the previous one, forming a chain.
+Remote sensing is the science of **collecting information about Earth without direct contact**, using satellites or aircraft.
 
 ---
 
-## **Main Components of a Bitcoin Block**
+## **Definition (Easy Line)**
 
-A block has **two main parts**:
-
----
-
-## **1. Block Header**
-
-This contains important metadata:
-
-### **1️⃣ Previous Block Hash**
-
-* Stores hash of previous block
-* Connects blocks together
+Remote sensing is the technique of **observing and measuring objects from a distance using sensors**.
 
 ---
 
-### **2️⃣ Merkle Root**
+## **Basic Concept**
 
-* A single hash representing all transactions
-* Ensures data integrity
+* The Sun (or sensor) provides **energy**
+* Energy travels to Earth
+* Objects (soil, water, vegetation) **reflect or absorb energy**
+* Sensors capture this reflected energy
+* Data is processed to get useful information
 
----
-
-### **3️⃣ Timestamp**
-
-* Time when block was created
-
----
-
-### **4️⃣ Nonce**
-
-* A number used in mining
-* Helps solve Proof-of-Work puzzle
+👉 In short:
+**Energy → Object → Sensor → Data → Information**
 
 ---
 
-### **5️⃣ Version**
+## **Remote Sensing Process (Steps)**
 
-* Specifies block version
+### **1️⃣ Energy Source**
 
----
-
-### **6️⃣ Difficulty Target**
-
-* Defines how hard it is to mine the block
+* Usually the Sun provides energy
 
 ---
 
-## **2. Transaction Data**
+### **2️⃣ Energy Travels through Atmosphere**
 
-* Contains list of all transactions
-* Includes sender, receiver, and amount
+* Energy may be scattered or absorbed
 
 ---
 
-## **Working (Flow)**
+### **3️⃣ Interaction with Earth Surface**
 
-1. Transactions are collected
-2. Merkle root is generated
-3. Header is formed
-4. Mining is performed
-5. Block is added to blockchain
+* Objects reflect energy differently
+
+---
+
+### **4️⃣ Data Collection by Sensor**
+
+* Sensors on satellites capture reflected energy
+
+---
+
+### **5️⃣ Data Transmission**
+
+* Data is sent to ground stations
+
+---
+
+### **6️⃣ Data Processing**
+
+* Raw data is converted into images
+
+---
+
+### **7️⃣ Interpretation**
+
+* Images are analyzed to extract information
+
+---
+
+## **Data vs Information**
+
+* **Data** → Raw values/images collected by sensors
+* **Information** → Meaningful result after analysis
+
+---
+
+## **Applications**
+
+* Agriculture
+* Weather forecasting
+* Disaster management
+* Mapping
 
 ---
 
 ## **Conclusion**
 
-Bitcoin block structure ensures **security, integrity, and proper linking of data** in the blockchain.
+Remote sensing helps in **fast, large-scale, and accurate observation of Earth** without physical contact.
 
 ---
 
-# **19(b) Explain Merkle Tree and its importance (4M)**
+# **2. Explain Remote Sensing Data Collection Methods, Advantages and Limitations (10M)**
 
 ## **Introduction**
 
-A Merkle Tree is a structure used to organize and verify transactions efficiently.
+Remote sensing data is collected using **different platforms and sensors** to observe Earth features.
 
 ---
 
-## **What is Merkle Tree?**
+## **Data Collection Methods**
 
-* A tree of hashes
-* Leaves = transaction hashes
-* Parent nodes = hash of child nodes
+### **1️⃣ Based on Platform**
 
----
+#### **a) Ground-based**
 
-## **Working**
-
-1. Each transaction is hashed
-2. Pairs of hashes are combined and hashed again
-3. Process continues until one final hash (Merkle Root) is obtained
+* Sensors placed on ground
+* Used for detailed study
 
 ---
 
-## **Importance**
+#### **b) Airborne**
 
-### **1️⃣ Data Integrity**
-
-* Any change in data changes root hash
-
----
-
-### **2️⃣ Efficient Verification**
-
-* No need to check all transactions
+* Sensors mounted on aircraft or drones
+* Covers medium area
 
 ---
 
-### **3️⃣ Faster Processing**
+#### **c) Spaceborne**
 
-* Reduces computation time
-
----
-
-## **Conclusion**
-
-Merkle Tree helps in **secure and efficient verification of transactions**.
+* Sensors on satellites
+* Covers large area
 
 ---
 
-# **20(a) Explain Smart Contracts and their working mechanism (6M)**
+### **2️⃣ Based on Energy Source**
 
-## **Introduction**
+#### **a) Passive Remote Sensing**
 
-Smart contracts are **self-executing programs** stored on the blockchain that run automatically when conditions are met.
-
----
-
-## **What are Smart Contracts?**
-
-* Digital agreements written in code
-* No need for intermediaries
-* Automatically enforce rules
+* Uses natural energy (Sun)
+* Example: optical images
 
 ---
 
-## **Working Mechanism**
+#### **b) Active Remote Sensing**
 
-### **Step 1: Contract Creation**
-
-* Written in programming language
-* Conditions and rules defined
-
----
-
-### **Step 2: Deployment**
-
-* Uploaded to blockchain
-
----
-
-### **Step 3: Triggering Event**
-
-* When conditions are met, contract activates
-
----
-
-### **Step 4: Execution**
-
-* Performs actions automatically
-* Example: transfer money
-
----
-
-### **Step 5: Record Storage**
-
-* Result stored permanently
+* Sensor sends its own energy
+* Example: RADAR
 
 ---
 
 ## **Advantages**
 
-* No middleman
-* Fast execution
-* High security
+### **1️⃣ Large Area Coverage**
+
+* Can cover huge areas quickly
+
+---
+
+### **2️⃣ Time Saving**
+
+* Faster than ground survey
+
+---
+
+### **3️⃣ Repeated Observations**
+
+* Same area can be observed regularly
+
+---
+
+### **4️⃣ Access to Remote Areas**
+
+* Useful for forests, mountains
+
+---
+
+### **5️⃣ Multi-purpose Use**
+
+* Used in agriculture, weather, defense
+
+---
+
+## **Limitations**
+
+### **1️⃣ Weather Dependency**
+
+* Clouds can block data
+
+---
+
+### **2️⃣ Cost**
+
+* Satellite systems are expensive
+
+---
+
+### **3️⃣ Requires Skilled Analysis**
+
+* Data interpretation needs expertise
+
+---
+
+### **4️⃣ Resolution Limit**
+
+* Some images may not be very detailed
 
 ---
 
 ## **Conclusion**
 
-Smart contracts automate processes, making transactions faster, secure, and reliable.
+Remote sensing data collection is **powerful and efficient**, but has some limitations related to cost, weather, and analysis.
 
 ---
 
-# **20(b) Applications of Smart Contracts in Finance Sector (4M)**
+## **🔥 Memory Trick**
+
+For Process →
+**“Energy → Atmosphere → Object → Sensor → Data → Info”**
+
+---
+
+Here are **clear, simple, exam-ready 10-mark answers** for these very important topics.
+
+---
+
+# **3. Explain the Electromagnetic Spectrum and its Importance in Remote Sensing (10M)**
 
 ## **Introduction**
 
-Smart contracts are widely used in finance to automate and secure transactions.
+The Electromagnetic (EM) Spectrum is the **range of all types of electromagnetic radiation (energy)** used in remote sensing.
 
 ---
 
-## **Applications**
+## **What is Electromagnetic Spectrum? (Easy Idea)**
 
-### **1️⃣ Automated Payments**
-
-* Payments released when conditions are met
-
----
-
-### **2️⃣ Loans and Lending**
-
-* Automatic loan approval and repayment
+* It includes different types of energy waves based on **wavelength**
+* From **short waves (high energy)** to **long waves (low energy)**
 
 ---
 
-### **3️⃣ Insurance Claims**
+## **Main Regions of EM Spectrum**
 
-* Claims processed automatically
+### **1️⃣ Gamma Rays**
 
----
-
-### **4️⃣ Trading and Exchanges**
-
-* Faster and secure trading
+* Very short wavelength
+* Not used in remote sensing
 
 ---
 
-### **5️⃣ Asset Management**
+### **2️⃣ X-Rays**
 
-* Manage ownership of assets digitally
+* Short wavelength
+* Limited use
+
+---
+
+### **3️⃣ Ultraviolet (UV)**
+
+* Slightly useful
+
+---
+
+### **4️⃣ Visible Light**
+
+* Seen by human eye
+* Important for imaging
+
+---
+
+### **5️⃣ Infrared (IR)**
+
+* Detects heat
+* Very important for vegetation and temperature
+
+---
+
+### **6️⃣ Microwave**
+
+* Can pass through clouds
+* Used in RADAR
+
+---
+
+## **Importance in Remote Sensing**
+
+### **1️⃣ Data Collection**
+
+* Sensors capture reflected energy from objects
+
+---
+
+### **2️⃣ Object Identification**
+
+* Different objects reflect different wavelengths
+
+---
+
+### **3️⃣ Weather Monitoring**
+
+* Infrared and microwave help in weather analysis
+
+---
+
+### **4️⃣ Day and Night Imaging**
+
+* Microwave works even at night
+
+---
+
+### **5️⃣ Surface Analysis**
+
+* Helps study soil, water, vegetation
+
+---
+
+## **Key Point**
+
+👉 Remote sensing works mainly in:
+
+* Visible
+* Infrared
+* Microwave regions
 
 ---
 
 ## **Conclusion**
 
-Smart contracts improve efficiency, reduce cost, and eliminate intermediaries in financial systems.
+The EM spectrum is the **foundation of remote sensing**, as it provides the energy needed to detect and analyze Earth features.
 
 ---
 
-Here are **simple, structured, beginner-friendly 10-mark answers** for your Unit–II questions.
-
----
-
-# **21(a) Explain Ethereum architecture and accounts (6M)**
+# **4. Explain Energy Interaction with Atmosphere and Earth Surface Features (10M)**
 
 ## **Introduction**
 
-Ethereum is a blockchain platform that supports **smart contracts and decentralized applications**. Its architecture defines how transactions are processed and stored.
+When electromagnetic energy travels from the Sun to Earth, it **interacts with atmosphere and surface features** before reaching sensors.
 
 ---
 
-## **Ethereum Architecture (Main Components)**
+## **Interaction with Atmosphere**
 
-### **1. Ethereum Virtual Machine (EVM)**
+### **1️⃣ Scattering**
 
-* A runtime environment that executes smart contracts
-* Ensures all nodes run the same code
+* Energy is **deflected in different directions**
+* Caused by particles in air
 
----
-
-### **2. Nodes**
-
-* Computers that maintain the network
-* Store blockchain data and validate transactions
+👉 Example: Blue sky
 
 ---
 
-### **3. Blockchain Ledger**
+### **2️⃣ Absorption**
 
-* Stores all transactions and smart contract data
-* Distributed across all nodes
+* Energy is **absorbed by gases** like:
 
----
+  * Ozone
+  * Water vapor
 
-### **4. Gas Mechanism**
-
-* Used to pay for transaction execution
-* Prevents misuse of resources
+👉 Reduces energy reaching Earth
 
 ---
 
-### **5. Smart Contracts**
+### **3️⃣ Transmission**
 
-* Self-executing programs stored on blockchain
-
----
-
-## **Types of Ethereum Accounts**
-
-### **1. Externally Owned Account (EOA)**
-
-* Controlled by a user
-* Uses private key
-* Can send transactions
+* Energy passes through atmosphere without change
 
 ---
 
-### **2. Contract Account**
+## **Interaction with Earth Surface**
 
-* Controlled by smart contract code
-* Executes automatically when triggered
+Different objects interact differently:
+
+---
+
+### **1️⃣ Soil**
+
+* Reflects moderate energy
+* Depends on moisture:
+
+  * Wet soil → less reflection
+  * Dry soil → more reflection
+
+---
+
+### **2️⃣ Water**
+
+* Absorbs most energy
+* Appears dark in images
+
+---
+
+### **3️⃣ Vegetation**
+
+* Reflects strongly in infrared
+* Healthy vegetation → high reflection
+
+---
+
+## **Types of Interaction (Easy Summary)**
+
+### **1️⃣ Reflection**
+
+* Energy bounces back
+
+---
+
+### **2️⃣ Absorption**
+
+* Energy is absorbed
+
+---
+
+### **3️⃣ Transmission**
+
+* Energy passes through
+
+---
+
+## **Importance**
+
+* Helps identify objects
+* Useful for agriculture and water studies
+* Improves image interpretation
 
 ---
 
 ## **Conclusion**
 
-Ethereum architecture combines EVM, accounts, and smart contracts to create a powerful decentralized platform.
+Understanding energy interaction helps in **accurate detection and analysis of Earth features in remote sensing**.
 
 ---
 
-# **21(b) Explain DAO and “Code is Law” principle (4M)**
+## **🔥 Memory Trick**
+
+For Interaction →
+**“SAT”**
+
+* Scattering
+* Absorption
+* Transmission
+
+---
+
+Here are **simple, structured, easy-to-remember 10-mark answers** for Satellites & Sensors.
+
+---
+
+# **5. Explain Indian Remote Sensing Satellites and Sensors (10M)**
 
 ## **Introduction**
 
-DAO and “Code is Law” are key ideas in blockchain governance and automation.
+India has developed a strong remote sensing program using satellites to **collect data about Earth for various applications**.
 
 ---
 
-## **1. DAO (Decentralized Autonomous Organization)**
+## **Indian Remote Sensing (IRS) Satellites**
 
-### **Definition**
-
-* An organization run by smart contracts
-* No central authority
+* IRS is a series of satellites launched by India for **Earth observation**
+* Used in agriculture, mapping, weather, and disaster management
 
 ---
 
-### **Features**
+## **Major IRS Satellites (Examples)**
 
-* Decisions made by voting
-* Transparent operations
-* Automated rules
-
----
-
-## **2. “Code is Law” Principle**
-
-### **Meaning**
-
-* Rules written in code are final
-* Smart contracts execute exactly as programmed
+* IRS-1A, IRS-1B → Early satellites
+* Resourcesat → Resource monitoring
+* Cartosat → High-resolution mapping
+* Oceansat → Ocean studies
 
 ---
 
-### **Implication**
+## **Sensors in Remote Sensing**
 
-* No human intervention
-* No changes once deployed
+Sensors are devices that **capture reflected energy from Earth**.
+
+---
+
+## **Types of Sensors**
+
+### **1️⃣ Passive Sensors**
+
+* Use natural energy (Sun)
+* Example: cameras, optical sensors
+
+---
+
+### **2️⃣ Active Sensors**
+
+* Send their own energy and receive it back
+* Example: RADAR
+
+---
+
+## **Important Sensor Characteristics**
+
+### **1️⃣ Spatial Resolution**
+
+* Level of detail in image
+
+---
+
+### **2️⃣ Spectral Resolution**
+
+* Ability to detect different wavelengths
+
+---
+
+### **3️⃣ Temporal Resolution**
+
+* How often data is captured
+
+---
+
+### **4️⃣ Radiometric Resolution**
+
+* Sensitivity to small energy differences
+
+---
+
+## **Applications of IRS Satellites**
+
+* Agriculture monitoring
+* Urban planning
+* Water resource management
+* Disaster management
 
 ---
 
 ## **Conclusion**
 
-DAO represents decentralized governance, while “Code is Law” ensures strict execution of rules.
+Indian remote sensing satellites and sensors play a key role in **collecting accurate and useful Earth data for development and planning**.
 
 ---
 
-# **22(a) Explain Bitcoin mining and types of mining hardware (6M)**
+# **6. Explain IKONOS Satellite Sensor and Blue Bird Satellites with their Characteristics (10M)**
 
 ## **Introduction**
 
-Bitcoin mining is the process of **validating transactions and adding new blocks** to the blockchain.
+IKONOS and BlueBird satellites are **high-resolution commercial satellites** used for detailed Earth observation.
 
 ---
 
-## **Working of Bitcoin Mining**
+## **IKONOS Satellite**
 
-### **Step 1: Transaction Collection**
+### **Overview**
 
-* Transactions are grouped into a block
-
----
-
-### **Step 2: Puzzle Solving**
-
-* Miners solve a mathematical problem
+* One of the first **high-resolution satellites**
+* Provides detailed images of Earth
 
 ---
 
-### **Step 3: Hash Generation**
+### **Key Features**
 
-* Generate hash that meets required condition
+* High spatial resolution (clear images)
+* Captures both:
 
----
-
-### **Step 4: Block Addition**
-
-* Valid block added to blockchain
+  * Panchromatic (black & white)
+  * Multispectral (color) images
 
 ---
 
-### **Step 5: Reward**
+### **Uses**
 
-* Miner receives Bitcoin reward
-
----
-
-## **Types of Mining Hardware**
-
-### **1. CPU (Central Processing Unit)**
-
-* Basic mining
-* Very slow
+* Urban mapping
+* Military applications
+* Environmental monitoring
 
 ---
 
-### **2. GPU (Graphics Processing Unit)**
+## **BlueBird Satellites**
 
-* Faster than CPU
-* Used for parallel processing
+### **Overview**
 
----
-
-### **3. FPGA (Field Programmable Gate Array)**
-
-* More efficient
-* Customizable hardware
+* Series of commercial satellites operated for **high-resolution imaging**
+* Includes satellites like GeoEye
 
 ---
 
-### **4. ASIC (Application Specific Integrated Circuit)**
+### **Key Characteristics**
 
-* Most powerful and efficient
-* Designed only for mining
+### **1️⃣ Very High Resolution**
+
+* Captures very fine details
+
+---
+
+### **2️⃣ Fast Data Collection**
+
+* Covers large areas quickly
+
+---
+
+### **3️⃣ Multi-purpose Use**
+
+* Used in mapping, defense, planning
+
+---
+
+### **4️⃣ Advanced Sensors**
+
+* Provide accurate and detailed data
+
+---
+
+## **Comparison (Simple Idea)**
+
+* IKONOS → Early high-resolution satellite
+* BlueBird → More advanced, higher detail
 
 ---
 
 ## **Conclusion**
 
-Mining secures the network, and hardware evolution has improved mining efficiency.
+IKONOS and BlueBird satellites provide **high-quality images**, making them important for detailed mapping and analysis.
 
 ---
 
-# **22(b) Explain Hashcash Puzzle (4M)**
+## **🔥 Memory Trick**
+
+For Resolution Types →
+**“SSTR”**
+
+* Spatial
+* Spectral
+* Temporal
+* Radiometric
+
+---
+
+Here are **simple, detailed, exam-ready 10-mark answers** for the last part of Unit–II.
+
+---
+
+# **7. Explain Resolution in Remote Sensing and its Types. Also explain Map, Image, and False Color Composite (FCC) (10M)**
 
 ## **Introduction**
 
-Hashcash is a proof-of-work system used in Bitcoin mining.
+Resolution refers to the **ability of a sensor to capture details** in an image.
+Higher resolution means **more clarity and detail**.
 
 ---
 
-## **What is Hashcash Puzzle?**
+## **Types of Resolution**
 
-* A mathematical problem
-* Requires finding a value (nonce)
+### **1️⃣ Spatial Resolution**
 
----
-
-## **Working**
-
-1. Input data is taken
-2. Miner adds nonce
-3. Hash is calculated
-4. If hash meets condition (like leading zeros), solution is valid
+* Shows **level of detail in an image**
+* High spatial → clear, detailed image
+* Low spatial → blurry, less detail
 
 ---
 
-## **Purpose**
+### **2️⃣ Spectral Resolution**
 
-* Prevent spam
-* Ensure computational effort
-* Secure network
-
----
-
-## **Conclusion**
-
-Hashcash puzzle ensures that mining requires effort, making the system secure and trustworthy.
+* Ability to detect **different wavelengths (colors)**
+* More bands → better identification of objects
 
 ---
 
-Here are **simple, structured, beginner-friendly 10-mark answers** for your questions.
+### **3️⃣ Temporal Resolution**
+
+* How often the satellite captures images of the same area
 
 ---
 
-# **23(a) Explain Ethereum block structure in detail (6M)**
+### **4️⃣ Radiometric Resolution**
 
-## **Introduction**
-
-An Ethereum block stores transactions, smart contract data, and other information. It is similar to Bitcoin but includes additional fields for smart contract execution.
-
----
-
-## **Main Parts of Ethereum Block**
-
-An Ethereum block has **three main components**:
+* Ability to detect **small differences in energy**
+* Higher → better sensitivity
 
 ---
 
-## **1. Block Header**
+## **Map vs Image**
 
-Contains metadata about the block:
+### **Map**
 
-### **1️⃣ Parent Hash**
-
-* Hash of previous block
-* Links blocks together
-
----
-
-### **2️⃣ State Root**
-
-* Represents current state of all accounts
-* Includes balances and smart contract data
+* Processed and interpreted
+* Has scale, symbols, and labels
+* Used for accurate representation
 
 ---
 
-### **3️⃣ Transactions Root**
+### **Image**
 
-* Hash of all transactions (via Merkle tree)
-
----
-
-### **4️⃣ Receipts Root**
-
-* Stores results of transactions
+* Raw data captured by sensors
+* No labels or symbols
+* Needs interpretation
 
 ---
 
-### **5️⃣ Timestamp**
+## **False Color Composite (FCC)**
 
-* Time when block was created
+### **What is FCC?**
 
----
-
-### **6️⃣ Nonce**
-
-* Used in mining process
+* Image where **colors are not real**
+* Different bands are assigned artificial colors
 
 ---
 
-### **7️⃣ Gas Limit & Gas Used**
+### **Example**
 
-* Limits and tracks computation in block
-
----
-
-## **2. Transaction List**
-
-* Contains all transactions in the block
-* Includes smart contract executions
+* Vegetation appears **red**
+* Water appears **dark**
 
 ---
-
-## **3. Uncle Blocks (Optional)**
-
-* Blocks that were mined but not added to main chain
-* Still rewarded to improve security
-
----
-
-## **Conclusion**
-
-Ethereum block structure supports both transactions and smart contracts, making it more flexible than basic blockchains.
-
----
-
-# **23(b) Compare Bitcoin and Ethereum (4M)**
-
-## **Introduction**
-
-Bitcoin and Ethereum are popular blockchain platforms but have different purposes.
-
----
-
-## **Comparison**
-
-| Feature         | Bitcoin          | Ethereum                  |
-| --------------- | ---------------- | ------------------------- |
-| Purpose         | Digital currency | Platform for applications |
-| Creator         | Satoshi Nakamoto | Vitalik Buterin           |
-| Smart Contracts | Not supported    | Supported                 |
-| Programming     | Limited          | Flexible                  |
-| Block Time      | ~10 minutes      | ~15 seconds               |
-| Use Case        | Payments         | Apps, contracts           |
-
----
-
-## **Conclusion**
-
-Bitcoin is mainly for currency, while Ethereum supports advanced applications.
-
----
-
-# **24(a) Explain Smart Contract Lifecycle (6M)**
-
-## **Introduction**
-
-A smart contract lifecycle describes the stages from creation to execution and completion.
-
----
-
-## **Stages of Smart Contract Lifecycle**
-
-### **1️⃣ Creation**
-
-* Contract is written in code
-* Rules and conditions defined
-
----
-
-### **2️⃣ Compilation**
-
-* Code is converted into machine-readable format
-
----
-
-### **3️⃣ Deployment**
-
-* Contract is uploaded to blockchain
-* Assigned a unique address
-
----
-
-### **4️⃣ Execution**
-
-* Triggered when conditions are met
-* Performs actions automatically
-
----
-
-### **5️⃣ Validation**
-
-* Network nodes verify execution
-
----
-
-### **6️⃣ Completion**
-
-* Results are stored permanently
-
----
-
-## **Conclusion**
-
-Smart contracts go through multiple stages to ensure secure and automatic execution.
-
----
-
-# **24(b) Applications of Smart Contracts in Insurance Sector (4M)**
-
-## **Introduction**
-
-Smart contracts improve efficiency and transparency in insurance systems.
-
----
-
-## **Applications**
-
-### **1️⃣ Automatic Claim Processing**
-
-* Claims are processed automatically when conditions are met
-
----
-
-### **2️⃣ Fraud Prevention**
-
-* Transparent records reduce fraud
-
----
-
-### **3️⃣ Policy Management**
-
-* Policies stored digitally and securely
-
----
-
-### **4️⃣ Faster Settlements**
-
-* No manual verification needed
-
----
-
-### **5️⃣ Parametric Insurance**
-
-* Payments triggered by events (e.g., rainfall data)
-
----
-
-## **Conclusion**
-
-Smart contracts make insurance faster, transparent, and more reliable.
-
----
-
-Here are **clear, beginner-friendly, structured 10-mark answers** for your questions.
-
----
-
-# **25(a) Explain Bitcoin Script and P2PKH steps (6M)**
-
-## **Introduction**
-
-Bitcoin uses a simple scripting system to define how transactions are validated. One of the most common transaction types is **P2PKH (Pay-to-Public-Key-Hash)**.
-
----
-
-## **1. Bitcoin Script**
-
-### **Definition**
-
-* A simple, stack-based scripting language
-* Used to define rules for spending Bitcoin
-
----
-
-### **Features**
-
-* Not a full programming language
-* Executes step-by-step instructions
-* Ensures transaction validity
-
----
-
-## **2. P2PKH (Pay-to-Public-Key-Hash)**
 
 ### **Purpose**
 
-* Allows sending Bitcoin to a specific user using their public key hash
-
----
-
-## **Steps in P2PKH Transaction**
-
-### **Step 1: Locking Script (ScriptPubKey)**
-
-* Sender creates a condition:
-
-  * “Only the owner of this public key can spend this coin”
-
----
-
-### **Step 2: Unlocking Script (ScriptSig)**
-
-* Receiver provides:
-
-  * Digital signature
-  * Public key
-
----
-
-### **Step 3: Verification Process**
-
-* Network checks:
-
-  * Public key hash matches
-  * Signature is valid
-
----
-
-### **Step 4: Execution**
-
-* Script runs
-* If valid → transaction accepted
+* Helps in easy identification of features
+* Highlights differences clearly
 
 ---
 
 ## **Conclusion**
 
-Bitcoin Script ensures secure transactions, and P2PKH is the most commonly used method for transferring Bitcoin safely.
+Resolution improves image quality, while FCC helps in **better interpretation of Earth features**.
 
 ---
 
-# **25(b) Explain Zero, One and Six confirmation transactions (4M)**
+# **8. Explain Digital Data in Remote Sensing and Elements of Visual Interpretation Techniques (10M)**
 
 ## **Introduction**
 
-A confirmation means a transaction has been included in a block. More confirmations mean higher security.
+Remote sensing data is stored in **digital form** and analyzed using visual interpretation techniques.
 
 ---
 
-## **Types of Confirmations**
+## **Digital Data in Remote Sensing**
 
-### **1️⃣ Zero Confirmation**
+### **What is Digital Data?**
 
-* Transaction is not yet added to a block
-* Fast but not secure
-
----
-
-### **2️⃣ One Confirmation**
-
-* Transaction included in one block
-* Moderately secure
+* Data stored as **numbers (pixels)**
+* Each pixel represents a value of energy
 
 ---
 
-### **3️⃣ Six Confirmations**
+### **Key Features**
 
-* Transaction confirmed in six blocks
-* Highly secure and trusted
-
----
-
-## **Conclusion**
-
-More confirmations reduce the chance of fraud or reversal.
+* Easy to store and process
+* Used in computers and GIS
+* Can be enhanced and analyzed
 
 ---
 
-# **26(a) Explain Types of Smart Contracts (6M)**
+## **Advantages of Digital Data**
 
-## **Introduction**
-
-Smart contracts can be categorized based on their usage and functionality.
-
----
-
-## **Types of Smart Contracts**
-
-### **1️⃣ Smart Legal Contracts**
-
-* Follow real-world legal agreements
-* Automatically enforce terms
+* High accuracy
+* Easy manipulation
+* Faster analysis
 
 ---
 
-### **2️⃣ Decentralized Autonomous Organizations (DAO)**
+## **Elements of Visual Interpretation**
 
-* Organization managed by smart contracts
-* Decisions made through voting
-
----
-
-### **3️⃣ Application Logic Contracts (ALC)**
-
-* Used in applications
-* Manage business logic
+These are clues used to identify objects in images:
 
 ---
 
-### **4️⃣ Multi-signature Contracts**
+### **1️⃣ Tone/Color**
 
-* Require approval from multiple users
-* Used for shared control
-
----
-
-## **Conclusion**
-
-Different types of smart contracts are used for automation, governance, and application management.
+* Brightness or color of object
 
 ---
 
-# **26(b) Applications of Smart Contracts in Education Sector (4M)**
+### **2️⃣ Shape**
 
-## **Introduction**
-
-Smart contracts improve transparency and efficiency in education systems.
+* Form of object (square, circular, etc.)
 
 ---
 
-## **Applications**
+### **3️⃣ Size**
 
-### **1️⃣ Certificate Verification**
-
-* Store certificates on blockchain
-* Easy and tamper-proof verification
+* Helps distinguish objects
 
 ---
 
-### **2️⃣ Student Records Management**
+### **4️⃣ Pattern**
 
-* Secure storage of academic data
-
----
-
-### **3️⃣ Automated Scholarships**
-
-* Funds released automatically based on eligibility
+* Arrangement of objects
 
 ---
 
-### **4️⃣ Online Learning Systems**
+### **5️⃣ Texture**
 
-* Track course completion and performance
+* Smooth or rough appearance
 
 ---
 
-### **5️⃣ Fee Payments**
+### **6️⃣ Shadow**
 
-* Automated and transparent payment systems
+* Gives idea of height
+
+---
+
+### **7️⃣ Location/Site**
+
+* Where the object is located
+
+---
+
+### **8️⃣ Association**
+
+* Relation with nearby objects
 
 ---
 
 ## **Conclusion**
 
-Smart contracts make education systems more secure, transparent, and efficient.
+Digital data makes analysis easy, and visual interpretation helps in **identifying and understanding objects clearly**.
+
+---
+
+## **🔥 Memory Trick**
+
+For Interpretation Elements →
+**“TSSPTLSA”**
+
+* Tone
+* Shape
+* Size
+* Pattern
+* Texture
+* Location
+* Shadow
+* Association
 
 ---
 
 
-
-
-
-Tell me.
