@@ -1,923 +1,769 @@
-Understood. Here are clear, beginner-friendly, exam-ready notes for both questions, written in a structured 10-mark format.
+Great choice—these are **core 10-mark questions**. I’ll keep them **simple, structured, and easy to remember**.
 
 ---
 
-# **11(a) Explain the evolution of blockchain (First to Fourth generation).**
+# **1. What is Photogrammetry? Explain its Principles. (10M)**
 
 ## **Introduction**
 
-Blockchain technology has evolved over time to solve different problems. Each generation improved upon the previous one in terms of functionality, scalability, and usability.
+Photogrammetry is the science of **measuring and extracting information about objects or land using photographs**, especially aerial photos.
+
+👉 In simple words:
+It helps us **study the Earth from images** instead of direct measurement.
 
 ---
 
-## **1. First Generation (Blockchain 1.0 – Cryptocurrency Stage)**
+## **Definition (Easy Line for Exam)**
 
-### **Focus:** Digital currency
-
-* Introduced by Bitcoin in 2009
-* Main purpose: enable secure digital payments without banks
-* Uses decentralized network and Proof-of-Work
-
-### **Key Features:**
-
-* Peer-to-peer transactions
-* No central authority
-* Transparent ledger
-
-### **Limitation:**
-
-* Only supports currency transactions
-* Slow processing speed
+Photogrammetry is the technique of obtaining **accurate measurements and information from photographs**.
 
 ---
 
-## **2. Second Generation (Blockchain 2.0 – Smart Contracts)**
+## **Basic Working Idea**
 
-### **Focus:** Programmable transactions
-
-* Introduced by Ethereum
-* Allows execution of smart contracts (automatic agreements)
-
-### **Key Features:**
-
-* Smart contracts (self-executing code)
-* Supports applications beyond payments
-* Enables decentralized applications (DApps)
-
-### **Limitation:**
-
-* High transaction fees
-* Scalability issues
+1. Photos are taken from aircraft or drones
+2. Images are analyzed
+3. Measurements like distance, height, and area are calculated
 
 ---
 
-## **3. Third Generation (Blockchain 3.0 – Scalability & Performance)**
+## **Principles of Photogrammetry**
 
-### **Focus:** Improving speed and efficiency
+### **1️⃣ Perspective Principle**
 
-* Developed to solve problems of earlier blockchains
-
-### **Key Features:**
-
-* Faster transactions
-* Better scalability
-* Improved consensus methods (like Proof-of-Stake)
-
-### **Examples:**
-
-* EOS, Cardano
-
-### **Goal:**
-
-Make blockchain suitable for real-world large-scale use.
+* Objects appear **smaller when far** and **larger when near**
+* Helps understand distance and position
 
 ---
 
-## **4. Fourth Generation (Blockchain 4.0 – Integration with Industry)**
+### **2️⃣ Geometry Principle**
 
-### **Focus:** Business and real-world integration
+* Relationship between:
 
-* Combines blockchain with technologies like AI, IoT, and cloud
+  * Camera
+  * Object
+  * Image
+* Used to calculate real-world measurements
 
-### **Key Features:**
+---
 
-* Enterprise solutions
-* Automation and smart decision-making
-* High performance and security
+### **3️⃣ Scale Principle**
 
-### **Applications:**
+* Every photograph has a **scale**
+* Helps convert image measurements into real-world values
 
-* Healthcare
-* Supply chain
-* Finance
+---
+
+### **4️⃣ Parallax Principle**
+
+* Same object appears at **different positions in two images**
+* Used to measure height
+
+---
+
+### **5️⃣ Stereoscopy Principle**
+
+* Two overlapping images create a **3D view**
+* Helps understand depth and terrain
+
+---
+
+## **Applications (Optional but good for marks)**
+
+* Map making
+* Land surveying
+* Urban planning
+* Disaster management
 
 ---
 
 ## **Conclusion**
 
-Blockchain evolved from simple digital currency systems to advanced platforms used in industries. Each generation improves usability, speed, and application scope.
+Photogrammetry is an important technique that allows **accurate measurement and analysis of land using photographs**, saving time and effort.
 
 ---
 
-# **11(b) Explain the characteristics of hash function in blockchain.**
+# **2. What are Aerial Photographs? Explain their Types. (10M)**
 
 ## **Introduction**
 
-A hash function is a mathematical function that converts data into a fixed-size output called a hash. It is essential for security in blockchain.
+Aerial photographs are images of the Earth’s surface taken from **aircraft, drones, or satellites**.
 
 ---
 
-## **Characteristics of Hash Functions**
+## **Definition (Easy Line)**
 
-### **1. Deterministic**
-
-* Same input always gives the same output
-* Ensures consistency
+Aerial photographs are **photos taken from above the ground** to study land features.
 
 ---
 
-### **2. Fixed Output Size**
+## **Types of Aerial Photographs**
 
-* No matter the input size, output length is fixed
-* Example: SHA-256 produces 256-bit output
+### **1️⃣ Based on Camera Angle**
 
----
+#### **a) Vertical Photographs**
 
-### **3. Fast Computation**
+* Camera is **pointing straight down (90°)**
+* Covers small area but highly accurate
 
-* Hash can be generated quickly
-* Important for efficient processing
+👉 **Features:**
 
----
-
-### **4. Pre-image Resistance**
-
-* Difficult to find original input from hash
-* Ensures security
+* Uniform scale
+* Less distortion
+* Used for mapping
 
 ---
 
-### **5. Collision Resistance**
+#### **b) Oblique Photographs**
 
-* Two different inputs should not produce the same hash
-* Prevents data duplication attacks
+* Camera is **tilted at an angle**
 
----
+**Types:**
 
-### **6. Avalanche Effect**
+* **Low Oblique**
 
-* Small change in input causes big change in output
-* Ensures unpredictability
+  * Does not show horizon
+  * Covers moderate area
 
----
+* **High Oblique**
 
-## **Conclusion**
-
-Hash functions provide security, data integrity, and trust in blockchain systems. They are essential for linking blocks and protecting data.
+  * Shows horizon
+  * Covers large area
 
 ---
 
-# **12(a) Explain the Proof-of-Work algorithm in detail.**
+### **2️⃣ Based on Scale**
 
-## **Introduction**
+#### **a) Large Scale**
 
-Proof-of-Work (PoW) is a consensus mechanism used to validate transactions and add new blocks to the blockchain.
+* Shows **small area with more detail**
 
----
+#### **b) Small Scale**
 
-## **Working of Proof-of-Work**
-
-### **Step 1: Transaction Collection**
-
-* Transactions are grouped into a block
+* Shows **large area with less detail**
 
 ---
 
-### **Step 2: Puzzle Solving**
+### **3️⃣ Based on Purpose**
 
-* Miners compete to solve a mathematical puzzle
-* Puzzle requires finding a value (nonce)
+#### **a) Metric Photographs**
 
----
+* Used for measurement and mapping
 
-### **Step 3: Hash Calculation**
+#### **b) Non-Metric Photographs**
 
-* Hash of block is calculated
-* Must satisfy a condition (like starting with zeros)
-
----
-
-### **Step 4: Block Validation**
-
-* First miner to solve puzzle broadcasts solution
-* Other nodes verify it
-
----
-
-### **Step 5: Block Addition**
-
-* Valid block is added to blockchain
-* Miner gets reward
+* Used for general viewing (not accurate measurements)
 
 ---
 
 ## **Advantages**
 
-* High security
-* Prevents fraud
-
----
-
-## **Disadvantages**
-
-* High energy consumption
-* Slow transaction speed
+* Covers large area quickly
+* Useful for mapping and planning
 
 ---
 
 ## **Conclusion**
 
-PoW ensures security and trust but consumes high resources.
+Aerial photographs are essential tools in remote sensing, helping in **accurate observation and analysis of land from above**.
 
 ---
 
-# **12(b) Explain double spending problem and how it is prevented.**
+## **Memory Trick (Super Useful)**
+
+For **Photogrammetry Principles → “PGSPS”**
+
+* Perspective
+* Geometry
+* Scale
+* Parallax
+* Stereoscopy
+
+---
+
+Here are **simple, detailed, easy-to-remember 10-mark answers** for these geometry topics. No heavy jargon, just clean structure.
+
+---
+
+# **3. Explain the Geometry of a Vertical Aerial Photograph (10M)**
 
 ## **Introduction**
 
-Double spending means using the same digital currency more than once. This is a major issue in digital systems.
+A vertical aerial photograph is taken with the camera pointing **straight down (90°)**.
+Its geometry explains the relationship between **camera, ground, and image**.
 
 ---
 
-## **Problem Explanation**
+## **Key Elements of Geometry**
 
-* Digital data can be copied easily
-* A user may try to send the same coins to multiple people
+### **1️⃣ Camera Position**
 
----
-
-## **How Blockchain Prevents Double Spending**
-
-### **1. Transaction Verification**
-
-* All transactions are checked by network nodes
+* Camera is placed **vertically above the ground**
+* Optical axis is **perpendicular** to Earth
 
 ---
 
-### **2. Consensus Mechanism**
+### **2️⃣ Principal Point (PP)**
 
-* Only valid transactions are accepted
-* PoW ensures agreement among nodes
-
----
-
-### **3. Public Ledger**
-
-* All transactions are recorded publicly
-* Anyone can verify transaction history
+* The center point of the photograph
+* Lies exactly below the camera
 
 ---
 
-### **4. Block Confirmation**
+### **3️⃣ Ground Point**
 
-* Transactions are confirmed after being added to a block
-* More confirmations = higher security
+* Actual point on Earth corresponding to a point in photo
+
+---
+
+### **4️⃣ Image Point**
+
+* The location of ground point on the photograph
+
+---
+
+### **5️⃣ Nadir Point**
+
+* Point directly below the camera on ground
+* Almost same as principal point in vertical photos
+
+---
+
+### **6️⃣ Isocenter**
+
+* Midpoint between principal point and nadir
+
+---
+
+## **Relationship (Important Idea)**
+
+* Light travels from ground → camera → image
+* Forms a **central projection**
+* Straight lines on ground remain straight in image
+
+---
+
+## **Key Characteristics**
+
+* Scale is **almost uniform**
+* Minimal distortion
+* Accurate for measurements
 
 ---
 
 ## **Conclusion**
 
-Blockchain prevents double spending using verification, consensus, and transparency, ensuring secure transactions.
+Geometry of vertical aerial photographs helps in **accurate mapping and measurement** by maintaining a clear relation between ground and image.
 
 ---
 
-Here are **clear, structured, beginner-friendly 10-mark answers** for your questions. Language is simple, with proper flow for exams.
-
----
-
-# **13(a) Explain Distributed Consensus and Public Key Cryptography (6M)**
+# **4. Explain Scale of an Aerial Photograph and its Calculation (10M)**
 
 ## **Introduction**
 
-Blockchain works without a central authority. To make this possible, it uses **distributed consensus** and **public key cryptography** to ensure trust, security, and agreement among users.
+Scale represents the relationship between **distance on photo and actual ground distance**.
 
 ---
 
-## **1. Distributed Consensus**
+## **Definition (Easy Line)**
 
-### **Definition**
-
-Distributed consensus is a process where all nodes in a network **agree on the same data or transaction state**.
+Scale = **Photo distance / Ground distance**
 
 ---
 
-## **Why it is needed**
+## **Types of Scale Representation**
 
-* No central authority
-* Multiple users must agree on valid transactions
-* Prevents fraud and inconsistencies
+### **1️⃣ Fractional Scale**
 
----
-
-## **How it works**
-
-1. A transaction is created
-2. It is shared with all nodes
-3. Nodes verify the transaction
-4. A consensus mechanism (like PoW or PoS) is used
-5. Once agreed, transaction is added to blockchain
+* Example: **1:10,000**
+* Means 1 unit on photo = 10,000 units on ground
 
 ---
 
-## **Examples of Consensus Mechanisms**
+### **2️⃣ Statement Scale**
 
-* Proof-of-Work
-* Proof-of-Stake
-
----
-
-## **2. Public Key Cryptography**
-
-### **Definition**
-
-A security method that uses **two keys**:
-
-* Public key (shared openly)
-* Private key (kept secret)
+* Example: 1 cm = 100 m
 
 ---
 
-## **Working**
+### **3️⃣ Graphical Scale**
 
-* Sender encrypts or signs data
-* Receiver uses public key to verify
-* Only the owner with private key can authorize transactions
+* Scale shown using a line/bar
 
 ---
 
-## **Uses in Blockchain**
+## **Scale Calculation**
 
-* Secure transactions
-* Digital signatures
-* Identity verification
+### **Basic Formula**
+
+Scale = **f / H**
+
+Where:
+
+* **f** = focal length of camera
+* **H** = height of camera above ground
+
+---
+
+## **Important Points**
+
+* Higher altitude → smaller scale
+* Lower altitude → larger scale
+
+---
+
+## **Uses of Scale**
+
+* Measure distances
+* Calculate area
+* Create maps
 
 ---
 
 ## **Conclusion**
 
-Distributed consensus ensures agreement among nodes, while public key cryptography ensures security and authenticity.
+Scale is essential for converting **photo measurements into real-world values**.
 
 ---
 
-# **13(b) Differentiate Public and Private Blockchain (4M)**
+# **5. Explain Height Determination using Single Vertical Aerial Photograph (10M)**
 
 ## **Introduction**
 
-Blockchains can be classified based on access control into public and private.
+Height of objects (like buildings, hills) can be measured using aerial photographs.
 
 ---
 
-## **Differences**
+## **Basic Concept**
 
-| Feature      | Public Blockchain              | Private Blockchain          |
-| ------------ | ------------------------------ | --------------------------- |
-| Access       | Open to everyone               | Restricted access           |
-| Control      | Decentralized                  | Controlled by organization  |
-| Transparency | High                           | Limited                     |
-| Speed        | Slower                         | Faster                      |
-| Security     | High (due to decentralization) | Moderate                    |
-| Example      | Bitcoin                        | Company internal blockchain |
+* Objects appear **shifted outward** from center
+* This shift is called **relief displacement**
+
+---
+
+## **Method of Height Determination**
+
+### **1️⃣ Identify Object**
+
+* Select object whose height is to be measured
+
+---
+
+### **2️⃣ Measure Displacement**
+
+* Measure distance between:
+
+  * Top of object
+  * Base of object
+
+---
+
+### **3️⃣ Use Known Values**
+
+* Camera height
+* Photo scale
+
+---
+
+### **4️⃣ Apply Relation**
+
+Height is proportional to **displacement**
+
+👉 More displacement = more height
+
+---
+
+## **Key Idea (Easy to Remember)**
+
+* Taller object → more displacement
+* Short object → less displacement
+
+---
+
+## **Applications**
+
+* Measuring building height
+* Terrain analysis
 
 ---
 
 ## **Conclusion**
 
-Public blockchain is open and decentralized, while private blockchain is controlled and efficient for organizations.
+Height determination using aerial photographs is a **simple and effective method** based on displacement.
 
 ---
 
-# **14(a) Explain Proof-of-Stake Algorithm (6M)**
+## **🔥 Memory Trick (Super Helpful)**
+
+For Geometry points → **“PPNIG”**
+
+* Principal point
+* Photo/Image point
+* Nadir
+* Isocenter
+* Ground point
+
+---
+
+Perfect—no formulas, just **clear concepts + easy memory**. These are **important 10-mark answers**, so I’ll keep them detailed but simple.
+
+---
+
+# **6. Explain Height Measurement using Relief Displacement (10M)**
 
 ## **Introduction**
 
-Proof-of-Stake (PoS) is a consensus mechanism that selects validators based on the amount of cryptocurrency they hold.
+Relief displacement is the **shift in position of objects in an aerial photograph due to their height**.
+It is used to estimate how tall an object is.
 
 ---
 
-## **Working of PoS**
+## **What is Relief Displacement? (Easy Idea)**
 
-### **Step 1: Stake Holding**
+* Objects in a photo do not appear exactly where they should
+* **Tall objects appear slightly pushed outward from the center**
 
-* Users lock some cryptocurrency as “stake”
-
----
-
-### **Step 2: Validator Selection**
-
-* System selects a validator based on stake size
+👉 In simple words:
+**Higher object → more shift → more displacement**
 
 ---
 
-### **Step 3: Block Validation**
+## **Why it Happens**
 
-* Selected validator verifies transactions
-
----
-
-### **Step 4: Reward**
-
-* Validator receives reward for validation
+* Aerial photos are taken from above
+* Light rays from top and base of object reach camera differently
+* This causes a shift in image
 
 ---
 
-## **Advantages**
+## **How Height is Determined (Concept Only)**
 
-* Low energy consumption
-* Faster than PoW
-* More efficient
+### **1️⃣ Identify Object**
+
+* Choose object (building, tower, hill)
 
 ---
 
-## **Disadvantages**
+### **2️⃣ Locate Center of Photo**
 
-* Wealth-based selection
-* Can lead to centralization
+* Find the center (principal point)
+
+---
+
+### **3️⃣ Observe Displacement**
+
+* Compare position of:
+
+  * Top of object
+  * Base of object
+
+---
+
+### **4️⃣ Analyze Shift**
+
+* If top is **farther from center than base**, object is tall
+
+---
+
+### **5️⃣ Estimate Height**
+
+* More displacement → greater height
+* Less displacement → smaller height
+
+---
+
+## **Key Points to Remember**
+
+* Displacement is **radial (moves outward from center)**
+* No displacement at center
+* Maximum displacement at edges
+
+---
+
+## **Applications**
+
+* Measuring building heights
+* Studying terrain and hills
 
 ---
 
 ## **Conclusion**
 
-PoS is an energy-efficient alternative to PoW, widely used in modern blockchains.
+Relief displacement helps determine height by observing how much an object shifts in a photograph, making it a **simple and useful technique in photogrammetry**.
 
 ---
 
-# **14(b) Explain Cryptocurrency Wallets and their Types (4M)**
+# **7. Explain Fundamentals of Stereoscopy and its Importance (10M)**
 
 ## **Introduction**
 
-A cryptocurrency wallet is a tool used to **store, send, and receive digital currency**.
+Stereoscopy is a technique that allows us to see **3D (three-dimensional) images** using two overlapping photographs.
 
 ---
 
-## **Types of Wallets**
+## **Basic Idea (Very Simple)**
 
-### **1. Hot Wallets (Online)**
+* Our two eyes see slightly different views
+* Brain combines them → gives **depth perception**
 
-* Connected to internet
-* Easy to use
-* Less secure
-
-**Examples:** mobile apps, web wallets
+👉 Same concept is used in aerial photos.
 
 ---
 
-### **2. Cold Wallets (Offline)**
+## **How Stereoscopy Works**
 
-* Not connected to internet
-* Highly secure
+### **1️⃣ Two Overlapping Photos**
 
-**Examples:** hardware wallets, paper wallets
-
----
-
-### **3. Software Wallets**
-
-* Installed on devices
-* Convenient but moderate security
+* Photos of same area taken from slightly different positions
 
 ---
 
-### **4. Hardware Wallets**
+### **2️⃣ Different Viewpoints**
 
-* Physical devices
-* Very secure
+* Each photo shows object from a different angle
+
+---
+
+### **3️⃣ Brain Combines Images**
+
+* When viewed together → gives **3D effect**
+
+---
+
+## **Tools Used**
+
+* Stereoscope (device used to view 3D images)
+
+---
+
+## **Key Concepts**
+
+### **1️⃣ Parallax**
+
+* Difference in position of object in two images
+* Helps in depth measurement
+
+---
+
+### **2️⃣ Overlap**
+
+* Photos must overlap (usually ~60%)
+
+---
+
+## **Importance of Stereoscopy**
+
+### **1️⃣ Depth Perception**
+
+* Helps see height and shape of land
+
+---
+
+### **2️⃣ Accurate Mapping**
+
+* Improves accuracy of maps
+
+---
+
+### **3️⃣ Terrain Analysis**
+
+* Used to study hills, valleys, slopes
+
+---
+
+### **4️⃣ Better Interpretation**
+
+* Easier to identify objects in 3D
 
 ---
 
 ## **Conclusion**
 
-Wallets are essential for managing cryptocurrencies, with different types offering different levels of security and convenience.
+Stereoscopy helps convert flat images into **3D views**, making it easier to understand terrain and measure heights accurately.
 
 ---
 
-Here are **clear, beginner-friendly, structured 10-mark answers** for your questions.
+## **🔥 Memory Trick**
+
+For Relief Displacement →
+**“Tall = More Shift”**
+
+For Stereoscopy →
+**“2 Photos = 3D Vision”**
 
 ---
 
-# **15(a) Explain evolution of currency and birth of Bitcoin (6M)**
+Here are **simple, clear, exam-ready 10-mark answers**—no formulas, just concepts you can remember easily.
+
+---
+
+# **8. What are Fiducial Points? Explain their Importance (10M)**
 
 ## **Introduction**
 
-Currency has evolved over time to make transactions easier, safer, and more efficient. Bitcoin is the latest step in this evolution.
+Fiducial points are **fixed reference marks** present on an aerial photograph.
+They are used to **identify the exact position and center of the image**.
 
 ---
 
-## **1. Evolution of Currency**
+## **What are Fiducial Points? (Easy Idea)**
 
-### **1️⃣ Barter System**
+* Small marks (dots/crosses) printed on the edges of the photo
+* Usually **4 or 8 points** placed symmetrically
 
-* Goods exchanged directly (no money)
-* Example: rice for vegetables
-* **Problem:** No common value system
-
----
-
-### **2️⃣ Commodity Money**
-
-* Items like gold, silver used as money
-* Had intrinsic value
-* **Problem:** Hard to carry and divide
+👉 They act like a **reference frame for the photograph**
 
 ---
 
-### **3️⃣ Paper Currency**
+## **Purpose of Fiducial Points**
 
-* Introduced by governments
-* Easy to carry and use
-* **Problem:** Requires trust in banks/government
+### **1️⃣ Finding the Center (Principal Point)**
 
----
-
-### **4️⃣ Digital Payments**
-
-* Online banking, cards, UPI
-* Fast and convenient
-* **Problem:** Depends on centralized systems
+* By joining fiducial points, we can locate the **exact center of the photo**
 
 ---
 
-## **2. Birth of Bitcoin**
+### **2️⃣ Maintaining Accuracy**
 
-* Introduced in 2009 by Satoshi Nakamoto
-* Created as a **decentralized digital currency**
-* Works without banks or intermediaries
-* Uses blockchain for transparency and security
+* Helps ensure measurements are **correct and consistent**
+
+---
+
+### **3️⃣ Image Orientation**
+
+* Used to properly align the photograph during analysis
+
+---
+
+### **4️⃣ Reference for Measurements**
+
+* All calculations (distance, height, etc.) are based on these fixed points
+
+---
+
+### **5️⃣ Error Correction**
+
+* Helps detect and correct distortions in the image
+
+---
+
+## **Key Points to Remember**
+
+* They are **fixed and do not change**
+* Used as a **base reference for all measurements**
 
 ---
 
 ## **Conclusion**
 
-Currency evolved from physical exchange to digital systems. Bitcoin removes the need for trust in central authorities by using technology.
+Fiducial points are essential for **accuracy, alignment, and reliable measurement** in aerial photographs.
 
 ---
 
-# **15(b) Explain how Bitcoin solves the trust problem (4M)**
+# **9. Explain Parallax and its Measurement using Fiducial Line (10M)**
 
 ## **Introduction**
 
-Traditional systems require trust in banks or intermediaries. Bitcoin removes this need.
+Parallax is the **apparent shift in position of an object** when viewed from two different images.
+It is mainly used to **measure height and depth**.
 
 ---
 
-## **How Bitcoin Solves Trust Problem**
+## **What is Parallax? (Easy Idea)**
 
-### **1️⃣ Decentralization**
+* Same object appears at **different positions in two photos**
 
-* No central authority
-* Network of users maintains system
-
----
-
-### **2️⃣ Transparency**
-
-* All transactions are recorded publicly
-* Anyone can verify
+👉 In simple words:
+**Different view → different position → parallax**
 
 ---
 
-### **3️⃣ Cryptography**
+## **Why Parallax Occurs**
 
-* Secure transactions using keys
-* Prevents fraud
-
----
-
-### **4️⃣ Consensus Mechanism**
-
-* Transactions are verified by multiple nodes
-* Only valid transactions are accepted
+* Photos are taken from slightly different positions
+* So objects shift slightly in each image
 
 ---
 
-## **Conclusion**
+## **Types of Parallax (Simple)**
 
-Bitcoin replaces trust in institutions with trust in technology and mathematics.
+### **1️⃣ Absolute Parallax**
 
----
-
-# **16(a) Explain hash function and its characteristics (6M)**
-
-## **Introduction**
-
-A hash function converts data into a fixed-size value (hash). It is used to secure data in blockchain.
+* Shift of a single point between two images
 
 ---
 
-## **What is Hash Function?**
+### **2️⃣ Differential Parallax**
 
-* Takes input (data)
-* Produces fixed-length output
-* Example: SHA-256
-
----
-
-## **Characteristics**
-
-### **1️⃣ Deterministic**
-
-* Same input → same output
+* Difference in shift between two points
+* Used to find height
 
 ---
 
-### **2️⃣ Fixed Length Output**
+## **Measurement using Fiducial Line**
 
-* Output size is constant
+### **What is Fiducial Line?**
 
----
-
-### **3️⃣ Fast Computation**
-
-* Quick to generate hash
+* A line drawn connecting fiducial points
+* Acts as a reference axis
 
 ---
 
-### **4️⃣ Pre-image Resistance**
+## **Steps to Measure Parallax**
 
-* Cannot find original input from hash
+### **1️⃣ Identify Same Object**
 
----
-
-### **5️⃣ Collision Resistance**
-
-* Two inputs should not give same output
+* Find same point in both photos
 
 ---
 
-### **6️⃣ Avalanche Effect**
+### **2️⃣ Draw Fiducial Line**
 
-* Small input change → big output change
+* Use fiducial points as reference
+
+---
+
+### **3️⃣ Measure Position**
+
+* Note position of object in both images
+
+---
+
+### **4️⃣ Calculate Shift**
+
+* Difference in position = parallax
+
+---
+
+## **Key Points**
+
+* More parallax → more height
+* Less parallax → less height
+* No parallax → flat surface
+
+---
+
+## **Applications**
+
+* Height measurement
+* 3D mapping
+* Terrain analysis
 
 ---
 
 ## **Conclusion**
 
-Hash functions ensure security, integrity, and linking of blocks in blockchain.
+Parallax helps in understanding **depth and height** by comparing object positions in two images, making it a key concept in photogrammetry.
 
 ---
 
-# **16(b) Explain structure of a block in blockchain (4M)**
+## **🔥 Memory Tricks**
 
-## **Introduction**
-
-A blockchain is made up of blocks. Each block stores transaction data securely.
-
----
-
-## **Structure of a Block**
-
-### **1️⃣ Block Header**
-
-Contains:
-
-* Previous block hash
-* Timestamp
-* Nonce
-* Merkle root (summary of transactions)
+* **Fiducial Points → “Photo Reference Marks”**
+* **Parallax → “Position Difference = Depth”**
 
 ---
 
-### **2️⃣ Transaction Data**
 
-* List of transactions
-* Actual data stored in block
-
----
-
-## **Working**
-
-* Each block links to previous block using hash
-* Forms a secure chain
-
----
-
-## **Conclusion**
-
-Block structure ensures data integrity and forms the foundation of blockchain.
-
----
-
-Here are **simple, structured, exam-ready 10-mark answers** for your questions.
-
----
-
-# **17(a) Explain Centralization vs Decentralization (6M)**
-
-## **Introduction**
-
-Systems can be managed either by a **single authority (centralization)** or by **multiple independent participants (decentralization)**. Blockchain is based on decentralization.
-
----
-
-## **1. Centralization**
-
-### **Definition**
-
-A system controlled by a **single central authority**.
-
----
-
-### **Characteristics**
-
-* One organization controls data and decisions
-* Faster decision-making
-* Easier management
-
----
-
-### **Examples**
-
-* Banks
-* Government systems
-
----
-
-### **Limitations**
-
-* Single point of failure
-* Less transparency
-* Requires trust in authority
-
----
-
-## **2. Decentralization**
-
-### **Definition**
-
-A system where **control is distributed among many nodes/users**.
-
----
-
-### **Characteristics**
-
-* No single authority
-* Data shared across network
-* High transparency
-
----
-
-### **Examples**
-
-* Blockchain networks
-* Peer-to-peer systems
-
----
-
-### **Advantages**
-
-* No single point of failure
-* More secure
-* Trustless system
-
----
-
-## **Comparison**
-
-| Feature      | Centralized      | Decentralized |
-| ------------ | ---------------- | ------------- |
-| Control      | Single authority | Distributed   |
-| Security     | Lower            | Higher        |
-| Transparency | Low              | High          |
-| Failure risk | High             | Low           |
-
----
-
-## **Conclusion**
-
-Centralized systems are simple but risky, while decentralized systems are more secure and transparent.
-
----
-
-# **17(b) Compare Proof-of-Work and Proof-of-Stake (4M)**
-
-## **Introduction**
-
-Both are consensus mechanisms used to validate transactions in blockchain.
-
----
-
-## **Comparison**
-
-| Feature    | Proof-of-Work (PoW)    | Proof-of-Stake (PoS)   |
-| ---------- | ---------------------- | ---------------------- |
-| Method     | Mining (solve puzzles) | Stake coins            |
-| Energy use | Very high              | Low                    |
-| Speed      | Slower                 | Faster                 |
-| Cost       | Expensive              | Less expensive         |
-| Example    | Bitcoin                | Ethereum (new version) |
-
----
-
-## **Conclusion**
-
-PoW is secure but energy-intensive, while PoS is efficient and faster.
-
----
-
-# **18(a) Explain Blockchain Ecosystem (6M)**
-
-## **Introduction**
-
-Blockchain ecosystem refers to all components and participants that work together to run a blockchain network.
-
----
-
-## **Main Components**
-
-### **1️⃣ Nodes**
-
-* Computers that maintain blockchain
-* Store and verify data
-
----
-
-### **2️⃣ Users**
-
-* People who send and receive transactions
-
----
-
-### **3️⃣ Miners / Validators**
-
-* Validate transactions
-* Add new blocks
-
----
-
-### **4️⃣ Blockchain Platform**
-
-* Software system (like Ethereum)
-
----
-
-### **5️⃣ Smart Contracts**
-
-* Programs that run automatically
-
----
-
-### **6️⃣ Wallets**
-
-* Used to store and manage digital currency
-
----
-
-### **7️⃣ Consensus Mechanism**
-
-* Method to agree on transactions
-
----
-
-## **Working**
-
-* Users create transactions
-* Nodes verify
-* Validators confirm
-* Data stored in blockchain
-
----
-
-## **Conclusion**
-
-All components together form a system that ensures secure, transparent, and decentralized operations.
-
----
-
-# **18(b) Discuss Pros and Cons of Blockchain (4M)**
-
-## **Advantages**
-
-1️⃣ **Transparency**
-
-* All transactions visible
-
-2️⃣ **Security**
-
-* Data is encrypted and tamper-proof
-
-3️⃣ **Decentralization**
-
-* No central control
-
-4️⃣ **Immutability**
-
-* Data cannot be changed once added
-
----
-
-## **Disadvantages**
-
-1️⃣ **High Energy Consumption**
-
-* Especially in PoW
-
-2️⃣ **Scalability Issues**
-
-* Slow processing
-
-3️⃣ **Complexity**
-
-* Difficult for beginners
-
-4️⃣ **Regulatory Issues**
-
-* Lack of clear rules
-
----
-
-## **Conclusion**
-
-Blockchain offers strong security and transparency but faces challenges like scalability and energy usage.
-
----
 
 
