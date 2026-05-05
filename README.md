@@ -4,6 +4,7 @@
 
 ## LAQ's:
 
+[JARGONS](./cd/Laq/JARGONS.md)
 
 [UNIT-1](./cd/Laq/unit1.md)
 
