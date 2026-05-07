@@ -1,578 +1,574 @@
-Great—these are **core 10-mark answers**. I’ll keep them **detailed, simple, and easy to remember**.
+# 1. Explain N-Gram Models (10M)
 
----
+## Introduction
+
+N-gram models are important language models used in NLP to predict the next word in a sentence based on previous words.
 
-# **1. What is Raster Data Model? Explain its Elements (10M)**
+---
 
-## **Introduction**
+## What is an N-Gram?
 
-The raster data model is a way of representing geographic data in GIS using a **grid of cells**.
+An N-gram is a sequence of N consecutive words.
 
 ---
 
-## **Definition (Easy Line)**
+## Basic Idea
 
-Raster data model represents spatial data as a **matrix of small cells (pixels)** arranged in rows and columns.
+The model predicts a word using nearby words.
 
 ---
 
-## **Basic Idea**
+## Types of N-Gram Models
 
-* The entire area is divided into **small equal-sized cells**
-* Each cell stores a **value representing a feature**
+---
 
-👉 Example:
+### 1. Unigram
 
-* 1 = water
-* 2 = land
-* 3 = vegetation
+Uses one word at a time.
 
----
+#### Example
 
-## **Elements of Raster Data Model**
+“I”, “love”, “music”
 
 ---
 
-### **1️⃣ Pixel (Cell)**
+### 2. Bigram
 
-* The smallest unit of raster data
-* Each pixel represents a value
+Uses two consecutive words.
 
-👉 Example: one square in a grid
+#### Example
 
----
+“I love”, “love music”
 
-### **2️⃣ Rows**
+---
 
-* Horizontal arrangement of cells
+### 3. Trigram
 
----
+Uses three consecutive words.
 
-### **3️⃣ Columns**
+#### Example
 
-* Vertical arrangement of cells
+“I love music”
 
 ---
 
-### **4️⃣ Resolution (Cell Size)**
+### 4. Higher Order N-Grams
 
-* Size of each cell
+Uses more than three words.
 
-👉 Smaller cell → more detail
-👉 Larger cell → less detail
-
 ---
 
-### **5️⃣ Value (Attribute)**
+## Working of N-Gram Model
 
-* Each cell has a value representing data
+### Step 1
 
-👉 Example:
+Sentence is divided into word sequences.
 
-* Temperature
-* Elevation
-* Land type
-
 ---
 
-### **6️⃣ Grid Structure**
+### Step 2
 
-* Combination of rows and columns forming a grid
+Frequency of sequences is calculated.
 
 ---
 
-## **Characteristics**
+### Step 3
 
-* Simple structure
-* Easy to process
-* Suitable for continuous data
+Probability of next word is predicted.
 
 ---
+
+## Example
 
-## **Advantages**
+Sentence:
+“I love NLP”
 
-* Easy data storage
-* Good for analysis
-* Suitable for satellite data
+Bigram model:
 
+* P(love | I)
+* P(NLP | love)
+
 ---
 
-## **Limitations**
+## Applications
 
-* Less accuracy for boundaries
-* Large storage required
+* Text prediction
+* Speech recognition
+* Machine translation
+* Spell checking
 
 ---
 
-## **Conclusion**
+## Advantages
 
-The raster data model represents spatial data using **grid cells**, making it simple and useful for analysis of continuous features.
+* Simple and easy to implement
+* Efficient for prediction tasks
 
 ---
 
-# **2. Explain the Types of Raster Data with Examples (10M)**
+## Limitations
 
-## **Introduction**
+* Requires large data
+* Cannot understand deep meaning
+* Data sparsity problem
 
-Raster data can be classified based on the **type of information stored in cells**.
-
 ---
+
+## Conclusion
 
-## **Types of Raster Data**
+N-gram models are simple statistical language models that predict word sequences using previous words.
 
 ---
 
-### **1️⃣ Continuous Raster Data**
+# 2. Explain Evaluation Methods in Language Modelling (10M)
 
-* Represents data that changes smoothly over space
+## Introduction
 
+Evaluation methods are used to measure the performance and accuracy of language models in NLP.
+
 ---
 
-#### **Examples**
+## Need for Evaluation
 
-* Temperature
-* Elevation
-* Rainfall
+* Measure model quality
+* Compare models
+* Improve prediction accuracy
 
 ---
 
-#### **Characteristics**
+## Common Evaluation Methods
 
-* Values vary gradually
-* No clear boundaries
-
 ---
 
-### **2️⃣ Discrete Raster Data**
+### 1. Perplexity
 
-* Represents distinct categories
+Most commonly used evaluation metric.
 
 ---
 
-#### **Examples**
+## What is Perplexity?
 
-* Land use (forest, urban, water)
-* Soil type
+Perplexity measures how well a language model predicts text.
 
 ---
 
-#### **Characteristics**
+### Interpretation
 
-* Each cell belongs to a specific class
-* Clear boundaries between categories
+* Lower perplexity → better model
+* Higher perplexity → poor prediction
 
 ---
 
-## **Comparison (Easy Idea)**
+## Example
 
-* Continuous → gradual change
-* Discrete → fixed categories
+If a model predicts words correctly, perplexity becomes low.
 
 ---
 
-## **Importance**
+### 2. Accuracy
 
-* Helps choose correct data type
-* Improves analysis accuracy
+Measures how many predictions are correct.
 
 ---
 
-## **Conclusion**
+### 3. Precision
 
-Raster data is mainly of two types—**continuous and discrete**, each useful for representing different real-world features.
+Measures correctness of positive predictions.
 
 ---
-
-# **3. Explain Raster Data Structure and How Data is Stored in Raster Format (10M)**
 
-## **Introduction**
+### 4. Recall
 
-Raster data structure defines how spatial data is **organized and stored in grid format**.
+Measures how many relevant results are identified.
 
 ---
 
-## **Basic Idea**
+### 5. F1-Score
 
-* Data is stored as a **grid of cells**
-* Each cell contains a **numeric value**
+Combination of precision and recall.
 
 ---
 
-## **Structure of Raster Data**
+### 6. Human Evaluation
 
+Humans manually judge output quality.
+
 ---
 
-### **1️⃣ Grid System**
+## Applications
 
-* Entire area divided into equal-sized cells
+* Machine translation
+* Chatbots
+* Text generation
+* Speech systems
 
 ---
 
-### **2️⃣ Rows and Columns**
+## Challenges
 
-* Cells arranged in rows and columns
+* Different datasets produce different results
+* Human language complexity
+* Context understanding difficulty
 
 ---
 
-### **3️⃣ Cell Value Storage**
+## Conclusion
 
-* Each cell stores a value representing a feature
+Evaluation methods help determine how effectively a language model predicts and understands language data.
 
 ---
+
+# 3. Explain Bayesian Estimation (10M)
+
+## Introduction
 
-## **How Data is Stored**
+Bayesian estimation is a statistical method used in NLP and machine learning for probability prediction and decision making.
 
 ---
 
-### **1️⃣ Matrix Format**
+## What is Bayesian Estimation?
 
-* Stored as a table (rows × columns)
+It uses:
 
-👉 Example:
+* Prior knowledge
+* Observed data
+* Probability theory
 
-| 1 | 2 | 2 |
-| - | - | - |
-| 3 | 3 | 1 |
+to estimate outcomes.
 
 ---
 
-### **2️⃣ Each Value Represents**
+## Basic Idea
 
-* Land type
-* Elevation
-* Temperature
+Bayesian estimation updates predictions when new information becomes available.
 
 ---
 
-### **3️⃣ Cell Location**
+## Components of Bayesian Estimation
 
-* Position determined by row and column number
-
 ---
 
-## **Types of Storage Methods (Simple Idea)**
+### 1. Prior Probability
 
-* Simple grid storage
-* Compressed storage (to reduce size)
+Initial belief before observing data.
 
 ---
 
-## **Advantages**
+### 2. Likelihood
 
-* Simple structure
-* Easy computation
-* Good for modeling
+Probability of observed data.
 
 ---
 
-## **Limitations**
+### 3. Posterior Probability
 
-* Large file size
-* Lower precision for boundaries
+Updated probability after observing data.
 
 ---
 
-## **Conclusion**
+## Working Process
 
-Raster data structure stores spatial data in a **grid format with cell values**, making it easy to analyze and process.
+### Step 1
 
----
+Start with prior probability.
 
-## **🔥 Memory Trick**
+---
 
-Raster Elements →
-**“PRCRV”**
+### Step 2
 
-* Pixel
-* Rows
-* Columns
-* Resolution
-* Value
+Observe new data.
 
 ---
 
-Perfect—these are **important 10-mark answers**, I’ll keep them **clear, detailed, and very easy to remember**.
+### Step 3
 
+Update probability using Bayes theorem.
+
 ---
 
-# **4. What is Data Conversion in GIS? Explain Different Types of Data Conversion (10M)**
+## Example
 
-## **Introduction**
+Spam email detection:
 
-Data conversion in GIS refers to the process of **changing data from one format to another** so that it can be used for analysis.
+* Prior belief about spam
+* Analyze email words
+* Update spam probability
 
 ---
 
-## **Definition (Easy Line)**
+## Applications
 
-Data conversion is the process of **transforming spatial data between different formats like raster and vector**.
+* Spam filtering
+* Speech recognition
+* Machine translation
+* Text classification
 
 ---
 
-## **Need for Data Conversion**
+## Advantages
 
-* Different data sources use different formats
-* To perform analysis, data must be in a **compatible format**
-* Helps in integration and processing
+* Handles uncertainty well
+* Learns from new data
+* Flexible probabilistic approach
 
 ---
+
+## Limitations
 
-## **Types of Data Conversion**
+* Requires probability estimation
+* Computational complexity
 
 ---
 
-### **1️⃣ Raster to Vector Conversion**
+## Conclusion
 
-* Converts grid data into geometric shapes
+Bayesian estimation is an important probabilistic method used in NLP for prediction, classification, and decision-making.
 
-#### **Example**
 
-* Raster image of land → converted into polygons (land parcels)
 
----
+# 4. Explain Adaptation Techniques in Language Modelling (10M)
 
-#### **Use**
+## Introduction
 
-* When precise boundaries are needed
+Adaptation techniques are methods used to improve language models for specific tasks, users, or domains by adjusting them using new data.
 
 ---
 
-### **2️⃣ Vector to Raster Conversion**
+## What is Adaptation?
 
-* Converts points, lines, polygons into grid cells
+Adaptation means modifying a language model so it performs better in a particular environment or application.
 
 ---
 
-#### **Example**
+## Need for Adaptation Techniques
 
-* Road map → converted into grid format
+* General models may not work well in all domains
+* Different applications use different vocabulary and styles
+* Improves prediction accuracy
 
 ---
 
-#### **Use**
+## Example
 
-* For analysis like overlay and modeling
+A medical chatbot requires medical vocabulary, while a banking chatbot requires financial terms.
 
 ---
 
-### **3️⃣ Format Conversion**
+## Types of Adaptation Techniques
 
-* Changing file formats without changing structure
-
-#### **Example**
+---
 
-* Shapefile to GeoJSON
+### 1. Domain Adaptation
 
----
+Adapts model to a specific domain.
 
-## **Advantages**
+#### Examples
 
-* Improves data usability
-* Enables analysis
-* Helps integrate multiple data sources
+* Medical domain
+* Legal domain
+* Banking domain
 
 ---
 
-## **Limitations**
+### 2. Speaker Adaptation
 
-* May cause data loss
-* Accuracy may reduce
+Used in speech systems to adapt to different speakers.
 
 ---
 
-## **Conclusion**
+### 3. Topic Adaptation
 
-Data conversion is essential in GIS for **making different data formats compatible and useful for analysis**.
+Model adjusts according to discussion topic.
 
 ---
 
-# **5. Explain Integration of Raster and Vector Data in GIS (10M)**
+### 4. Vocabulary Adaptation
 
-## **Introduction**
+Adds new words and terms to improve understanding.
 
-GIS often uses both raster and vector data together. Integration means **combining both data types for better analysis**.
-
 ---
 
-## **Basic Idea (Simple)**
+### 5. Context Adaptation
 
-* Raster → grid data
-* Vector → geometric shapes
-* Integration → using both together
+Uses user context and previous information.
 
 ---
 
-## **Why Integration is Needed**
+### 6. Online Adaptation
 
-* Real-world problems need **multiple data types**
-* Improves accuracy and analysis
+Model continuously learns from new incoming data.
 
 ---
 
-## **Methods of Integration**
+## Methods Used in Adaptation
 
----
+### Fine-Tuning
 
-### **1️⃣ Overlay Technique**
+Training the model again with domain-specific data.
 
-* Combining raster and vector layers
+---
 
-#### **Example**
+### Transfer Learning
 
-* Land use map (raster) + road network (vector)
+Using knowledge from one task for another task.
 
 ---
 
-### **2️⃣ Conversion-Based Integration**
+### Interpolation
 
-* Convert one format into another
+Combining multiple language models together.
 
-👉 Raster → Vector or Vector → Raster
-
 ---
-
-### **3️⃣ Data Alignment**
 
-* Ensuring both datasets match in:
+## Applications
 
-  * Scale
-  * Coordinate system
+* Chatbots
+* Speech recognition
+* Machine translation
+* Personalized assistants
 
 ---
 
-## **Applications**
+## Advantages
 
-* Urban planning
-* Environmental studies
-* Disaster management
+* Improves accuracy
+* Handles domain-specific language
+* Better user experience
 
 ---
 
-## **Advantages**
+## Challenges
 
-* Better analysis
-* More accurate results
-* Combines strengths of both models
+* Requires additional data
+* Training complexity
+* Risk of overfitting
 
 ---
 
-## **Challenges**
+## Conclusion
 
-* Data mismatch
-* Complexity
-* Processing time
+Adaptation techniques help language models perform efficiently in specific domains and applications by learning from specialized data.
 
 ---
 
-## **Conclusion**
+# 5. Explain Multilingual Models in NLP (10M)
 
-Integration of raster and vector data helps GIS provide **more powerful and accurate analysis by combining different data types**.
+## Introduction
 
+Multilingual models are NLP models designed to process and understand multiple languages using a single system.
+
 ---
 
-# **6. How are Physical Features like Land, Water, and Vegetation Represented in Raster Data Model? (10M)**
+## What are Multilingual Models?
 
-## **Introduction**
+These models can:
 
-In raster data model, real-world features are represented using **grid cells with values**.
+* Read
+* Understand
+* Translate
+  multiple languages together.
 
 ---
 
-## **Basic Idea**
+## Need for Multilingual Models
 
-* Each cell represents a **specific feature**
-* Value stored in cell indicates the type of feature
+* Global communication
+* Multilingual applications
+* Reduced need for separate models for each language
 
 ---
 
-## **Representation of Physical Features**
+## Working of Multilingual Models
 
----
+The model is trained using text from multiple languages so it learns common language patterns.
 
-### **1️⃣ Land**
+---
 
-* Different land types are assigned values
+## Features of Multilingual Models
 
-#### **Example**
+### Shared Learning
 
-* 1 = urban
-* 2 = agriculture
-* 3 = barren land
+Knowledge from one language helps another language.
 
 ---
 
-### **2️⃣ Water**
+### Cross-Lingual Understanding
 
-* Water bodies like rivers and lakes
+Model understands relationships between languages.
 
-#### **Example**
+---
 
-* 4 = river
-* 5 = lake
+### Common Representation
 
+Different languages are represented in a shared format.
+
 ---
 
-### **3️⃣ Vegetation**
+## Types of Multilingual Models
 
-* Forest and plant cover
+---
 
-#### **Example**
+### 1. Multilingual BERT (mBERT)
 
-* 6 = forest
-* 7 = grassland
+Supports many languages using transformer architecture.
 
 ---
 
-## **How Representation Works**
+### 2. XLM Models
 
-* Area is divided into grid cells
-* Each cell stores a value
-* Similar values form patterns
+Cross-lingual models for multilingual understanding.
 
 ---
 
-## **Color Representation (Easy Idea)**
+### 3. Translation Models
 
-* Each value is shown using colors
+Used for translating between languages.
 
-#### **Example**
+---
 
-* Blue → water
-* Green → vegetation
-* Brown → land
+## Applications
 
+* Machine translation
+* Multilingual chatbots
+* Cross-language search
+* Speech assistants
+
 ---
 
-## **Advantages**
+## Advantages
 
-* Simple representation
-* Easy to analyze
-* Suitable for large areas
+* Supports many languages
+* Reduces training cost
+* Helps low-resource languages
 
 ---
+
+## Challenges
 
-## **Limitations**
+### 1. Different Grammar Structures
 
-* Less detail for boundaries
-* Depends on resolution
+Languages have different syntax.
 
 ---
 
-## **Conclusion**
+### 2. Data Imbalance
 
-In raster model, physical features are represented using **cell values and colors**, making it easy to analyze large geographic areas.
+Some languages have less training data.
 
 ---
 
-## **🔥 Memory Trick**
+### 3. Script Differences
+
+Languages use different writing systems.
+
+---
 
-Conversion →
-**“RVV”**
+### 4. Cultural Context
 
-* Raster → Vector
-* Vector → Raster
-* Format conversion
+Meaning changes across cultures.
 
 ---
 
+## Conclusion
 
+Multilingual models help NLP systems process multiple languages efficiently using shared learning and cross-lingual understanding.
