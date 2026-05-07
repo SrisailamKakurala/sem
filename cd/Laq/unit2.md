@@ -1,824 +1,587 @@
-Here are **simple, detailed, easy-to-remember 10-mark answers** for Unit–II basics.
+# 1. Explain Parsing Algorithms (10M)
 
----
-
-# **1. What is Remote Sensing? Explain its Basic Concept and Process (10M)**
-
-## **Introduction**
-
-Remote sensing is the science of **collecting information about Earth without direct contact**, using satellites or aircraft.
-
----
-
-## **Definition (Easy Line)**
-
-Remote sensing is the technique of **observing and measuring objects from a distance using sensors**.
-
----
-
-## **Basic Concept**
-
-* The Sun (or sensor) provides **energy**
-* Energy travels to Earth
-* Objects (soil, water, vegetation) **reflect or absorb energy**
-* Sensors capture this reflected energy
-* Data is processed to get useful information
-
-👉 In short:
-**Energy → Object → Sensor → Data → Information**
-
----
-
-## **Remote Sensing Process (Steps)**
-
-### **1️⃣ Energy Source**
-
-* Usually the Sun provides energy
-
----
-
-### **2️⃣ Energy Travels through Atmosphere**
-
-* Energy may be scattered or absorbed
-
----
-
-### **3️⃣ Interaction with Earth Surface**
-
-* Objects reflect energy differently
-
----
-
-### **4️⃣ Data Collection by Sensor**
-
-* Sensors on satellites capture reflected energy
-
----
-
-### **5️⃣ Data Transmission**
-
-* Data is sent to ground stations
-
----
-
-### **6️⃣ Data Processing**
+## Introduction
 
-* Raw data is converted into images
+Parsing algorithms are methods used in NLP to analyze the grammatical structure of sentences. They help computers understand how words are arranged in a sentence.
 
 ---
 
-### **7️⃣ Interpretation**
+## What is Parsing?
 
-* Images are analyzed to extract information
+Parsing is the process of:
 
----
-
-## **Data vs Information**
-
-* **Data** → Raw values/images collected by sensors
-* **Information** → Meaningful result after analysis
-
----
-
-## **Applications**
-
-* Agriculture
-* Weather forecasting
-* Disaster management
-* Mapping
-
----
-
-## **Conclusion**
-
-Remote sensing helps in **fast, large-scale, and accurate observation of Earth** without physical contact.
-
----
-
-# **2. Explain Remote Sensing Data Collection Methods, Advantages and Limitations (10M)**
-
-## **Introduction**
-
-Remote sensing data is collected using **different platforms and sensors** to observe Earth features.
-
----
+* Breaking a sentence into parts
+* Checking grammatical correctness
+* Creating sentence structure
 
-## **Data Collection Methods**
-
-### **1️⃣ Based on Platform**
-
-#### **a) Ground-based**
-
-* Sensors placed on ground
-* Used for detailed study
-
----
-
-#### **b) Airborne**
-
-* Sensors mounted on aircraft or drones
-* Covers medium area
-
----
-
-#### **c) Spaceborne**
-
-* Sensors on satellites
-* Covers large area
-
----
-
-### **2️⃣ Based on Energy Source**
-
-#### **a) Passive Remote Sensing**
-
-* Uses natural energy (Sun)
-* Example: optical images
-
 ---
 
-#### **b) Active Remote Sensing**
+## Purpose of Parsing Algorithms
 
-* Sensor sends its own energy
-* Example: RADAR
+* Understand sentence meaning
+* Identify relationships between words
+* Support NLP applications
 
 ---
-
-## **Advantages**
-
-### **1️⃣ Large Area Coverage**
 
-* Can cover huge areas quickly
+## Types of Parsing Algorithms
 
 ---
 
-### **2️⃣ Time Saving**
+### 1. Top-Down Parsing
 
-* Faster than ground survey
+Starts from the main grammar rule and moves toward words.
 
----
-
-### **3️⃣ Repeated Observations**
+#### Working
 
-* Same area can be observed regularly
+* Begins with the start symbol
+* Expands grammar rules step-by-step
 
 ---
 
-### **4️⃣ Access to Remote Areas**
+#### Advantages
 
-* Useful for forests, mountains
+* Simple to understand
 
 ---
 
-### **5️⃣ Multi-purpose Use**
+#### Limitations
 
-* Used in agriculture, weather, defense
+* May repeat unnecessary steps
 
 ---
-
-## **Limitations**
-
-### **1️⃣ Weather Dependency**
 
-* Clouds can block data
+### 2. Bottom-Up Parsing
 
----
+Starts from words and builds sentence structure upward.
 
-### **2️⃣ Cost**
+#### Working
 
-* Satellite systems are expensive
+* Individual words are combined into phrases
+* Phrases form complete sentence
 
 ---
 
-### **3️⃣ Requires Skilled Analysis**
+#### Advantages
 
-* Data interpretation needs expertise
+* More efficient for many cases
 
 ---
 
-### **4️⃣ Resolution Limit**
+#### Limitations
 
-* Some images may not be very detailed
+* Complex implementation
 
 ---
-
-## **Conclusion**
 
-Remote sensing data collection is **powerful and efficient**, but has some limitations related to cost, weather, and analysis.
+### 3. Recursive Descent Parsing
 
----
+Uses recursive procedures to analyze sentence structure.
 
-## **🔥 Memory Trick**
+#### Features
 
-For Process →
-**“Energy → Atmosphere → Object → Sensor → Data → Info”**
+* Simple parsing technique
+* Based on grammar rules
 
 ---
 
-Here are **clear, simple, exam-ready 10-mark answers** for these very important topics.
-
----
+### 4. CYK Algorithm
 
-# **3. Explain the Electromagnetic Spectrum and its Importance in Remote Sensing (10M)**
+A dynamic programming parsing algorithm used with CFG.
 
-## **Introduction**
+#### Features
 
-The Electromagnetic (EM) Spectrum is the **range of all types of electromagnetic radiation (energy)** used in remote sensing.
+* Efficient for complex parsing
+* Uses table-based processing
 
 ---
 
-## **What is Electromagnetic Spectrum? (Easy Idea)**
+### 5. Dependency Parsing
 
-* It includes different types of energy waves based on **wavelength**
-* From **short waves (high energy)** to **long waves (low energy)**
+Finds relationships between words in a sentence.
 
----
-
-## **Main Regions of EM Spectrum**
+#### Example
 
-### **1️⃣ Gamma Rays**
+Subject → verb → object relation
 
-* Very short wavelength
-* Not used in remote sensing
-
 ---
 
-### **2️⃣ X-Rays**
+## Applications
 
-* Short wavelength
-* Limited use
+* Machine translation
+* Grammar checking
+* Question answering systems
+* Speech processing
 
 ---
 
-### **3️⃣ Ultraviolet (UV)**
+## Challenges
 
-* Slightly useful
+* Ambiguous sentences
+* Complex grammar
+* Multiple sentence interpretations
 
 ---
 
-### **4️⃣ Visible Light**
+## Conclusion
 
-* Seen by human eye
-* Important for imaging
+Parsing algorithms are important in NLP for understanding sentence structure and improving language processing systems.
 
 ---
-
-### **5️⃣ Infrared (IR)**
 
-* Detects heat
-* Very important for vegetation and temperature
+# 2. Explain Syntactic Structure Representation (10M)
 
----
-
-### **6️⃣ Microwave**
+## Introduction
 
-* Can pass through clouds
-* Used in RADAR
+Syntactic structure representation is the method of showing how words are arranged grammatically in a sentence.
 
 ---
-
-## **Importance in Remote Sensing**
-
-### **1️⃣ Data Collection**
-
-* Sensors capture reflected energy from objects
 
----
+## What is Syntax?
 
-### **2️⃣ Object Identification**
+Syntax is the study of:
 
-* Different objects reflect different wavelengths
+* Sentence structure
+* Word arrangement
+* Grammar rules
 
 ---
 
-### **3️⃣ Weather Monitoring**
+## Purpose of Syntactic Representation
 
-* Infrared and microwave help in weather analysis
+* Understand grammatical relationships
+* Represent sentence structure clearly
+* Help NLP systems process language
 
 ---
-
-### **4️⃣ Day and Night Imaging**
 
-* Microwave works even at night
+## Types of Syntactic Structure Representation
 
 ---
-
-### **5️⃣ Surface Analysis**
-
-* Helps study soil, water, vegetation
 
----
+### 1. Parse Tree Representation
 
-## **Key Point**
+Represents sentence structure using a tree format.
 
-👉 Remote sensing works mainly in:
+#### Features
 
-* Visible
-* Infrared
-* Microwave regions
+* Root node represents sentence
+* Branches represent phrases and words
 
 ---
-
-## **Conclusion**
 
-The EM spectrum is the **foundation of remote sensing**, as it provides the energy needed to detect and analyze Earth features.
+#### Example
 
----
+Sentence:
+“The boy plays cricket”
 
-# **4. Explain Energy Interaction with Atmosphere and Earth Surface Features (10M)**
+* Sentence
 
-## **Introduction**
+  * Noun Phrase
+  * Verb Phrase
 
-When electromagnetic energy travels from the Sun to Earth, it **interacts with atmosphere and surface features** before reaching sensors.
-
 ---
 
-## **Interaction with Atmosphere**
+### 2. Dependency Representation
 
-### **1️⃣ Scattering**
+Shows dependency relations between words.
 
-* Energy is **deflected in different directions**
-* Caused by particles in air
+#### Example
 
-👉 Example: Blue sky
+* Subject connected to verb
+* Verb connected to object
 
 ---
 
-### **2️⃣ Absorption**
+### 3. Phrase Structure Representation
 
-* Energy is **absorbed by gases** like:
+Groups words into phrases.
 
-  * Ozone
-  * Water vapor
+#### Types of Phrases
 
-👉 Reduces energy reaching Earth
+* Noun phrase
+* Verb phrase
+* Prepositional phrase
 
 ---
-
-### **3️⃣ Transmission**
 
-* Energy passes through atmosphere without change
+### 4. Bracket Notation
 
----
+Represents sentence structure using brackets.
 
-## **Interaction with Earth Surface**
+#### Example
 
-Different objects interact differently:
+(S (NP Boy) (VP plays cricket))
 
 ---
-
-### **1️⃣ Soil**
 
-* Reflects moderate energy
-* Depends on moisture:
+## Advantages
 
-  * Wet soil → less reflection
-  * Dry soil → more reflection
+* Improves sentence understanding
+* Helps semantic analysis
+* Supports parsing systems
 
 ---
 
-### **2️⃣ Water**
+## Applications
 
-* Absorbs most energy
-* Appears dark in images
+* Machine translation
+* Speech recognition
+* Grammar correction
+* Chatbots
 
 ---
 
-### **3️⃣ Vegetation**
+## Challenges
 
-* Reflects strongly in infrared
-* Healthy vegetation → high reflection
+* Ambiguity in sentences
+* Complex sentence structures
+* Multiple interpretations
 
 ---
-
-## **Types of Interaction (Easy Summary)**
-
-### **1️⃣ Reflection**
-
-* Energy bounces back
 
----
+## Conclusion
 
-### **2️⃣ Absorption**
+Syntactic structure representation helps NLP systems understand grammatical structure and relationships between words effectively.
 
-* Energy is absorbed
 
----
+# 3. Explain the Role of Treebanks (10M)
 
-### **3️⃣ Transmission**
+## Introduction
 
-* Energy passes through
+Treebanks are important resources in NLP used to store sentences along with their grammatical structure.
 
 ---
 
-## **Importance**
+## What is a Treebank?
 
-* Helps identify objects
-* Useful for agriculture and water studies
-* Improves image interpretation
+A treebank is a collection of:
 
----
+* Sentences
+* Parse trees
+* Syntactic annotations
 
-## **Conclusion**
+It helps computers learn language structure.
 
-Understanding energy interaction helps in **accurate detection and analysis of Earth features in remote sensing**.
-
 ---
-
-## **🔥 Memory Trick**
 
-For Interaction →
-**“SAT”**
+## Purpose of Treebanks
 
-* Scattering
-* Absorption
-* Transmission
+* Train NLP systems
+* Study grammar patterns
+* Improve parsing accuracy
 
 ---
 
-Here are **simple, structured, easy-to-remember 10-mark answers** for Satellites & Sensors.
+## Structure of a Treebank
 
----
-
-# **5. Explain Indian Remote Sensing Satellites and Sensors (10M)**
-
-## **Introduction**
-
-India has developed a strong remote sensing program using satellites to **collect data about Earth for various applications**.
+Each sentence is stored with:
 
----
-
-## **Indian Remote Sensing (IRS) Satellites**
+* Words
+* Grammar labels
+* Tree structure
 
-* IRS is a series of satellites launched by India for **Earth observation**
-* Used in agriculture, mapping, weather, and disaster management
-
 ---
 
-## **Major IRS Satellites (Examples)**
+## Example
 
-* IRS-1A, IRS-1B → Early satellites
-* Resourcesat → Resource monitoring
-* Cartosat → High-resolution mapping
-* Oceansat → Ocean studies
-
----
+Sentence:
+“The cat sleeps”
 
-## **Sensors in Remote Sensing**
+Treebank stores:
 
-Sensors are devices that **capture reflected energy from Earth**.
+* Noun phrase
+* Verb phrase
+* Relationships between words
 
 ---
 
-## **Types of Sensors**
+## Types of Treebanks
 
-### **1️⃣ Passive Sensors**
+### 1. Constituency Treebank
 
-* Use natural energy (Sun)
-* Example: cameras, optical sensors
+Represents phrase structure.
 
 ---
 
-### **2️⃣ Active Sensors**
+### 2. Dependency Treebank
 
-* Send their own energy and receive it back
-* Example: RADAR
+Represents word dependencies.
 
 ---
 
-## **Important Sensor Characteristics**
+## Role of Treebanks in NLP
 
-### **1️⃣ Spatial Resolution**
+### 1. Parser Training
 
-* Level of detail in image
+Used to train parsing algorithms.
 
 ---
 
-### **2️⃣ Spectral Resolution**
+### 2. Grammar Analysis
 
-* Ability to detect different wavelengths
+Helps identify language patterns.
 
 ---
 
-### **3️⃣ Temporal Resolution**
+### 3. Machine Translation
 
-* How often data is captured
+Improves translation quality.
 
 ---
 
-### **4️⃣ Radiometric Resolution**
+### 4. Speech Recognition
 
-* Sensitivity to small energy differences
+Helps understand sentence structure.
 
 ---
 
-## **Applications of IRS Satellites**
+### 5. Research and Development
 
-* Agriculture monitoring
-* Urban planning
-* Water resource management
-* Disaster management
+Useful for NLP experiments and evaluation.
 
 ---
 
-## **Conclusion**
+## Advantages
 
-Indian remote sensing satellites and sensors play a key role in **collecting accurate and useful Earth data for development and planning**.
+* Improves parsing accuracy
+* Provides structured language data
+* Useful for machine learning
 
 ---
 
-# **6. Explain IKONOS Satellite Sensor and Blue Bird Satellites with their Characteristics (10M)**
+## Challenges
 
-## **Introduction**
+* Time-consuming annotation
+* Expensive to create
+* Language complexity
 
-IKONOS and BlueBird satellites are **high-resolution commercial satellites** used for detailed Earth observation.
-
 ---
-
-## **IKONOS Satellite**
 
-### **Overview**
+## Conclusion
 
-* One of the first **high-resolution satellites**
-* Provides detailed images of Earth
+Treebanks play a major role in NLP by providing structured grammatical data for training and improving language processing systems.
 
 ---
 
-### **Key Features**
+# 4. Explain PCFG (Probabilistic Context-Free Grammar) (10M)
 
-* High spatial resolution (clear images)
-* Captures both:
+## Introduction
 
-  * Panchromatic (black & white)
-  * Multispectral (color) images
+PCFG is an extension of Context-Free Grammar that uses probabilities for grammar rules.
 
 ---
 
-### **Uses**
-
-* Urban mapping
-* Military applications
-* Environmental monitoring
-
----
+## What is PCFG?
 
-## **BlueBird Satellites**
+Probabilistic Context-Free Grammar assigns:
 
-### **Overview**
+* Grammar rules
+* Probability values
 
-* Series of commercial satellites operated for **high-resolution imaging**
-* Includes satellites like GeoEye
+This helps choose the most likely sentence structure.
 
 ---
 
-### **Key Characteristics**
+## Need for PCFG
 
-### **1️⃣ Very High Resolution**
+A sentence may have multiple parse trees due to ambiguity.
+PCFG helps identify the most probable interpretation.
 
-* Captures very fine details
-
 ---
-
-### **2️⃣ Fast Data Collection**
 
-* Covers large areas quickly
+## Components of PCFG
 
----
+### 1. Non-Terminals
 
-### **3️⃣ Multi-purpose Use**
+Grammar symbols like:
 
-* Used in mapping, defense, planning
+* Sentence (S)
+* Noun Phrase (NP)
 
 ---
 
-### **4️⃣ Advanced Sensors**
+### 2. Terminals
 
-* Provide accurate and detailed data
+Actual words in sentence.
 
 ---
-
-## **Comparison (Simple Idea)**
-
-* IKONOS → Early high-resolution satellite
-* BlueBird → More advanced, higher detail
 
----
+### 3. Production Rules
 
-## **Conclusion**
+Rules used to form sentences.
 
-IKONOS and BlueBird satellites provide **high-quality images**, making them important for detailed mapping and analysis.
+Example:
+S → NP + VP
 
 ---
-
-## **🔥 Memory Trick**
-
-For Resolution Types →
-**“SSTR”**
-
-* Spatial
-* Spectral
-* Temporal
-* Radiometric
 
----
+### 4. Probabilities
 
-Here are **simple, detailed, exam-ready 10-mark answers** for the last part of Unit–II.
+Each rule has a probability value.
 
 ---
 
-# **7. Explain Resolution in Remote Sensing and its Types. Also explain Map, Image, and False Color Composite (FCC) (10M)**
+## Working of PCFG
 
-## **Introduction**
+### Step 1
 
-Resolution refers to the **ability of a sensor to capture details** in an image.
-Higher resolution means **more clarity and detail**.
+Apply grammar rules.
 
 ---
-
-## **Types of Resolution**
 
-### **1️⃣ Spatial Resolution**
+### Step 2
 
-* Shows **level of detail in an image**
-* High spatial → clear, detailed image
-* Low spatial → blurry, less detail
+Calculate probability of parse trees.
 
 ---
 
-### **2️⃣ Spectral Resolution**
+### Step 3
 
-* Ability to detect **different wavelengths (colors)**
-* More bands → better identification of objects
+Select parse tree with highest probability.
 
 ---
 
-### **3️⃣ Temporal Resolution**
+## Advantages
 
-* How often the satellite captures images of the same area
+* Handles ambiguity better
+* Improves parsing accuracy
+* Useful in statistical NLP
 
 ---
 
-### **4️⃣ Radiometric Resolution**
+## Applications
 
-* Ability to detect **small differences in energy**
-* Higher → better sensitivity
+* Speech recognition
+* Machine translation
+* Syntax parsing
 
 ---
 
-## **Map vs Image**
+## Limitations
 
-### **Map**
+* Requires training data
+* Complex probability calculations
 
-* Processed and interpreted
-* Has scale, symbols, and labels
-* Used for accurate representation
-
 ---
 
-### **Image**
+## Conclusion
 
-* Raw data captured by sensors
-* No labels or symbols
-* Needs interpretation
+PCFG combines grammar rules with probability to improve sentence parsing and ambiguity resolution in NLP.
 
 ---
-
-## **False Color Composite (FCC)**
-
-### **What is FCC?**
 
-* Image where **colors are not real**
-* Different bands are assigned artificial colors
+# 5. Explain Chart Parsing (10M)
 
----
-
-### **Example**
+## Introduction
 
-* Vegetation appears **red**
-* Water appears **dark**
+Chart parsing is an efficient parsing technique used in NLP to analyze sentence structure.
 
 ---
 
-### **Purpose**
+## What is Chart Parsing?
 
-* Helps in easy identification of features
-* Highlights differences clearly
+Chart parsing stores intermediate parsing results in a table called a chart to avoid repeated calculations.
 
 ---
 
-## **Conclusion**
+## Purpose
 
-Resolution improves image quality, while FCC helps in **better interpretation of Earth features**.
+* Improve parsing efficiency
+* Reduce repeated work
+* Handle ambiguity effectively
 
 ---
 
-# **8. Explain Digital Data in Remote Sensing and Elements of Visual Interpretation Techniques (10M)**
+## Main Components
 
-## **Introduction**
+### 1. Chart
 
-Remote sensing data is stored in **digital form** and analyzed using visual interpretation techniques.
+A data structure storing partial parsing results.
 
 ---
 
-## **Digital Data in Remote Sensing**
+### 2. Edges
 
-### **What is Digital Data?**
+Represent parsing progress in the chart.
 
-* Data stored as **numbers (pixels)**
-* Each pixel represents a value of energy
-
 ---
 
-### **Key Features**
+### 3. Grammar Rules
 
-* Easy to store and process
-* Used in computers and GIS
-* Can be enhanced and analyzed
+Used for sentence analysis.
 
 ---
-
-## **Advantages of Digital Data**
-
-* High accuracy
-* Easy manipulation
-* Faster analysis
 
----
+## Working of Chart Parsing
 
-## **Elements of Visual Interpretation**
+### Step 1
 
-These are clues used to identify objects in images:
+Sentence words are entered into chart.
 
 ---
 
-### **1️⃣ Tone/Color**
+### Step 2
 
-* Brightness or color of object
+Grammar rules are applied.
 
 ---
 
-### **2️⃣ Shape**
+### Step 3
 
-* Form of object (square, circular, etc.)
+Partial results are stored.
 
 ---
 
-### **3️⃣ Size**
+### Step 4
 
-* Helps distinguish objects
+Final parse tree is generated.
 
 ---
-
-### **4️⃣ Pattern**
 
-* Arrangement of objects
+## Types of Chart Parsing
 
----
+### 1. Top-Down Chart Parsing
 
-### **5️⃣ Texture**
+Starts from grammar rules.
 
-* Smooth or rough appearance
-
 ---
 
-### **6️⃣ Shadow**
+### 2. Bottom-Up Chart Parsing
 
-* Gives idea of height
+Starts from words.
 
 ---
 
-### **7️⃣ Location/Site**
+### 3. Earley Parser
 
-* Where the object is located
+A popular chart parsing algorithm.
 
 ---
 
-### **8️⃣ Association**
+## Advantages
 
-* Relation with nearby objects
+* Avoids repeated computations
+* Efficient for long sentences
+* Handles ambiguity well
 
 ---
 
-## **Conclusion**
+## Applications
 
-Digital data makes analysis easy, and visual interpretation helps in **identifying and understanding objects clearly**.
+* Syntax analysis
+* Machine translation
+* Grammar checking
 
 ---
-
-## **🔥 Memory Trick**
 
-For Interpretation Elements →
-**“TSSPTLSA”**
+## Challenges
 
-* Tone
-* Shape
-* Size
-* Pattern
-* Texture
-* Location
-* Shadow
-* Association
+* Memory usage can be high
+* Complex implementation
 
 ---
 
+## Conclusion
 
+Chart parsing is an efficient NLP parsing method that improves sentence analysis by storing intermediate parsing results.
