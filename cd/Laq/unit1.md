@@ -1,769 +1,537 @@
-Great choice—these are **core 10-mark questions**. I’ll keep them **simple, structured, and easy to remember**.
+# 1. Explain Morphological Models (10M)
 
----
-
-# **1. What is Photogrammetry? Explain its Principles. (10M)**
-
-## **Introduction**
-
-Photogrammetry is the science of **measuring and extracting information about objects or land using photographs**, especially aerial photos.
-
-👉 In simple words:
-It helps us **study the Earth from images** instead of direct measurement.
-
----
-
-## **Definition (Easy Line for Exam)**
-
-Photogrammetry is the technique of obtaining **accurate measurements and information from photographs**.
-
----
-
-## **Basic Working Idea**
-
-1. Photos are taken from aircraft or drones
-2. Images are analyzed
-3. Measurements like distance, height, and area are calculated
-
----
-
-## **Principles of Photogrammetry**
-
-### **1️⃣ Perspective Principle**
-
-* Objects appear **smaller when far** and **larger when near**
-* Helps understand distance and position
-
----
-
-### **2️⃣ Geometry Principle**
-
-* Relationship between:
-
-  * Camera
-  * Object
-  * Image
-* Used to calculate real-world measurements
-
----
-
-### **3️⃣ Scale Principle**
-
-* Every photograph has a **scale**
-* Helps convert image measurements into real-world values
-
----
-
-### **4️⃣ Parallax Principle**
-
-* Same object appears at **different positions in two images**
-* Used to measure height
-
----
-
-### **5️⃣ Stereoscopy Principle**
-
-* Two overlapping images create a **3D view**
-* Helps understand depth and terrain
-
----
+## Introduction
 
-## **Applications (Optional but good for marks)**
+Morphological models are used in NLP to study the structure and formation of words. They help computers understand how words are formed using roots, prefixes, and suffixes.
 
-* Map making
-* Land surveying
-* Urban planning
-* Disaster management
-
----
-
-## **Conclusion**
-
-Photogrammetry is an important technique that allows **accurate measurement and analysis of land using photographs**, saving time and effort.
-
----
-
-# **2. What are Aerial Photographs? Explain their Types. (10M)**
-
-## **Introduction**
-
-Aerial photographs are images of the Earth’s surface taken from **aircraft, drones, or satellites**.
-
----
-
-## **Definition (Easy Line)**
-
-Aerial photographs are **photos taken from above the ground** to study land features.
-
 ---
-
-## **Types of Aerial Photographs**
 
-### **1️⃣ Based on Camera Angle**
+## What is Morphology?
 
-#### **a) Vertical Photographs**
+Morphology is the study of:
 
-* Camera is **pointing straight down (90°)**
-* Covers small area but highly accurate
+* Word formation
+* Word structure
+* Meaningful parts of words
 
-👉 **Features:**
-
-* Uniform scale
-* Less distortion
-* Used for mapping
-
 ---
-
-#### **b) Oblique Photographs**
 
-* Camera is **tilted at an angle**
+## What are Morphological Models?
 
-**Types:**
+Morphological models are systems that:
 
-* **Low Oblique**
+* Break words into smaller meaningful parts
+* Identify root words and endings
+* Analyze grammatical changes
 
-  * Does not show horizon
-  * Covers moderate area
-
-* **High Oblique**
-
-  * Shows horizon
-  * Covers large area
-
 ---
 
-### **2️⃣ Based on Scale**
+## Components of a Word
 
-#### **a) Large Scale**
+### Root
 
-* Shows **small area with more detail**
+Main part carrying meaning.
 
-#### **b) Small Scale**
+Example:
 
-* Shows **large area with less detail**
+* “play” in playing
 
 ---
-
-### **3️⃣ Based on Purpose**
 
-#### **a) Metric Photographs**
+### Prefix
 
-* Used for measurement and mapping
+Added before root.
 
-#### **b) Non-Metric Photographs**
+Example:
 
-* Used for general viewing (not accurate measurements)
+* “un” in unhappy
 
 ---
 
-## **Advantages**
+### Suffix
 
-* Covers large area quickly
-* Useful for mapping and planning
+Added after root.
 
----
-
-## **Conclusion**
+Example:
 
-Aerial photographs are essential tools in remote sensing, helping in **accurate observation and analysis of land from above**.
+* “ing” in playing
 
 ---
 
-## **Memory Trick (Super Useful)**
+## Types of Morphology
 
-For **Photogrammetry Principles → “PGSPS”**
+### 1. Inflectional Morphology
 
-* Perspective
-* Geometry
-* Scale
-* Parallax
-* Stereoscopy
+Changes grammatical form without changing meaning.
 
----
+Examples:
 
-Here are **simple, detailed, easy-to-remember 10-mark answers** for these geometry topics. No heavy jargon, just clean structure.
+* play → played
+* book → books
 
 ---
-
-# **3. Explain the Geometry of a Vertical Aerial Photograph (10M)**
-
-## **Introduction**
 
-A vertical aerial photograph is taken with the camera pointing **straight down (90°)**.
-Its geometry explains the relationship between **camera, ground, and image**.
+### 2. Derivational Morphology
 
----
-
-## **Key Elements of Geometry**
+Creates a new word with new meaning.
 
-### **1️⃣ Camera Position**
+Examples:
 
-* Camera is placed **vertically above the ground**
-* Optical axis is **perpendicular** to Earth
+* happy → happiness
+* teach → teacher
 
 ---
 
-### **2️⃣ Principal Point (PP)**
-
-* The center point of the photograph
-* Lies exactly below the camera
-
----
+## Working of Morphological Models
 
-### **3️⃣ Ground Point**
+### Step 1: Input Word
 
-* Actual point on Earth corresponding to a point in photo
+The model receives a word.
 
 ---
 
-### **4️⃣ Image Point**
+### Step 2: Segmentation
 
-* The location of ground point on the photograph
+Word is divided into morphemes.
 
----
-
-### **5️⃣ Nadir Point**
+Example:
 
-* Point directly below the camera on ground
-* Almost same as principal point in vertical photos
+* “unhappiness” → un + happy + ness
 
 ---
 
-### **6️⃣ Isocenter**
+### Step 3: Analysis
 
-* Midpoint between principal point and nadir
+Meaning and grammar are identified.
 
 ---
 
-## **Relationship (Important Idea)**
+## Applications in NLP
 
-* Light travels from ground → camera → image
-* Forms a **central projection**
-* Straight lines on ground remain straight in image
+* Machine translation
+* Spell checking
+* Speech recognition
+* Search engines
 
 ---
 
-## **Key Characteristics**
+## Challenges
 
-* Scale is **almost uniform**
-* Minimal distortion
-* Accurate for measurements
+* Irregular words
+* Complex languages
+* Multiple meanings
 
 ---
 
-## **Conclusion**
+## Conclusion
 
-Geometry of vertical aerial photographs helps in **accurate mapping and measurement** by maintaining a clear relation between ground and image.
+Morphological models help NLP systems understand word structure and meaning, improving language processing and analysis.
 
 ---
-
-# **4. Explain Scale of an Aerial Photograph and its Calculation (10M)**
-
-## **Introduction**
-
-Scale represents the relationship between **distance on photo and actual ground distance**.
 
----
+# 2. Explain Finite State Morphology (10M)
 
-## **Definition (Easy Line)**
+## Introduction
 
-Scale = **Photo distance / Ground distance**
+Finite State Morphology is a method used in NLP to analyze and generate words using finite state machines.
 
 ---
 
-## **Types of Scale Representation**
+## What is Finite State Morphology?
 
-### **1️⃣ Fractional Scale**
+It is a computational model that:
 
-* Example: **1:10,000**
-* Means 1 unit on photo = 10,000 units on ground
+* Processes word structures
+* Uses states and transitions
+* Recognizes valid word forms
 
 ---
-
-### **2️⃣ Statement Scale**
 
-* Example: 1 cm = 100 m
+## Basic Idea
 
----
+Words are analyzed step-by-step using rules.
 
-### **3️⃣ Graphical Scale**
+Example:
 
-* Scale shown using a line/bar
+* play → playing
+* walk → walked
 
 ---
-
-## **Scale Calculation**
 
-### **Basic Formula**
-
-Scale = **f / H**
-
-Where:
-
-* **f** = focal length of camera
-* **H** = height of camera above ground
-
----
+## Finite State Machine (FSM)
 
-## **Important Points**
+A finite state machine contains:
 
-* Higher altitude → smaller scale
-* Lower altitude → larger scale
+* States
+* Transitions
+* Input symbols
 
 ---
 
-## **Uses of Scale**
+## Working of Finite State Morphology
 
-* Measure distances
-* Calculate area
-* Create maps
+### Step 1: Start State
 
----
-
-## **Conclusion**
+Processing begins from an initial state.
 
-Scale is essential for converting **photo measurements into real-world values**.
-
 ---
-
-# **5. Explain Height Determination using Single Vertical Aerial Photograph (10M)**
 
-## **Introduction**
+### Step 2: Read Characters
 
-Height of objects (like buildings, hills) can be measured using aerial photographs.
+Characters are checked one by one.
 
 ---
 
-## **Basic Concept**
+### Step 3: State Transition
 
-* Objects appear **shifted outward** from center
-* This shift is called **relief displacement**
+Machine moves between states based on rules.
 
 ---
 
-## **Method of Height Determination**
+### Step 4: Final State
 
-### **1️⃣ Identify Object**
+If valid pattern is found, word is accepted.
 
-* Select object whose height is to be measured
-
 ---
-
-### **2️⃣ Measure Displacement**
 
-* Measure distance between:
+## Example
 
-  * Top of object
-  * Base of object
+For word “playing”:
 
----
+* Root → play
+* Suffix → ing
 
-### **3️⃣ Use Known Values**
+FSM recognizes both parts using transitions.
 
-* Camera height
-* Photo scale
-
 ---
-
-### **4️⃣ Apply Relation**
 
-Height is proportional to **displacement**
+## Advantages
 
-👉 More displacement = more height
+* Fast processing
+* Efficient word analysis
+* Handles large vocabularies
 
 ---
 
-## **Key Idea (Easy to Remember)**
+## Applications
 
-* Taller object → more displacement
-* Short object → less displacement
+* Spell checking
+* Text analysis
+* Morphological parsing
+* Language generation
 
 ---
 
-## **Applications**
+## Limitations
 
-* Measuring building height
-* Terrain analysis
+* Difficult for irregular forms
+* Complex for rich morphology languages
 
 ---
 
-## **Conclusion**
+## Conclusion
 
-Height determination using aerial photographs is a **simple and effective method** based on displacement.
+Finite State Morphology is an efficient method for analyzing word structures using state-based models in NLP.
 
----
-
-## **🔥 Memory Trick (Super Helpful)**
 
-For Geometry points → **“PPNIG”**
+# 3. Explain Document Structure Analysis Methods (10M)
 
-* Principal point
-* Photo/Image point
-* Nadir
-* Isocenter
-* Ground point
-
----
+## Introduction
 
-Perfect—no formulas, just **clear concepts + easy memory**. These are **important 10-mark answers**, so I’ll keep them detailed but simple.
+Document structure analysis is the process of identifying and understanding the structure of a document such as headings, paragraphs, tables, and images.
 
 ---
 
-# **6. Explain Height Measurement using Relief Displacement (10M)**
+## Purpose of Document Structure Analysis
 
-## **Introduction**
+* Organize document content
+* Extract useful information
+* Improve document understanding in NLP systems
 
-Relief displacement is the **shift in position of objects in an aerial photograph due to their height**.
-It is used to estimate how tall an object is.
-
 ---
-
-## **What is Relief Displacement? (Easy Idea)**
 
-* Objects in a photo do not appear exactly where they should
-* **Tall objects appear slightly pushed outward from the center**
+## Common Document Structure Analysis Methods
 
-👉 In simple words:
-**Higher object → more shift → more displacement**
-
 ---
-
-## **Why it Happens**
-
-* Aerial photos are taken from above
-* Light rays from top and base of object reach camera differently
-* This causes a shift in image
 
----
+### 1. Rule-Based Method
 
-## **How Height is Determined (Concept Only)**
+Uses predefined rules to identify document parts.
 
-### **1️⃣ Identify Object**
+#### Example
 
-* Choose object (building, tower, hill)
+* Large bold text → heading
+* Numbered lines → list
 
 ---
-
-### **2️⃣ Locate Center of Photo**
 
-* Find the center (principal point)
+### 2. Statistical Method
 
----
+Uses probability and data patterns for analysis.
 
-### **3️⃣ Observe Displacement**
+#### Example
 
-* Compare position of:
+Frequently occurring patterns are identified automatically.
 
-  * Top of object
-  * Base of object
-
 ---
-
-### **4️⃣ Analyze Shift**
 
-* If top is **farther from center than base**, object is tall
+### 3. Layout-Based Analysis
 
----
+Studies physical arrangement of document elements.
 
-### **5️⃣ Estimate Height**
+#### Includes
 
-* More displacement → greater height
-* Less displacement → smaller height
+* Text alignment
+* Spacing
+* Columns
 
 ---
-
-## **Key Points to Remember**
 
-* Displacement is **radial (moves outward from center)**
-* No displacement at center
-* Maximum displacement at edges
+### 4. Machine Learning Method
 
----
+Uses training data to classify document sections.
 
-## **Applications**
+#### Applications
 
-* Measuring building heights
-* Studying terrain and hills
+* OCR systems
+* PDF analysis
 
 ---
-
-## **Conclusion**
-
-Relief displacement helps determine height by observing how much an object shifts in a photograph, making it a **simple and useful technique in photogrammetry**.
 
----
+### 5. Template Matching
 
-# **7. Explain Fundamentals of Stereoscopy and its Importance (10M)**
+Compares documents with predefined templates.
 
-## **Introduction**
+#### Example
 
-Stereoscopy is a technique that allows us to see **3D (three-dimensional) images** using two overlapping photographs.
+* Invoice recognition
+* Form processing
 
 ---
-
-## **Basic Idea (Very Simple)**
 
-* Our two eyes see slightly different views
-* Brain combines them → gives **depth perception**
+## Applications
 
-👉 Same concept is used in aerial photos.
+* Digital libraries
+* Document search systems
+* Automated form processing
+* Information extraction
 
 ---
 
-## **How Stereoscopy Works**
+## Challenges
 
-### **1️⃣ Two Overlapping Photos**
+* Different document formats
+* Complex layouts
+* Handwritten documents
 
-* Photos of same area taken from slightly different positions
-
 ---
 
-### **2️⃣ Different Viewpoints**
+## Conclusion
 
-* Each photo shows object from a different angle
+Document structure analysis helps NLP systems understand and organize documents efficiently for better information processing.
 
 ---
-
-### **3️⃣ Brain Combines Images**
 
-* When viewed together → gives **3D effect**
+# 4. Explain Rule-Based vs Statistical Approaches (10M)
 
----
-
-## **Tools Used**
+## Introduction
 
-* Stereoscope (device used to view 3D images)
+Rule-based and statistical approaches are two important methods used in NLP for language processing and analysis.
 
 ---
 
-## **Key Concepts**
+# Rule-Based Approach
 
-### **1️⃣ Parallax**
+## What is it?
 
-* Difference in position of object in two images
-* Helps in depth measurement
+This method uses predefined linguistic rules created by experts.
 
 ---
 
-### **2️⃣ Overlap**
+## Working
 
-* Photos must overlap (usually ~60%)
+* Rules are manually written
+* System follows grammar and language patterns
 
 ---
 
-## **Importance of Stereoscopy**
+## Example
 
-### **1️⃣ Depth Perception**
+If a word ends with “ing”, identify it as a verb form.
 
-* Helps see height and shape of land
-
 ---
 
-### **2️⃣ Accurate Mapping**
+## Advantages
 
-* Improves accuracy of maps
+* Easy to understand
+* Gives predictable results
+* Good for small systems
 
 ---
 
-### **3️⃣ Terrain Analysis**
+## Limitations
 
-* Used to study hills, valleys, slopes
+* Difficult to create many rules
+* Cannot handle all language variations
 
 ---
-
-### **4️⃣ Better Interpretation**
-
-* Easier to identify objects in 3D
 
----
+# Statistical Approach
 
-## **Conclusion**
+## What is it?
 
-Stereoscopy helps convert flat images into **3D views**, making it easier to understand terrain and measure heights accurately.
+Uses probability and large amounts of data for language analysis.
 
 ---
-
-## **🔥 Memory Trick**
-
-For Relief Displacement →
-**“Tall = More Shift”**
-
-For Stereoscopy →
-**“2 Photos = 3D Vision”**
 
----
+## Working
 
-Here are **simple, clear, exam-ready 10-mark answers**—no formulas, just concepts you can remember easily.
+* Learns patterns from training data
+* Uses statistical models and probabilities
 
 ---
-
-# **8. What are Fiducial Points? Explain their Importance (10M)**
 
-## **Introduction**
+## Example
 
-Fiducial points are **fixed reference marks** present on an aerial photograph.
-They are used to **identify the exact position and center of the image**.
+Predicting next word based on frequency.
 
 ---
 
-## **What are Fiducial Points? (Easy Idea)**
+## Advantages
 
-* Small marks (dots/crosses) printed on the edges of the photo
-* Usually **4 or 8 points** placed symmetrically
+* Handles complex language patterns
+* More flexible
+* Better for large datasets
 
-👉 They act like a **reference frame for the photograph**
-
 ---
 
-## **Purpose of Fiducial Points**
+## Limitations
 
-### **1️⃣ Finding the Center (Principal Point)**
+* Requires huge data
+* Training takes time
 
-* By joining fiducial points, we can locate the **exact center of the photo**
-
 ---
 
-### **2️⃣ Maintaining Accuracy**
+# Difference Between Rule-Based and Statistical Approaches
 
-* Helps ensure measurements are **correct and consistent**
+| Rule-Based             | Statistical      |
+| ---------------------- | ---------------- |
+| Uses fixed rules       | Uses probability |
+| Human-designed         | Data-driven      |
+| Less flexible          | More flexible    |
+| Works on grammar rules | Learns from data |
 
 ---
 
-### **3️⃣ Image Orientation**
+## Applications
 
-* Used to properly align the photograph during analysis
+* Machine translation
+* Speech recognition
+* Text classification
 
 ---
 
-### **4️⃣ Reference for Measurements**
+## Conclusion
 
-* All calculations (distance, height, etc.) are based on these fixed points
+Rule-based approaches rely on predefined rules, while statistical approaches learn from data. Modern NLP often combines both methods.
 
 ---
-
-### **5️⃣ Error Correction**
 
-* Helps detect and correct distortions in the image
+# 5. Explain Features in Document Classification (10M)
 
----
-
-## **Key Points to Remember**
+## Introduction
 
-* They are **fixed and do not change**
-* Used as a **base reference for all measurements**
+Document classification is the process of grouping documents into categories based on their content.
 
 ---
 
-## **Conclusion**
+## What are Features?
 
-Fiducial points are essential for **accuracy, alignment, and reliable measurement** in aerial photographs.
+Features are important characteristics used to classify documents.
 
 ---
-
-# **9. Explain Parallax and its Measurement using Fiducial Line (10M)**
-
-## **Introduction**
 
-Parallax is the **apparent shift in position of an object** when viewed from two different images.
-It is mainly used to **measure height and depth**.
+## Types of Features in Document Classification
 
 ---
 
-## **What is Parallax? (Easy Idea)**
+### 1. Word Features
 
-* Same object appears at **different positions in two photos**
+Uses words present in the document.
 
-👉 In simple words:
-**Different view → different position → parallax**
+#### Example
 
----
-
-## **Why Parallax Occurs**
+Words like “sports” or “cricket” indicate sports category.
 
-* Photos are taken from slightly different positions
-* So objects shift slightly in each image
-
 ---
-
-## **Types of Parallax (Simple)**
-
-### **1️⃣ Absolute Parallax**
 
-* Shift of a single point between two images
+### 2. Frequency Features
 
----
+Uses how often words appear.
 
-### **2️⃣ Differential Parallax**
+#### Example
 
-* Difference in shift between two points
-* Used to find height
+Repeated words may indicate document topic.
 
 ---
-
-## **Measurement using Fiducial Line**
 
-### **What is Fiducial Line?**
-
-* A line drawn connecting fiducial points
-* Acts as a reference axis
-
----
+### 3. N-gram Features
 
-## **Steps to Measure Parallax**
+Uses combinations of words.
 
-### **1️⃣ Identify Same Object**
+#### Example
 
-* Find same point in both photos
+* Bigram → “machine learning”
+* Trigram → “natural language processing”
 
 ---
 
-### **2️⃣ Draw Fiducial Line**
+### 4. Syntax Features
 
-* Use fiducial points as reference
+Uses grammatical structure.
 
----
-
-### **3️⃣ Measure Position**
+#### Includes
 
-* Note position of object in both images
+* Parts of speech
+* Sentence patterns
 
 ---
 
-### **4️⃣ Calculate Shift**
+### 5. Semantic Features
 
-* Difference in position = parallax
+Uses meaning of words and sentences.
 
 ---
 
-## **Key Points**
+### 6. Metadata Features
 
-* More parallax → more height
-* Less parallax → less height
-* No parallax → flat surface
+Uses extra information.
 
----
+#### Example
 
-## **Applications**
+* Author
+* Date
+* File type
 
-* Height measurement
-* 3D mapping
-* Terrain analysis
-
 ---
 
-## **Conclusion**
+## Applications
 
-Parallax helps in understanding **depth and height** by comparing object positions in two images, making it a key concept in photogrammetry.
+* Email spam detection
+* News categorization
+* Sentiment analysis
 
 ---
 
-## **🔥 Memory Tricks**
+## Challenges
 
-* **Fiducial Points → “Photo Reference Marks”**
-* **Parallax → “Position Difference = Depth”**
+* Large vocabulary
+* Ambiguous words
+* Noisy data
 
 ---
-
 
+## Conclusion
 
+Features play an important role in document classification by helping systems identify and categorize documents accurately.
 
