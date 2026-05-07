@@ -1,547 +1,640 @@
-Great—these are **core 10-mark questions**. I’ll keep them **detailed, simple, and easy to remember**.
+# 1. Explain Ambiguity Resolution Models (10M)
 
+## Introduction
+
+Ambiguity is a common problem in NLP where a word or sentence can have more than one meaning. Ambiguity resolution models help identify the correct meaning based on context.
+
 ---
 
-# **1. What is GIS? Explain its Components (10M)**
+## What is Ambiguity?
 
-## **Introduction**
+Ambiguity occurs when:
 
-Geographic Information System (GIS) is a system used to **collect, store, analyze, and display geographic (location-based) data**.
+* A word has multiple meanings
+* A sentence has multiple interpretations
 
 ---
+
+## Example
+
+Sentence:
+“I saw a bat.”
 
-## **Definition (Easy Line)**
+Here “bat” may mean:
 
-GIS is a computer-based system that helps in **handling and analyzing data related to locations on Earth**.
+* An animal
+* A cricket bat
 
 ---
 
-## **Purpose of GIS**
+## Need for Ambiguity Resolution
 
-* Understand spatial patterns
-* Make better decisions
-* Solve real-world problems
+* Improve language understanding
+* Increase NLP accuracy
+* Avoid incorrect interpretation
 
 ---
 
-## **Components of GIS**
+## Types of Ambiguity
 
-### **1️⃣ Hardware**
+### 1. Lexical Ambiguity
 
-* Physical devices used in GIS
-* Examples:
+A single word has multiple meanings.
 
-  * Computer
-  * GPS devices
-  * Servers
+---
+
+### 2. Syntactic Ambiguity
 
-👉 Used to **store and process data**
+Sentence structure creates multiple meanings.
 
 ---
 
-### **2️⃣ Software**
+### 3. Semantic Ambiguity
 
-* Programs used to analyze and visualize data
-* Examples:
+Meaning of sentence is unclear.
 
-  * GIS software (ArcGIS, QGIS)
+---
 
-👉 Used for **mapping and analysis**
+## Ambiguity Resolution Models
 
 ---
 
-### **3️⃣ Data**
+### 1. Rule-Based Models
 
-* Most important component
-* Two types:
+Uses grammar and language rules to resolve ambiguity.
 
-  * Spatial data (location)
-  * Attribute data (details)
+#### Example
 
-👉 Without data, GIS has no use
+Context rules identify correct meaning.
 
 ---
+
+#### Advantages
 
-### **4️⃣ People**
+* Easy to understand
+* Gives controlled output
 
-* Users who operate GIS
-* Examples:
+---
 
-  * Analysts
-  * Planners
-  * Engineers
+#### Limitations
 
-👉 Responsible for **decision making**
+* Difficult to create many rules
 
 ---
 
-### **5️⃣ Methods**
+### 2. Statistical Models
 
-* Procedures and techniques used in GIS
-* Includes:
+Uses probabilities and large datasets.
 
-  * Data collection
-  * Analysis methods
+#### Working
 
-👉 Ensures proper use of GIS
+* Chooses most probable meaning based on data frequency.
 
 ---
 
-## **Applications of GIS**
+#### Advantages
 
-* Urban planning
-* Disaster management
-* Agriculture
-* Transportation
+* Handles large-scale language data
+* More flexible
 
 ---
+
+### 3. Machine Learning Models
 
-## **Conclusion**
+Learns ambiguity patterns from training data.
 
-GIS is a powerful tool that helps in **analyzing location-based data for better understanding and decision making**.
+#### Techniques
 
+* Decision trees
+* Neural networks
+
 ---
+
+### 4. Knowledge-Based Models
 
-# **2. What is Geospatial Data? Explain Spatial and Attribute Data (10M)**
+Uses dictionaries and semantic databases.
 
-## **Introduction**
+#### Example
 
-Geospatial data is the data that describes **objects or features on Earth along with their location**.
+WordNet for word meanings.
 
 ---
 
-## **Definition (Easy Line)**
+### 5. Context-Based Models
 
-Geospatial data is information that includes **location (where) and details (what)**.
+Uses nearby words and sentence context.
 
----
+#### Example
 
-## **Types of Geospatial Data**
+“river bank” vs “bank account”
 
 ---
 
-### **1️⃣ Spatial Data**
+## Applications
 
-* Represents **location and shape of objects**
+* Machine translation
+* Chatbots
+* Search engines
+* Speech recognition
 
-#### **Examples**
+---
 
-* Points → wells, trees
-* Lines → roads, rivers
-* Polygons → land, buildings
+## Challenges
 
-👉 Shows **“where the object is”**
+* Complex language usage
+* Limited training data
+* Context understanding difficulty
 
 ---
 
-### **2️⃣ Attribute Data**
+## Conclusion
 
-* Provides **information about the object**
+Ambiguity resolution models help NLP systems determine correct meanings and improve language understanding using rules, probability, and context.
 
-#### **Examples**
+---
 
-* Name of place
-* Population
-* Type of land
+# 2. Explain Multilingual Issues in NLP (10M)
 
-👉 Shows **“what the object is”**
+## Introduction
 
+Multilingual NLP deals with processing multiple languages. Different languages create many challenges for NLP systems.
+
 ---
+
+## What is Multilingual NLP?
 
-## **Key Difference (Easy Line)**
+It is the ability of NLP systems to:
 
-* Spatial Data → Location
-* Attribute Data → Description
+* Understand
+* Process
+* Translate multiple languages
 
 ---
 
-## **Importance**
+## Need for Multilingual NLP
 
-* Helps in mapping
-* Supports analysis
-* Used in decision making
+* Global communication
+* Translation systems
+* Multilingual applications
 
 ---
 
-## **Conclusion**
+## Major Multilingual Issues
 
-Geospatial data combines **location and information**, making it essential for GIS analysis.
-
 ---
+
+### 1. Different Grammar Structures
 
-# **3. Explain how Spatial Data and Attribute Data are linked in GIS (10M)**
+Languages follow different sentence patterns.
 
-## **Introduction**
+#### Example
 
-In GIS, spatial and attribute data are **connected to provide complete information about objects**.
+English:
+“Ram eats mango”
 
+Japanese structure is different.
+
 ---
+
+### 2. Vocabulary Differences
 
-## **Basic Idea (Very Simple)**
+Words differ across languages.
 
-* Spatial data tells **where**
-* Attribute data tells **what**
-* Linking both gives **full understanding**
+#### Problem
 
+Same meaning may have different words.
+
 ---
+
+### 3. Morphological Complexity
 
-## **How Linking is Done**
+Some languages have complex word formations.
 
-### **1️⃣ Unique Identifier (ID)**
+#### Example
 
-* Each spatial feature is given a unique ID
+Indian languages often contain long compound words.
 
 ---
 
-### **2️⃣ Attribute Table**
+### 4. Ambiguity
 
-* Contains details of objects
-* Each row corresponds to a spatial feature
+A word may have multiple meanings in different languages.
 
 ---
 
-### **3️⃣ Matching Process**
+### 5. Lack of Training Data
 
-* GIS matches spatial data with attribute data using ID
+Many languages have limited datasets.
 
 ---
 
-## **Example**
+### 6. Script and Writing System Differences
 
-* Map shows a point (location of school)
-* Attribute table shows:
+Languages use different scripts.
 
-  * Name: ABC School
-  * Students: 500
+#### Examples
 
-👉 Both are linked using same ID
+* English → Latin script
+* Hindi → Devanagari
 
 ---
 
-## **Methods of Linking**
+### 7. Cultural and Contextual Differences
 
-### **1️⃣ Join**
+Meaning changes based on culture and usage.
 
-* Combine tables based on common field
-
 ---
 
-### **2️⃣ Relate**
+### 8. Translation Challenges
 
-* Link tables without merging
+Direct translation may not preserve meaning.
 
 ---
 
-## **Importance of Linking**
+## Solutions for Multilingual Issues
 
-* Provides complete information
-* Improves analysis
-* Helps in decision making
+### 1. Machine Translation
 
+Automatically translates languages.
+
 ---
 
-## **Conclusion**
+### 2. Cross-Lingual Models
 
-Linking spatial and attribute data allows GIS to **connect location with information**, making it a powerful analysis tool.
+Shared models for multiple languages.
 
 ---
-
-## **🔥 Memory Trick**
 
-For GIS Components →
-**“HSDPM”**
+### 3. Large Multilingual Datasets
 
-* Hardware
-* Software
-* Data
-* People
-* Methods
+Training on multiple language corpora.
 
 ---
 
-Great—these are **full 10-mark answers**, written **simple, structured, and easy to remember**.
+## Applications
 
+* Google Translate
+* Multilingual chatbots
+* Speech assistants
+
 ---
+
+## Conclusion
+
+Multilingual issues make NLP challenging due to grammar, scripts, and cultural differences, but advanced models help process multiple languages effectively.
+
 
-# **4. Explain GIS Operations in Detail (10M)**
+# 3. Explain Word Sense Disambiguation (WSD) Techniques (10M)
 
-## **Introduction**
+## Introduction
 
-GIS operations are the steps used to **collect, store, process, and analyze geographic data** to produce useful information.
+Word Sense Disambiguation (WSD) is the process of identifying the correct meaning of a word based on context.
 
 ---
 
-## **Main GIS Operations**
+## What is WSD?
 
+Many words have multiple meanings.
+WSD helps NLP systems choose the correct meaning.
+
 ---
+
+## Example
 
-### **1️⃣ Data Input**
+Sentence:
+“He sat on the bank.”
 
-* Collecting data into GIS system
+Here “bank” may mean:
 
-#### **Sources**
+* River bank
+* Financial bank
+
+Context determines correct meaning.
+
+---
 
-* Maps
-* Satellite images
-* GPS data
+## Need for WSD
 
-👉 Converts real-world data into digital form
+* Improve language understanding
+* Reduce ambiguity
+* Increase NLP accuracy
 
 ---
 
-### **2️⃣ Data Management**
+## WSD Techniques
 
-* Storing and organizing data
+---
+
+### 1. Knowledge-Based Techniques
 
-#### **Includes**
+Uses dictionaries, semantic networks, and lexical databases.
 
-* Database creation
-* Updating data
-* Data security
+#### Example
 
-👉 Ensures data is **safe and easily accessible**
+WordNet is commonly used.
 
 ---
 
-### **3️⃣ Data Display**
+#### Advantages
 
-* Showing data in visual form
+* Does not require large training data
 
-#### **Forms**
+---
 
-* Maps
-* Charts
-* Graphs
+#### Limitations
 
-👉 Helps in easy understanding
+* Depends on knowledge resources
 
 ---
+
+### 2. Supervised Learning Technique
 
-### **4️⃣ Data Exploration**
+Uses labeled training data.
 
-* Examining data to find patterns
+#### Working
 
-#### **Examples**
+* Model learns correct meanings from examples.
 
-* Finding trends
-* Identifying relationships
+---
+
+#### Advantages
 
-👉 Helps in better interpretation
+* High accuracy
 
 ---
 
-### **5️⃣ Data Analysis**
+#### Limitations
 
-* Processing data to get results
+* Requires large annotated datasets
 
-#### **Examples**
+---
 
-* Overlay analysis
-* Buffer analysis
+### 3. Unsupervised Technique
 
-👉 Used for decision making
+Uses clustering and similarity methods without labeled data.
 
 ---
 
-## **Conclusion**
+#### Advantages
 
-GIS operations help transform raw data into **useful information for solving real-world problems**.
+* No training data needed
 
 ---
+
+#### Limitations
 
-# **5. Explain Spatial Data Input Methods and Attribute Data Management in GIS (10M)**
+* Lower accuracy
 
-## **Introduction**
+---
+
+### 4. Semi-Supervised Technique
 
-GIS requires proper data input and management to ensure **accurate analysis and results**.
+Combines labeled and unlabeled data.
 
 ---
 
-## **Spatial Data Input Methods**
+### 5. Context-Based Technique
 
-### **1️⃣ Manual Digitization**
+Uses nearby words to determine meaning.
 
-* Tracing maps manually into computer
+#### Example
 
-👉 Simple but time-consuming
+“money” near “bank” indicates financial meaning.
 
 ---
 
-### **2️⃣ Scanning**
+## Applications
 
-* Converting paper maps into digital images
+* Machine translation
+* Search engines
+* Chatbots
+* Speech recognition
 
 ---
 
-### **3️⃣ GPS Survey**
+## Challenges
 
-* Collecting real-time location data
+* Complex contexts
+* Multiple meanings
+* Lack of training data
 
 ---
 
-### **4️⃣ Remote Sensing**
+## Conclusion
 
-* Using satellite images for data input
+WSD techniques help NLP systems identify correct word meanings using knowledge, machine learning, and context analysis.
 
 ---
 
-### **5️⃣ Existing Digital Data**
+# 4. Explain Semantic Parsing Paradigms (10M)
 
-* Importing data from other sources
+## Introduction
 
----
+Semantic parsing is the process of converting natural language into a machine-understandable meaning representation.
 
-## **Attribute Data Management**
+---
 
-### **What is it?**
+## What is Semantic Parsing?
 
-* Managing descriptive information of spatial data
+It analyzes sentence meaning rather than only grammar.
 
 ---
 
-### **Functions**
+## Purpose
 
-#### **1️⃣ Storage**
+* Understand sentence meaning
+* Represent meaning formally
+* Support intelligent systems
 
-* Data stored in tables
+---
+
+## Semantic Parsing Paradigms
 
 ---
 
-#### **2️⃣ Retrieval**
+### 1. Rule-Based Paradigm
 
-* Accessing required data
+Uses predefined grammar and semantic rules.
 
+#### Features
+
+* Human-designed rules
+* Controlled processing
+
 ---
 
-#### **3️⃣ Updating**
+#### Advantages
 
-* Modifying data when needed
+* Easy interpretation
 
 ---
 
-#### **4️⃣ Querying**
+#### Limitations
 
-* Searching data based on conditions
+* Difficult for large systems
 
 ---
+
+### 2. Statistical Paradigm
 
-## **Importance**
+Uses probabilities and training data.
 
-* Improves accuracy
-* Saves time
-* Supports analysis
+#### Working
 
+* Learns meaning patterns from data.
+
 ---
 
-## **Conclusion**
+#### Advantages
 
-Proper data input and management ensure that GIS works **efficiently and accurately**.
+* Handles large datasets
+* More flexible
 
 ---
+
+### 3. Machine Learning Paradigm
 
-# **6. Explain Data Display, Data Exploration, and Data Analysis in GIS (10M)**
+Uses AI and neural networks for semantic understanding.
 
-## **Introduction**
+#### Techniques
 
-These steps help in **visualizing and understanding GIS data** to make decisions.
+* Deep learning
+* Neural semantic parsing
 
 ---
 
-## **1️⃣ Data Display**
+### 4. Logic-Based Paradigm
 
-### **What is it?**
+Represents meaning using formal logic.
 
-* Showing data visually
+#### Example
 
+First Order Logic (FOL)
+
 ---
 
-### **Forms**
+### 5. Frame-Based Paradigm
 
-* Maps
-* Graphs
-* Charts
+Represents meaning using predefined frames or structures.
 
 ---
 
-### **Purpose**
+## Applications
 
-* Easy understanding
-* Better communication
+* Question answering systems
+* Virtual assistants
+* Machine translation
+* Chatbots
 
 ---
+
+## Challenges
 
-## **2️⃣ Data Exploration**
+* Ambiguous sentences
+* Complex language structures
+* Context understanding
 
-### **What is it?**
+---
+
+## Conclusion
 
-* Examining data to find patterns
+Semantic parsing paradigms help NLP systems understand and represent sentence meaning using rules, logic, and machine learning approaches.
 
 ---
 
-### **Examples**
+# 5. Explain Knowledge-Based WSD vs Statistical WSD (10M)
 
-* Identifying clusters
-* Finding relationships
+## Introduction
 
+Knowledge-based and statistical approaches are two major methods used for Word Sense Disambiguation (WSD).
+
 ---
 
-### **Purpose**
+# Knowledge-Based WSD
 
-* Understand data behavior
+## What is it?
 
+Uses dictionaries, semantic databases, and linguistic knowledge to identify meanings.
+
 ---
+
+## Working
 
-## **3️⃣ Data Analysis**
+* Compares word meanings using lexical resources
+* Uses semantic similarity
 
-### **What is it?**
+---
+
+## Example Resources
 
-* Processing data to get meaningful results
+* WordNet
+* Dictionaries
 
 ---
+
+## Advantages
+
+* No large training data needed
+* Easy to interpret
 
-### **Types**
+---
 
-#### **a) Overlay Analysis**
+## Limitations
 
-* Combining multiple layers
+* Depends heavily on knowledge resources
+* Limited coverage
 
 ---
+
+# Statistical WSD
 
-#### **b) Buffer Analysis**
+## What is it?
 
-* Creating zones around features
+Uses probability and machine learning techniques.
 
 ---
 
-#### **c) Network Analysis**
+## Working
 
-* Finding shortest paths
+* Learns word meanings from large datasets
+* Uses context frequency and patterns
 
 ---
 
-### **Purpose**
+## Advantages
 
-* Supports planning and decision making
+* Higher accuracy with large data
+* Handles real-world usage better
 
 ---
 
-## **Conclusion**
+## Limitations
 
-Data display, exploration, and analysis help convert raw GIS data into **useful insights and decisions**.
+* Requires training data
+* Computationally expensive
 
 ---
 
-## **🔥 Memory Trick**
+# Difference Between Knowledge-Based and Statistical WSD
+
+| Knowledge-Based WSD       | Statistical WSD                |
+| ------------------------- | ------------------------------ |
+| Uses dictionaries         | Uses data and probability      |
+| No training data required | Requires large datasets        |
+| Rule/knowledge driven     | Data-driven                    |
+| Easier to explain         | More accurate in large systems |
+
+---
 
-For GIS Operations →
-**“IMEDA”**
+## Applications
 
-* Input
-* Management
-* Exploration
-* Display
-* Analysis
+* Search engines
+* Machine translation
+* Chatbots
+* Information retrieval
 
 ---
 
+## Conclusion
 
+Knowledge-based WSD uses semantic resources, while statistical WSD uses data-driven learning. Modern NLP often combines both approaches for better accuracy.
