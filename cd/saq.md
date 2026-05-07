@@ -1,145 +1,94 @@
-Here are **40 short answer questions (SAQs)** from your full syllabus.
-Each has a **clear question followed by a 1–3 line answer**.
+# UNIT I – Morphology & Document Structure
+
+Q: Define morphology in NLP.
+A: Morphology is the study of word formation and structure in Natural Language Processing.
+
+Q: What are morphemes?
+A: Morphemes are the smallest meaningful units in a word, such as prefixes, roots, or suffixes.
+
+Q: Inflectional vs derivational morphology.
+A: Inflectional morphology changes grammar form without changing meaning, while derivational morphology creates new words.
+
+Q: What is tokenization?
+A: Tokenization is the process of splitting text into smaller units like words or sentences.
+
+Q: What are challenges in word structure?
+A: Complex word forms, multiple meanings, and language variations make word analysis difficult.
 
 ---
 
-# UNIT I – Photogrammetry
+# UNIT II – Syntax I
 
-Q: What is photogrammetry?
-A: Photogrammetry is the science of obtaining measurements and information about objects using photographs, especially aerial images.
+Q: What is syntax in NLP?
+A: Syntax is the study of sentence structure and grammatical arrangement of words.
 
-Q: What are aerial photographs?
-A: Aerial photographs are images of the Earth taken from aircraft or drones to study surface features.
+Q: What is a parse tree?
+A: A parse tree is a tree structure showing grammatical relationships in a sentence.
 
-Q: What are the types of aerial photographs?
-A: Vertical and oblique photographs are the main types based on camera angle.
+Q: What is a treebank?
+A: A treebank is a collection of sentences annotated with syntactic or grammatical information.
 
-Q: What is scale in aerial photography?
-A: Scale is the ratio between distance on the photograph and actual ground distance.
+Q: What is CFG?
+A: Context Free Grammar (CFG) is a set of rules used to describe sentence structure.
 
-Q: What is relief displacement?
-A: It is the shift of objects from their true position in an image due to height differences.
-
-Q: What is stereoscopy?
-A: Stereoscopy is the technique of viewing two images together to get a 3D view.
-
-Q: What are fiducial points?
-A: Fiducial points are reference marks on aerial photographs used for measurement and alignment.
-
-Q: What is parallax?
-A: Parallax is the apparent shift in position of an object when viewed from different angles.
+Q: What is dependency parsing?
+A: Dependency parsing identifies relationships between words in a sentence.
 
 ---
 
-# UNIT II – Remote Sensing
+# UNIT III – Syntax II & Semantic Parsing I
 
-Q: What is remote sensing?
-A: Remote sensing is the process of collecting information about Earth without direct contact using satellites or sensors.
+Q: What is parsing ambiguity?
+A: Parsing ambiguity occurs when a sentence can have more than one interpretation.
 
-Q: What is remote sensing data?
-A: It is information collected from sensors in the form of images or digital values.
+Q: What is lexical ambiguity?
+A: Lexical ambiguity happens when a word has multiple meanings.
 
-Q: What is the remote sensing process?
-A: It involves energy emission, interaction with objects, detection by sensors, and data analysis.
+Q: What is WSD?
+A: Word Sense Disambiguation (WSD) is the process of finding the correct meaning of a word based on context.
 
-Q: What are advantages of remote sensing?
-A: It covers large areas, saves time, and allows repeated observations.
+Q: What is semantic interpretation?
+A: Semantic interpretation is the process of understanding the meaning of sentences.
 
-Q: What are limitations of remote sensing?
-A: It can be costly and affected by weather conditions like clouds.
-
-Q: What is electromagnetic spectrum?
-A: It is the range of all types of electromagnetic radiation used in sensing.
-
-Q: What is resolution in remote sensing?
-A: Resolution refers to the level of detail captured in an image.
-
-Q: What is False Color Composite?
-A: It is an image where colors are assigned differently to highlight features like vegetation.
+Q: What is multilingual NLP?
+A: Multilingual NLP deals with processing and understanding multiple languages.
 
 ---
 
-# UNIT III – GIS
+# UNIT IV – Semantic Parsing II
 
-Q: What is GIS?
-A: GIS is a system used to collect, store, analyze, and display geographic data.
+Q: What is predicate-argument structure?
+A: It represents the relationship between an action and the entities involved in it.
 
-Q: What are components of GIS?
-A: Hardware, software, data, people, and methods.
+Q: What is semantic representation?
+A: Semantic representation is a formal way of representing meaning in NLP.
 
-Q: What is spatial data?
-A: Spatial data represents the location and shape of geographic features.
+Q: What is FOL?
+A: First Order Logic (FOL) is a logical system used to represent facts and relationships.
 
-Q: What is attribute data?
-A: Attribute data provides descriptive information about spatial features.
+Q: What are semantic networks?
+A: Semantic networks represent knowledge using nodes and links.
 
-Q: What is GIS data input?
-A: It is the process of entering spatial and attribute data into GIS.
-
-Q: What is GIS data analysis?
-A: It involves processing data to extract useful information.
-
-Q: What is Geographic Coordinate System?
-A: It uses latitude and longitude to locate positions on Earth.
-
-Q: What is map projection?
-A: It is a method of representing the curved Earth surface on a flat map.
+Q: What are frames?
+A: Frames are data structures used to represent stereotyped situations and related information.
 
 ---
 
-# UNIT IV – Vector Data Model
+# UNIT V – Language Modelling
 
-Q: What is vector data model?
-A: It represents data using points, lines, and polygons.
+Q: What is a language model?
+A: A language model predicts the probability of word sequences in a language.
 
-Q: What is a point feature?
-A: It represents a single location like a well or tree.
+Q: What is an N-gram?
+A: An N-gram is a sequence of N consecutive words used in language modelling.
 
-Q: What is topology?
-A: Topology defines spatial relationships between features.
+Q: What is perplexity?
+A: Perplexity measures how well a language model predicts text data.
 
-Q: What is a shapefile?
-A: It is a common format used to store vector data in GIS.
+Q: What is Bayesian estimation?
+A: Bayesian estimation uses probability and prior knowledge to make predictions.
 
-Q: What is coverage data structure?
-A: It is an older format that stores spatial data with topology.
+Q: What are class-based models?
+A: Class-based models group similar words into classes to improve language modelling.
 
-Q: What are composite features?
-A: Features made by combining multiple simple features.
-
-Q: What is object-based model?
-A: It represents data as objects with properties and relationships.
-
-Q: What is Geobase data model?
-A: It is a structured system to store and manage spatial data efficiently.
-
----
-
-# UNIT V – Raster Data Model
-
-Q: What is raster data model?
-A: It represents data as a grid of cells or pixels.
-
-Q: What is a pixel?
-A: It is the smallest unit in raster data representing a value.
-
-Q: What are types of raster data?
-A: Continuous and discrete data.
-
-Q: What is raster data structure?
-A: It is a grid-based storage of data using rows and columns.
-
-Q: What is data conversion in GIS?
-A: It is the process of changing data from one format to another.
-
-Q: What is digitizing?
-A: It is converting maps or images into digital format.
-
-Q: What is scanning?
-A: It is converting paper maps into digital images.
-
-Q: What is metadata?
-A: Metadata is data that describes other data.
-
----
 
