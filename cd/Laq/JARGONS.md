@@ -1,175 +1,233 @@
-That’s actually a smart move—once you know the **jargons**, everything becomes much easier to understand and remember.
+# UNIT I – Morphology & Document Structure Jargons
 
-I’ll give you **important terms from all 5 units**, each in **very short, simple lines**.
+**Morphology**
+Study of word structure and formation.
 
----
+**Morpheme**
+Smallest meaningful unit in a word.
 
-# UNIT I – Photogrammetry Jargons
+**Root Word**
+Main part carrying meaning.
 
-**Photogrammetry**
-Getting measurements using photographs.
+**Prefix**
+Added before root word.
 
-**Aerial Photograph**
-Photo of Earth taken from air.
+**Suffix**
+Added after root word.
 
-**Vertical Photograph**
-Camera points straight down.
+**Inflectional Morphology**
+Changes grammar form without changing meaning.
 
-**Oblique Photograph**
-Camera is tilted.
+**Derivational Morphology**
+Creates new words with new meanings.
 
-**Scale**
-Photo distance vs real distance.
+**Tokenization**
+Splitting text into words or sentences.
 
-**Relief Displacement**
-Objects appear shifted due to height.
+**Stemming**
+Reducing word to base form.
 
-**Stereoscopy**
-Viewing images in 3D using two photos.
+**Lemmatization**
+Converting word into dictionary form.
 
-**Fiducial Points**
-Reference marks on photo for accuracy.
+**Finite State Machine (FSM)**
+State-based model for processing words.
 
-**Parallax**
-Shift in object position when viewed from different angles.
+**Finite State Morphology**
+Morphology analysis using FSM.
 
----
+**Document Structure**
+Organization of headings, paragraphs, tables, etc.
 
-# UNIT II – Remote Sensing Jargons
+**Document Classification**
+Grouping documents into categories.
 
-**Remote Sensing**
-Collecting data without touching objects.
-
-**Sensor**
-Device that captures data.
-
-**Electromagnetic Spectrum**
-All types of energy waves (visible, infrared, etc.).
-
-**Resolution**
-Detail level of an image.
-
-**Pixel**
-Smallest unit in an image.
-
-**False Color Composite (FCC)**
-Artificial colors used to highlight features.
-
-**Reflection**
-Energy bouncing back from surface.
-
-**Absorption**
-Energy absorbed by surface.
-
-**Scattering**
-Energy spread in different directions.
+**Feature Extraction**
+Selecting important information from text.
 
 ---
 
-# UNIT III – GIS Jargons
+# UNIT II – Syntax I Jargons
 
-**GIS**
-System for managing geographic data.
+**Syntax**
+Study of sentence structure.
 
-**Spatial Data**
-Location data (where).
+**Parsing**
+Analyzing grammatical structure of sentences.
 
-**Attribute Data**
-Description data (what).
+**Parser**
+Program that performs parsing.
 
-**Layer**
-One type of data in GIS map.
+**Parse Tree**
+Tree representation of sentence grammar.
 
-**Coordinate System**
-Method to locate positions.
+**Treebank**
+Collection of parsed and annotated sentences.
 
-**Datum**
-Reference for measuring Earth positions.
+**CFG (Context Free Grammar)**
+Grammar rules for sentence structure.
 
-**Map Projection**
-Converting Earth (3D) to flat map (2D).
+**Production Rule**
+Rule used to form sentence structures.
 
-**Overlay**
-Combining multiple map layers.
+**Non-Terminal Symbol**
+Grammar variable like NP or VP.
 
----
+**Terminal Symbol**
+Actual word in sentence.
 
-# UNIT IV – Vector Model Jargons
+**Dependency Parsing**
+Finding relationships between words.
 
-**Vector Data**
-Data using shapes (point, line, polygon).
+**Phrase Structure**
+Grouping words into phrases.
 
-**Point**
-Single location.
+**Chart Parsing**
+Efficient parsing using stored intermediate results.
 
-**Line**
-Connected points forming a path.
+**PCFG**
+CFG with probabilities.
 
-**Polygon**
-Closed shape representing area.
+**Top-Down Parsing**
+Parsing from start symbol to words.
 
-**Topology**
-Relationship between features.
-
-**Shapefile**
-Simple vector data format.
-
-**Coverage**
-Old vector format with topology.
-
-**Composite Feature**
-Combination of multiple features.
-
-**Object-Based Model**
-Data stored as objects with properties.
+**Bottom-Up Parsing**
+Parsing from words to sentence.
 
 ---
 
-# UNIT V – Raster Model Jargons
+# UNIT III – Syntax II & Semantic Parsing I Jargons
 
-**Raster Data**
-Grid-based data.
+**Ambiguity**
+Multiple possible meanings.
 
-**Cell / Pixel**
-Small square in raster.
+**Lexical Ambiguity**
+Single word with multiple meanings.
 
-**Resolution**
-Size of each cell.
+**Syntactic Ambiguity**
+Sentence structure causing multiple interpretations.
 
-**Continuous Data**
-Smoothly changing data (temperature).
+**Semantic Ambiguity**
+Unclear sentence meaning.
 
-**Discrete Data**
-Category-based data (land type).
+**WSD (Word Sense Disambiguation)**
+Finding correct word meaning using context.
 
-**Digitizing**
-Converting map to digital form.
+**Semantic Interpretation**
+Understanding sentence meaning.
 
-**Scanning**
-Converting paper to image.
+**Semantic Parsing**
+Converting language into meaning representation.
 
-**Metadata**
-Information about data.
+**Knowledge-Based WSD**
+Uses dictionaries and semantic resources.
 
-**Data Conversion**
-Changing data format.
+**Statistical WSD**
+Uses probability and data patterns.
+
+**Multilingual NLP**
+Processing multiple languages.
+
+**Context**
+Surrounding words affecting meaning.
+
+**Corpus**
+Large collection of text data.
+
+**Annotation**
+Adding labels or linguistic information to text.
 
 ---
 
-# SUPER QUICK MEMORY VIEW
+# UNIT IV – Semantic Parsing II Jargons
 
-* Photo unit → Images & measurement
-* Remote sensing → Satellites & energy
-* GIS → Data + analysis
-* Vector → Shapes
-* Raster → Grid
+**Semantics**
+Study of meaning in language.
+
+**Predicate**
+Action or state in sentence.
+
+**Argument**
+Entity related to predicate.
+
+**Predicate-Argument Structure**
+Relationship between action and participants.
+
+**Semantic Representation**
+Structured representation of meaning.
+
+**FOL (First Order Logic)**
+Logic system for representing facts and relationships.
+
+**Semantic Network**
+Knowledge representation using nodes and links.
+
+**Frame**
+Structured knowledge representation with slots.
+
+**Slot**
+Attribute in a frame.
+
+**Ontology**
+Formal representation of concepts and relationships.
+
+**Knowledge Representation**
+Storing knowledge in machine-understandable form.
+
+**Inference**
+Deriving conclusions from knowledge.
+
+**Reasoning**
+Logical processing of information.
 
 ---
 
-If you want, I can now:
+# UNIT V – Language Modelling Jargons
 
-* Turn these into **flashcards for fast revision**
-* Give **only most important 20 jargons for exam**
-* Or test you with quick MCQs
+**Language Model**
+Model predicting word sequences.
 
-Just tell 👍
+**N-Gram**
+Sequence of N consecutive words.
+
+**Unigram**
+Single-word sequence.
+
+**Bigram**
+Two-word sequence.
+
+**Trigram**
+Three-word sequence.
+
+**Probability**
+Chance of occurrence.
+
+**Perplexity**
+Measure of language model performance.
+
+**Bayesian Estimation**
+Probability estimation using prior knowledge.
+
+**Prior Probability**
+Initial probability before observing data.
+
+**Posterior Probability**
+Updated probability after observing data.
+
+**Likelihood**
+Probability of observed data.
+
+**Class-Based Model**
+Groups words into classes for modelling.
+
+**Adaptation**
+Adjusting model for specific domain/task.
+
+**Multilingual Model**
+Single model supporting multiple languages.
+
+**Corpus Training**
+Training model using large text datasets.
+
+**Smoothing**
+Handling unseen word sequences in language models.
