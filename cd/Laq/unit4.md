@@ -1,602 +1,936 @@
-# 1. Explain Predicate-Argument Structure (10M)
+# 1. Explain ARM Architecture and ARM Processor Fundamentals
 
 ## Introduction
 
-Predicate-Argument Structure is a semantic representation used in NLP to describe the relationship between an action and the entities involved in it.
+ARM stands for **Advanced RISC Machine**.
+It is a family of processors based on **RISC (Reduced Instruction Set Computer)** architecture.
+
+ARM processors are widely used in:
+
+* Mobile phones
+* Embedded systems
+* Tablets
+* IoT devices
+* Robotics
+
+ARM processors are popular because they provide:
+
+* High speed
+* Low power consumption
+* Efficient performance
 
 ---
 
-## What is Predicate-Argument Structure?
+# ARM Processor Fundamentals
 
-It identifies:
-
-* Predicate → action or event
-* Arguments → participants involved in the action
+ARM processors are designed using the RISC principle.
 
 ---
 
-## Basic Idea
+## RISC Concept
 
-A sentence mainly contains:
+RISC architecture uses:
 
-* An action
-* Objects or persons related to that action
+* Simple instructions
+* Faster execution
+* Smaller instruction set
 
----
-
-## Example
-
-Sentence:
-“Ram eats mango.”
-
-* Predicate → eats
-* Argument 1 → Ram (doer)
-* Argument 2 → mango (object)
+This improves processor speed and efficiency.
 
 ---
 
-## Components of Predicate-Argument Structure
+# Features of ARM Processor
 
 ---
 
-### 1. Predicate
+## 1. Low Power Consumption
 
-Represents:
+ARM processors consume very little power.
 
-* Action
-* Event
-* State
+This makes them ideal for:
 
-#### Examples
-
-* eat
-* run
-* sleep
+* Mobile devices
+* Battery-operated systems
 
 ---
 
-### 2. Arguments
+## 2. High Performance
 
-Entities connected to predicate.
-
-#### Types
-
-* Subject
-* Object
-* Receiver
+ARM executes instructions quickly using pipelining.
 
 ---
 
-## Roles of Arguments
+## 3. Simple Instruction Set
 
-### Agent
+Uses fewer and simple instructions.
 
-Performs action.
-
----
-
-### Theme
-
-Object affected by action.
+This reduces hardware complexity.
 
 ---
 
-### Recipient
+## 4. Large Register Set
 
-Receives something.
-
----
-
-## Importance in NLP
-
-* Helps understand sentence meaning
-* Improves semantic analysis
-* Useful for machine translation
+ARM contains many registers for faster data access.
 
 ---
 
-## Applications
+## 5. Pipelined Architecture
 
-* Chatbots
-* Question answering systems
-* Information extraction
+Multiple instructions are executed simultaneously in stages.
 
 ---
 
-## Advantages
+## 6. Conditional Execution
 
-* Clear meaning representation
-* Identifies relationships between words
+Instructions can execute based on conditions.
 
----
-
-## Challenges
-
-* Complex sentence structures
-* Ambiguous meanings
+This reduces branching and increases speed.
 
 ---
 
-## Conclusion
+# ARM Architecture
 
-Predicate-Argument Structure helps NLP systems understand who performs an action and who is affected by it.
+ARM architecture mainly consists of:
+
+* Registers
+* ALU
+* Control Unit
+* Pipeline
+* Bus Interface
+* Memory Interface
 
 ---
 
-# 2. Explain Meaning Representation Systems (10M)
+# Main Components of ARM Architecture
+
+---
+
+# 1. Register Bank
+
+Stores data and addresses.
+
+ARM typically contains:
+
+* General-purpose registers
+* Program Counter
+* Stack Pointer
+* Link Register
+
+---
+
+# 2. ALU (Arithmetic Logic Unit)
+
+Performs:
+
+* Arithmetic operations
+* Logical operations
+
+---
+
+# 3. Control Unit
+
+Controls execution of instructions.
+
+---
+
+# 4. Pipeline Unit
+
+Improves execution speed by processing multiple instructions simultaneously.
+
+---
+
+# 5. Memory Interface
+
+Handles communication with memory.
+
+---
+
+# ARM Processor Modes
+
+ARM supports different operating modes such as:
+
+* User mode
+* Supervisor mode
+* Interrupt mode
+
+These modes improve system control and security.
+
+---
+
+# Applications of ARM Processors
+
+* Smartphones
+* Embedded systems
+* Automotive systems
+* Medical devices
+* Smart appliances
+
+---
+
+# Advantages of ARM Architecture
+
+* Low power usage
+* High speed
+* Compact design
+* Efficient processing
+
+---
+
+# Conclusion
+
+ARM architecture is a powerful and efficient RISC-based processor architecture widely used in modern embedded and mobile systems because of its speed, low power consumption, and flexible design.
+
+---
+
+# 2. Explain ARM Registers, CPSR, and Pipeline Operation
 
 ## Introduction
 
-Meaning representation systems are methods used in NLP to represent sentence meaning in a structured form understandable by computers.
+ARM processors use registers, status registers, and pipelining to achieve high-speed processing and efficient instruction execution.
 
 ---
 
-## Purpose of Meaning Representation
+# ARM Registers
 
-* Represent sentence meaning clearly
-* Support reasoning and analysis
-* Help machines understand language
+Registers are small storage locations inside the processor used to store:
 
----
+* Data
+* Addresses
+* Instructions
 
-## Characteristics
-
-A good meaning representation should:
-
-* Be clear
-* Handle ambiguity
-* Support reasoning
+ARM processors contain multiple registers.
 
 ---
 
-## Types of Meaning Representation Systems
+# Types of ARM Registers
 
 ---
 
-### 1. First Order Logic (FOL)
+## 1. General Purpose Registers
 
-Represents meaning using logic statements.
+Used for normal data operations.
 
-#### Example
+Usually represented as:
 
-“Ram likes mango.”
-
-Represented logically using predicates.
+* R0 to R12
 
 ---
 
-### 2. Semantic Networks
+## 2. Stack Pointer (SP)
 
-Represents knowledge using nodes and links.
+Also called:
 
-#### Features
+* R13
 
-* Nodes represent concepts
-* Links represent relationships
-
----
-
-### 3. Frames
-
-Stores knowledge in structured slots.
-
-#### Example
-
-Restaurant frame:
-
-* Customer
-* Food
-* Bill
+Used for stack operations.
 
 ---
 
-### 4. Conceptual Dependency
+## 3. Link Register (LR)
 
-Represents actions and relationships in conceptual form.
+Also called:
 
----
+* R14
 
-## Applications
-
-* Expert systems
-* Question answering
-* Machine translation
-* Knowledge representation
+Stores return address during function calls.
 
 ---
 
-## Advantages
+## 4. Program Counter (PC)
 
-* Structured understanding
-* Supports intelligent reasoning
+Also called:
 
----
+* R15
 
-## Challenges
-
-* Complex natural language
-* Ambiguity handling
+Contains address of next instruction.
 
 ---
 
-## Conclusion
+# CPSR (Current Program Status Register)
 
-Meaning representation systems help computers represent and process human language meaning effectively.
+CPSR stores:
+
+* Processor status
+* Condition flags
+* Control information
 
 ---
 
-# 3. Explain FOL vs Semantic Networks vs Frames (10M)
+# Functions of CPSR
+
+---
+
+## 1. Condition Flags
+
+Indicate result of operations.
+
+### Important Flags
+
+* Zero flag
+* Carry flag
+* Negative flag
+* Overflow flag
+
+---
+
+## 2. Control Bits
+
+Control processor mode and interrupt handling.
+
+---
+
+# Pipeline Operation in ARM
+
+## What is Pipeline?
+
+Pipeline is a technique where multiple instructions are processed simultaneously in different stages.
+
+This improves processor speed.
+
+---
+
+# Stages of ARM Pipeline
+
+---
+
+## 1. Fetch
+
+Instruction is fetched from memory.
+
+---
+
+## 2. Decode
+
+Instruction is decoded and understood.
+
+---
+
+## 3. Execute
+
+Instruction is executed.
+
+---
+
+# Working of Pipeline
+
+While one instruction executes:
+
+* Next instruction decodes
+* Another instruction fetches
+
+Thus many instructions process together.
+
+---
+
+# Advantages of Pipeline
+
+* Faster execution
+* Improved performance
+* Better CPU utilization
+
+---
+
+# Disadvantages
+
+* Complex hardware
+* Pipeline hazards may occur
+
+---
+
+# Applications
+
+* Embedded systems
+* Mobile processors
+* Real-time systems
+
+---
+
+# Conclusion
+
+ARM registers, CPSR, and pipelining together provide efficient processing, fast instruction execution, and better system performance.
+
+---
+
+# 3. Explain Exceptions, Interrupts, and Interrupt Vector Table in ARM
 
 ## Introduction
 
-FOL, Semantic Networks, and Frames are important meaning representation systems used in NLP and Artificial Intelligence.
+ARM processors handle abnormal events and external requests using:
+
+* Exceptions
+* Interrupts
+* Interrupt vector tables
+
+These mechanisms improve processor control and responsiveness.
 
 ---
 
-# First Order Logic (FOL)
+# Exceptions in ARM
 
-## What is FOL?
+## What is an Exception?
 
-A formal logical system used to represent facts, objects, and relationships.
+An exception is an event that interrupts normal program execution.
 
----
-
-## Features
-
-* Uses predicates and variables
-* Supports logical reasoning
+Processor temporarily stops current program and handles the event.
 
 ---
 
-## Example
+# Types of Exceptions
 
-“Ram likes mango”
-
-Represented logically using predicates.
-
----
-
-## Advantages
-
-* Precise representation
-* Strong reasoning ability
+* Reset
+* Undefined instruction
+* Software interrupt
+* Data abort
+* IRQ
+* FIQ
 
 ---
 
-## Limitations
+# Interrupts in ARM
 
-* Difficult for complex real-world knowledge
+## What is an Interrupt?
 
----
+Interrupt is a signal requesting immediate processor attention.
 
-# Semantic Networks
-
-## What are Semantic Networks?
-
-Knowledge representation using nodes and links.
+Interrupts help processors respond quickly to important events.
 
 ---
 
-## Features
-
-* Nodes represent concepts
-* Links represent relationships
+# Types of Interrupts
 
 ---
 
-## Example
+## 1. IRQ (Interrupt Request)
 
-Dog → is an → Animal
-
----
-
-## Advantages
-
-* Easy visualization
-* Good relationship representation
+Normal priority interrupt.
 
 ---
 
-## Limitations
+## 2. FIQ (Fast Interrupt Request)
 
-* Weak logical reasoning
+High priority interrupt.
 
----
-
-# Frames
-
-## What are Frames?
-
-Data structures used to represent stereotyped situations.
+Handled faster than IRQ.
 
 ---
 
-## Features
+# Interrupt Vector Table
 
-* Contains slots and values
-* Represents structured knowledge
+## What is Interrupt Vector Table?
 
----
+It is a table containing addresses of exception handling routines.
 
-## Example
+When exception occurs:
 
-Student frame:
-
-* Name
-* Roll number
-* Course
+* Processor checks vector table
+* Jumps to corresponding handler
 
 ---
 
-## Advantages
+# Functions of Interrupt Vector Table
 
-* Organized representation
-* Easy inheritance of properties
-
----
-
-## Limitations
-
-* Limited flexibility for complex reasoning
+* Identifies exception handlers
+* Controls interrupt processing
+* Improves response time
 
 ---
 
-# Difference Between FOL, Semantic Networks, and Frames
-
-| FOL                    | Semantic Networks    | Frames                 |
-| ---------------------- | -------------------- | ---------------------- |
-| Logic-based            | Graph-based          | Structure-based        |
-| Strong reasoning       | Easy visualization   | Organized knowledge    |
-| Uses predicates        | Uses nodes and links | Uses slots and values  |
-| Complex representation | Simple relationships | Structured information |
+# Exception Handling Process
 
 ---
 
-## Applications
+## Step 1
 
-* NLP systems
-* Expert systems
-* AI knowledge bases
+Exception occurs.
 
 ---
 
-## Conclusion
+## Step 2
 
-FOL, Semantic Networks, and Frames are different approaches for representing meaning and knowledge in NLP systems.
+Processor saves current state.
 
+---
 
-# 4. Explain the Role of Semantics in NLP (10M)
+## Step 3
+
+Processor jumps to handler routine.
+
+---
+
+## Step 4
+
+Exception service routine executes.
+
+---
+
+## Step 5
+
+Processor returns to original program.
+
+---
+
+# Applications
+
+* Embedded systems
+* Real-time control
+* Communication systems
+
+---
+
+# Advantages
+
+* Fast event handling
+* Better processor control
+* Efficient multitasking
+
+---
+
+# Conclusion
+
+Exceptions, interrupts, and interrupt vector tables help ARM processors respond quickly and efficiently to important system events.
+
+---
+
+# 4. Explain ARM Data Processing Instructions with Examples
 
 ## Introduction
 
-Semantics is the branch of NLP that deals with the meaning of words, phrases, and sentences. It helps computers understand what a sentence actually means.
+Data processing instructions perform arithmetic and logical operations in ARM processors.
+
+These instructions mainly operate on registers.
 
 ---
 
-## What is Semantics?
-
-Semantics focuses on:
-
-* Meaning of words
-* Meaning of sentences
-* Relationships between words
+# Types of Data Processing Instructions
 
 ---
 
-## Need for Semantics in NLP
+# 1. Arithmetic Instructions
 
-Without semantics, computers can only process text grammatically and cannot understand meaning properly.
-
----
-
-## Roles of Semantics in NLP
+Used for mathematical calculations.
 
 ---
 
-### 1. Understanding Meaning
+## ADD
 
-Semantics helps identify the actual meaning of sentences.
+Adds two values.
 
-#### Example
+Example:
 
-“The bank is near the river.”
+```asm
+ADD R0, R1, R2
+```
 
-Here “bank” means river side, not financial bank.
+Meaning:
 
----
-
-### 2. Resolving Ambiguity
-
-Many words have multiple meanings.
-Semantics helps identify the correct meaning using context.
+* R0 = R1 + R2
 
 ---
 
-### 3. Improving Machine Translation
+## SUB
 
-Semantics helps preserve meaning during translation between languages.
+Subtracts values.
 
----
-
-### 4. Question Answering Systems
-
-Helps systems understand questions and generate meaningful answers.
+```asm
+SUB R0, R1, R2
+```
 
 ---
 
-### 5. Chatbots and Virtual Assistants
+## MUL
 
-Used to understand user intent and provide correct responses.
-
----
-
-### 6. Information Extraction
-
-Extracts meaningful information from documents and text.
+Performs multiplication.
 
 ---
 
-### 7. Text Summarization
+# 2. Logical Instructions
 
-Helps identify important meaning in large text.
-
----
-
-## Semantic Relationships
-
-### Synonym
-
-Words with same meaning.
+Used for logical operations.
 
 ---
 
-### Antonym
+## AND
 
-Words with opposite meaning.
+Performs logical AND.
 
----
-
-### Hypernym
-
-General category word.
+```asm
+AND R0, R1, R2
+```
 
 ---
 
-### Hyponym
+## ORR
 
-Specific type word.
-
----
-
-## Applications of Semantics
-
-* Search engines
-* Speech recognition
-* Machine translation
-* AI assistants
+Performs logical OR.
 
 ---
 
-## Challenges in Semantics
+## EOR
 
-* Ambiguous language
-* Context understanding
-* Idioms and figurative speech
+Performs exclusive OR.
 
 ---
 
-## Conclusion
+## MOV
 
-Semantics plays a major role in NLP by helping computers understand and process the meaning of human language accurately.
+Moves data between registers.
 
 ---
 
-# 5. Explain Challenges in Knowledge Representation (10M)
+# 3. Compare Instructions
+
+Used for comparison.
+
+---
+
+## CMP
+
+Compares two values.
+
+Updates status flags.
+
+---
+
+# Features of ARM Data Processing Instructions
+
+* Fast execution
+* Register-based operations
+* Conditional execution support
+
+---
+
+# Applications
+
+* Arithmetic calculations
+* Data manipulation
+* Logical decision making
+
+---
+
+# Conclusion
+
+ARM data processing instructions provide efficient arithmetic and logical operations for high-speed processor performance.
+
+---
+
+# 5. Explain ARM Branch Instructions and Load/Store Instructions
 
 ## Introduction
 
-Knowledge representation is the process of storing information in a structured form so that computers can understand and use it.
+ARM processors use:
+
+* Branch instructions for program control
+* Load/store instructions for memory access
+
+These instructions are fundamental for program execution.
 
 ---
 
-## Need for Knowledge Representation
+# Branch Instructions
 
-* Store real-world information
-* Support reasoning and decision-making
-* Improve intelligent systems
+## What are Branch Instructions?
 
----
+Branch instructions change execution flow of a program.
 
-## Major Challenges in Knowledge Representation
+Used in:
 
----
-
-### 1. Ambiguity
-
-Words and sentences may have multiple meanings.
-
-#### Example
-
-“Bat” can mean an animal or sports equipment.
+* Loops
+* Decision making
+* Function calls
 
 ---
 
-### 2. Handling Large Knowledge
-
-Real-world knowledge is huge and difficult to organize.
+# Types of Branch Instructions
 
 ---
 
-### 3. Incomplete Information
+## B (Branch)
 
-Systems may not always have full information.
+Performs unconditional jump.
 
----
+Example:
 
-### 4. Dynamic Nature of Knowledge
-
-Knowledge changes over time and must be updated regularly.
-
----
-
-### 5. Context Understanding
-
-Meaning often depends on context.
-
-#### Example
-
-“Cold” may refer to weather or illness.
+```asm
+B LOOP
+```
 
 ---
 
-### 6. Representation Complexity
+## BL (Branch with Link)
 
-Complex relationships are difficult to represent clearly.
+Used for function calls.
 
----
-
-### 7. Reasoning Difficulty
-
-Efficient reasoning with large knowledge bases is challenging.
+Stores return address in Link Register.
 
 ---
 
-### 8. Natural Language Complexity
+## BX
 
-Human language contains idioms, emotions, and informal expressions.
-
----
-
-### 9. Scalability Issues
-
-Large knowledge systems require high storage and processing power.
+Branches to address stored in register.
 
 ---
 
-### 10. Uncertainty Handling
+# Applications of Branch Instructions
 
-Real-world information may be uncertain or probabilistic.
-
----
-
-## Approaches to Overcome Challenges
-
-* Ontologies
-* Semantic networks
-* Machine learning methods
-* Knowledge graphs
+* Loops
+* Procedures
+* Conditional execution
 
 ---
 
-## Applications
+# Load and Store Instructions
 
-* Expert systems
-* Search engines
-* AI assistants
-* Medical diagnosis systems
+ARM follows load/store architecture.
+
+Operations occur between:
+
+* Registers
+* Memory
 
 ---
 
-## Conclusion
+# LDR (Load Register)
 
-Knowledge representation faces many challenges due to the complexity and dynamic nature of human knowledge, but advanced AI techniques help improve representation and reasoning.
+Loads data from memory into register.
+
+Example:
+
+```asm
+LDR R0, [R1]
+```
+
+---
+
+# STR (Store Register)
+
+Stores register data into memory.
+
+```asm
+STR R0, [R1]
+```
+
+---
+
+# Advantages of Load/Store Architecture
+
+* Simpler instruction design
+* Faster execution
+* Efficient memory handling
+
+---
+
+# Conclusion
+
+Branch instructions control program flow, while load/store instructions manage memory operations efficiently in ARM processors.
+
+---
+
+# 6. Explain Software Interrupt Instructions, Program Status Register Instructions, and Conditional Execution in ARM
+
+## Introduction
+
+ARM processors support:
+
+* Software interrupts
+* Program status registers
+* Conditional execution
+
+These improve system control and execution efficiency.
+
+---
+
+# Software Interrupt Instructions
+
+## What is Software Interrupt?
+
+Software interrupt is generated by program instruction.
+
+Used to request operating system services.
+
+---
+
+## SWI Instruction
+
+Example:
+
+```asm
+SWI 01
+```
+
+Processor jumps to interrupt handler.
+
+---
+
+# Uses of SWI
+
+* Operating system calls
+* System services
+* Exception handling
+
+---
+
+# Program Status Register Instructions
+
+Program Status Registers store processor status information.
+
+---
+
+# Types
+
+* CPSR
+* SPSR
+
+---
+
+# Functions
+
+* Store condition flags
+* Control processor modes
+* Interrupt control
+
+---
+
+# Conditional Execution
+
+ARM allows instructions to execute only when conditions are satisfied.
+
+This reduces unnecessary branching.
+
+---
+
+# Example Conditions
+
+* EQ → Equal
+* NE → Not Equal
+* GT → Greater Than
+
+---
+
+# Example
+
+```asm
+ADDEQ R0, R1, R2
+```
+
+Executes only if equal condition is true.
+
+---
+
+# Advantages
+
+* Faster execution
+* Reduced branching
+* Improved efficiency
+
+---
+
+# Conclusion
+
+Software interrupts, status registers, and conditional execution improve ARM processor control, efficiency, and multitasking capability.
+
+---
+
+# 7. Explain Loading Constants and Thumb Instructions in ARM Processor
+
+## Introduction
+
+ARM processors use:
+
+* Loading constants for immediate values
+* Thumb instructions for compact code execution
+
+These improve memory efficiency and performance.
+
+---
+
+# Loading Constants
+
+## What is Loading Constants?
+
+Loading constants means placing fixed values into registers.
+
+---
+
+# Methods of Loading Constants
+
+---
+
+## 1. MOV Instruction
+
+Used for small constants.
+
+Example:
+
+```asm
+MOV R0, #25
+```
+
+---
+
+## 2. LDR Pseudo Instruction
+
+Used for large constants.
+
+Example:
+
+```asm
+LDR R0, =0x12345678
+```
+
+---
+
+# Importance
+
+* Initializes registers
+* Used in calculations
+* Supports memory addressing
+
+---
+
+# Thumb Instructions
+
+## What are Thumb Instructions?
+
+Thumb instructions are compressed 16-bit ARM instructions.
+
+They reduce memory usage.
+
+---
+
+# Features of Thumb Instructions
+
+* Smaller instruction size
+* Improved code density
+* Faster memory access
+
+---
+
+# Advantages
+
+* Reduced memory requirement
+* Better performance in embedded systems
+* Efficient execution
+
+---
+
+# Applications
+
+* Mobile devices
+* Embedded systems
+* Low-memory applications
+
+---
+
+# Difference Between ARM and Thumb Instructions
+
+| ARM Instructions   | Thumb Instructions       |
+| ------------------ | ------------------------ |
+| 32-bit             | 16-bit                   |
+| Larger code size   | Smaller code size        |
+| Higher performance | Better memory efficiency |
+
+---
+
+# Conclusion
+
+Loading constants helps initialize registers efficiently, while Thumb instructions improve memory efficiency and compact code execution in ARM processors.
