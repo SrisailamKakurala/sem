@@ -1,537 +1,814 @@
-# 1. Explain Morphological Models (10M)
+# 1. Explain the Instruction Formats and Addressing Modes of 8086 with Examples
 
 ## Introduction
 
-Morphological models are used in NLP to study the structure and formation of words. They help computers understand how words are formed using roots, prefixes, and suffixes.
+The 8086 microprocessor executes instructions written in assembly language.
+Each instruction contains information about:
+
+* What operation should be performed
+* On which data the operation should be performed
+
+To execute instructions correctly, 8086 uses:
+
+* Instruction formats
+* Addressing modes
+
+These help the processor understand the operation and locate data in memory or registers.
 
 ---
 
-## What is Morphology?
+# Instruction Format of 8086
 
-Morphology is the study of:
+## What is an Instruction Format?
 
-* Word formation
-* Word structure
-* Meaningful parts of words
+Instruction format is the structure or layout of an instruction in memory.
 
----
+An instruction mainly contains:
 
-## What are Morphological Models?
-
-Morphological models are systems that:
-
-* Break words into smaller meaningful parts
-* Identify root words and endings
-* Analyze grammatical changes
+* Opcode
+* Operand
+* Address information
 
 ---
 
-## Components of a Word
+## Parts of an Instruction
 
-### Root
+### 1. Opcode
 
-Main part carrying meaning.
-
-Example:
-
-* “play” in playing
-
----
-
-### Prefix
-
-Added before root.
-
-Example:
-
-* “un” in unhappy
-
----
-
-### Suffix
-
-Added after root.
-
-Example:
-
-* “ing” in playing
-
----
-
-## Types of Morphology
-
-### 1. Inflectional Morphology
-
-Changes grammatical form without changing meaning.
+Opcode tells the processor which operation to perform.
 
 Examples:
 
-* play → played
-* book → books
+* MOV → Move data
+* ADD → Addition
+* SUB → Subtraction
 
 ---
 
-### 2. Derivational Morphology
+### 2. Operand
 
-Creates a new word with new meaning.
-
-Examples:
-
-* happy → happiness
-* teach → teacher
-
----
-
-## Working of Morphological Models
-
-### Step 1: Input Word
-
-The model receives a word.
-
----
-
-### Step 2: Segmentation
-
-Word is divided into morphemes.
+Operand represents the data or location on which operation is performed.
 
 Example:
 
-* “unhappiness” → un + happy + ness
+```asm
+MOV AX, BX
+```
+
+* MOV → Opcode
+* AX and BX → Operands
 
 ---
 
-### Step 3: Analysis
-
-Meaning and grammar are identified.
+## Types of Instruction Formats
 
 ---
 
-## Applications in NLP
+### 1. One-Byte Instruction
 
-* Machine translation
-* Spell checking
-* Speech recognition
-* Search engines
-
----
-
-## Challenges
-
-* Irregular words
-* Complex languages
-* Multiple meanings
-
----
-
-## Conclusion
-
-Morphological models help NLP systems understand word structure and meaning, improving language processing and analysis.
-
----
-
-# 2. Explain Finite State Morphology (10M)
-
-## Introduction
-
-Finite State Morphology is a method used in NLP to analyze and generate words using finite state machines.
-
----
-
-## What is Finite State Morphology?
-
-It is a computational model that:
-
-* Processes word structures
-* Uses states and transitions
-* Recognizes valid word forms
-
----
-
-## Basic Idea
-
-Words are analyzed step-by-step using rules.
+Contains only opcode.
 
 Example:
 
-* play → playing
-* walk → walked
+```asm
+CLC
+```
+
+Used for simple operations.
 
 ---
 
-## Finite State Machine (FSM)
+### 2. Two-Byte Instruction
 
-A finite state machine contains:
+Contains opcode and operand information.
 
-* States
-* Transitions
-* Input symbols
+Example:
 
----
-
-## Working of Finite State Morphology
-
-### Step 1: Start State
-
-Processing begins from an initial state.
+```asm
+MOV AL, BL
+```
 
 ---
 
-### Step 2: Read Characters
+### 3. Multi-Byte Instruction
 
-Characters are checked one by one.
+Contains opcode, addressing information, and data/address.
 
----
+Example:
 
-### Step 3: State Transition
-
-Machine moves between states based on rules.
-
----
-
-### Step 4: Final State
-
-If valid pattern is found, word is accepted.
+```asm
+MOV AX, 1234H
+```
 
 ---
 
-## Example
+# Addressing Modes of 8086
 
-For word “playing”:
+## What is an Addressing Mode?
 
-* Root → play
-* Suffix → ing
+Addressing mode is the method used to locate operands.
 
-FSM recognizes both parts using transitions.
+It tells the processor:
 
----
-
-## Advantages
-
-* Fast processing
-* Efficient word analysis
-* Handles large vocabularies
+* Where data is stored
+* How to access data
 
 ---
 
-## Applications
-
-* Spell checking
-* Text analysis
-* Morphological parsing
-* Language generation
+# Types of Addressing Modes
 
 ---
 
-## Limitations
+## 1. Immediate Addressing Mode
 
-* Difficult for irregular forms
-* Complex for rich morphology languages
+Data is directly given in instruction.
+
+### Example
+
+```asm
+MOV AX, 1234H
+```
+
+Meaning:
+
+* Load value 1234H directly into AX register.
+
+### Advantages
+
+* Fast execution
+* Simple
+
+---
+
+## 2. Register Addressing Mode
+
+Operand is stored in register.
+
+### Example
+
+```asm
+MOV AX, BX
+```
+
+Meaning:
+
+* Copy contents of BX into AX.
+
+### Advantages
+
+* Very fast
+* No memory access needed
+
+---
+
+## 3. Direct Addressing Mode
+
+Memory address is directly specified.
+
+### Example
+
+```asm
+MOV AX, [2000H]
+```
+
+Meaning:
+
+* Data from memory location 2000H is copied into AX.
+
+---
+
+## 4. Register Indirect Addressing Mode
+
+Address of operand is stored in register.
+
+### Example
+
+```asm
+MOV AX, [BX]
+```
+
+Meaning:
+
+* BX contains memory address
+* Data from that address moves into AX
+
+---
+
+## 5. Based Addressing Mode
+
+Uses base register for memory access.
+
+### Example
+
+```asm
+MOV AX, [BX+10H]
+```
+
+---
+
+## 6. Indexed Addressing Mode
+
+Uses index registers SI or DI.
+
+### Example
+
+```asm
+MOV AX, [SI]
+```
+
+Used mainly in string operations.
+
+---
+
+## 7. Based Indexed Addressing Mode
+
+Combines base and index registers.
+
+### Example
+
+```asm
+MOV AX, [BX+SI]
+```
+
+Useful for array processing.
+
+---
+
+## Importance of Addressing Modes
+
+* Efficient memory access
+* Faster execution
+* Supports arrays and strings
+* Reduces instruction size
 
 ---
 
 ## Conclusion
 
-Finite State Morphology is an efficient method for analyzing word structures using state-based models in NLP.
+Instruction formats define the structure of instructions, while addressing modes define how operands are accessed. These concepts are essential for programming and understanding 8086 microprocessor operations.
 
+---
 
-# 3. Explain Document Structure Analysis Methods (10M)
+# 2. Explain the Instruction Set of 8086 Processor
 
 ## Introduction
 
-Document structure analysis is the process of identifying and understanding the structure of a document such as headings, paragraphs, tables, and images.
+Instruction set is the collection of commands that the 8086 processor can execute.
+
+These instructions are used to:
+
+* Transfer data
+* Perform arithmetic operations
+* Execute logical operations
+* Control program flow
 
 ---
 
-## Purpose of Document Structure Analysis
-
-* Organize document content
-* Extract useful information
-* Improve document understanding in NLP systems
+# Types of 8086 Instructions
 
 ---
 
-## Common Document Structure Analysis Methods
+# 1. Data Transfer Instructions
+
+Used to transfer data between registers, memory, and I/O devices.
 
 ---
 
-### 1. Rule-Based Method
+## Common Instructions
 
-Uses predefined rules to identify document parts.
+### MOV
 
-#### Example
+Moves data from source to destination.
 
-* Large bold text → heading
-* Numbered lines → list
+Example:
 
----
-
-### 2. Statistical Method
-
-Uses probability and data patterns for analysis.
-
-#### Example
-
-Frequently occurring patterns are identified automatically.
+```asm
+MOV AX, BX
+```
 
 ---
 
-### 3. Layout-Based Analysis
+### PUSH
 
-Studies physical arrangement of document elements.
+Stores data into stack.
 
-#### Includes
-
-* Text alignment
-* Spacing
-* Columns
+```asm
+PUSH AX
+```
 
 ---
 
-### 4. Machine Learning Method
+### POP
 
-Uses training data to classify document sections.
+Retrieves data from stack.
 
-#### Applications
-
-* OCR systems
-* PDF analysis
-
----
-
-### 5. Template Matching
-
-Compares documents with predefined templates.
-
-#### Example
-
-* Invoice recognition
-* Form processing
+```asm
+POP AX
+```
 
 ---
 
-## Applications
+### XCHG
 
-* Digital libraries
-* Document search systems
-* Automated form processing
-* Information extraction
+Exchanges data.
+
+```asm
+XCHG AX, BX
+```
 
 ---
 
-## Challenges
+# 2. Arithmetic Instructions
 
-* Different document formats
-* Complex layouts
-* Handwritten documents
+Used for mathematical operations.
+
+---
+
+## ADD
+
+Adds data.
+
+```asm
+ADD AX, BX
+```
+
+---
+
+## SUB
+
+Subtracts data.
+
+```asm
+SUB AX, BX
+```
+
+---
+
+## INC
+
+Increments value by 1.
+
+```asm
+INC AX
+```
+
+---
+
+## DEC
+
+Decrements value by 1.
+
+```asm
+DEC AX
+```
+
+---
+
+## MUL
+
+Multiplies data.
+
+---
+
+## DIV
+
+Divides data.
+
+---
+
+# 3. Logical Instructions
+
+Used for logical operations.
+
+---
+
+## AND
+
+Performs logical AND.
+
+```asm
+AND AX, BX
+```
+
+---
+
+## OR
+
+Performs logical OR.
+
+---
+
+## XOR
+
+Performs exclusive OR.
+
+---
+
+## NOT
+
+Inverts bits.
+
+---
+
+# 4. Branch Instructions
+
+Used for decision making and looping.
+
+---
+
+## JMP
+
+Unconditional jump.
+
+```asm
+JMP LABEL
+```
+
+---
+
+## JZ
+
+Jump if zero flag is set.
+
+---
+
+## JNZ
+
+Jump if zero flag is not set.
+
+---
+
+## LOOP
+
+Repeats instructions.
+
+---
+
+# 5. CALL and RETURN Instructions
+
+Used in subprograms.
+
+---
+
+## CALL
+
+Transfers control to procedure.
+
+```asm
+CALL PROC1
+```
+
+---
+
+## RET
+
+Returns control to main program.
+
+```asm
+RET
+```
+
+---
+
+# 6. String Instructions
+
+Used for string and array processing.
+
+---
+
+## MOVS
+
+Moves string data.
+
+---
+
+## LODS
+
+Loads string data.
+
+---
+
+## STOS
+
+Stores string data.
+
+---
+
+# Importance of Instruction Set
+
+* Controls processor operations
+* Helps in assembly language programming
+* Supports mathematical and logical operations
 
 ---
 
 ## Conclusion
 
-Document structure analysis helps NLP systems understand and organize documents efficiently for better information processing.
+The instruction set of 8086 contains different categories of instructions used for data transfer, arithmetic, logic, branching, and string processing.
 
 ---
 
-# 4. Explain Rule-Based vs Statistical Approaches (10M)
+# 3. Explain Assembler Directives and Macros in 8086 Assembly Language Programming
 
 ## Introduction
 
-Rule-based and statistical approaches are two important methods used in NLP for language processing and analysis.
+Assembler directives and macros are special commands used in assembly language programming.
+
+They help:
+
+* Organize programs
+* Simplify coding
+* Improve readability
+
+These are processed by assembler and not directly executed by processor.
 
 ---
 
-# Rule-Based Approach
+# Assembler Directives
 
-## What is it?
+## What are Assembler Directives?
 
-This method uses predefined linguistic rules created by experts.
+Assembler directives are instructions given to assembler for controlling assembly process.
 
----
-
-## Working
-
-* Rules are manually written
-* System follows grammar and language patterns
+They do not generate machine code.
 
 ---
 
-## Example
-
-If a word ends with “ing”, identify it as a verb form.
+# Common Assembler Directives
 
 ---
 
-## Advantages
+## 1. DB (Define Byte)
 
-* Easy to understand
-* Gives predictable results
-* Good for small systems
+Used to define 8-bit data.
 
----
+Example:
 
-## Limitations
-
-* Difficult to create many rules
-* Cannot handle all language variations
+```asm
+NUM DB 25H
+```
 
 ---
 
-# Statistical Approach
+## 2. DW (Define Word)
 
-## What is it?
+Defines 16-bit data.
 
-Uses probability and large amounts of data for language analysis.
-
----
-
-## Working
-
-* Learns patterns from training data
-* Uses statistical models and probabilities
+```asm
+NUM DW 1234H
+```
 
 ---
 
-## Example
+## 3. SEGMENT
 
-Predicting next word based on frequency.
-
----
-
-## Advantages
-
-* Handles complex language patterns
-* More flexible
-* Better for large datasets
+Defines memory segment.
 
 ---
 
-## Limitations
+## 4. ENDS
 
-* Requires huge data
-* Training takes time
-
----
-
-# Difference Between Rule-Based and Statistical Approaches
-
-| Rule-Based             | Statistical      |
-| ---------------------- | ---------------- |
-| Uses fixed rules       | Uses probability |
-| Human-designed         | Data-driven      |
-| Less flexible          | More flexible    |
-| Works on grammar rules | Learns from data |
+Ends segment definition.
 
 ---
 
-## Applications
+## 5. ASSUME
 
-* Machine translation
-* Speech recognition
-* Text classification
+Associates segment registers.
+
+---
+
+## 6. END
+
+Marks end of program.
+
+---
+
+# Advantages of Directives
+
+* Organize memory
+* Define variables
+* Simplify program structure
+
+---
+
+# Macros
+
+## What is a Macro?
+
+Macro is a group of instructions given a single name.
+
+Whenever macro name is used, all instructions execute automatically.
+
+---
+
+# Structure of Macro
+
+```asm
+MACRO_NAME MACRO
+instructions
+ENDM
+```
+
+---
+
+# Example
+
+```asm
+DISPLAY MACRO
+MOV AH, 02H
+INT 21H
+ENDM
+```
+
+---
+
+# Advantages of Macros
+
+* Reduces repeated code
+* Saves programming time
+* Improves readability
+
+---
+
+# Difference Between Macro and Procedure
+
+| Macro              | Procedure            |
+| ------------------ | -------------------- |
+| Expanded inline    | Called separately    |
+| Faster execution   | Smaller memory usage |
+| More memory needed | Less memory needed   |
 
 ---
 
 ## Conclusion
 
-Rule-based approaches rely on predefined rules, while statistical approaches learn from data. Modern NLP often combines both methods.
+Assembler directives help control program organization, while macros simplify repeated instruction execution in 8086 programming.
 
 ---
 
-# 5. Explain Features in Document Classification (10M)
+# 4. Write and Explain 8086 Programs for Logical Operations, Branch Instructions, and CALL Instructions
 
 ## Introduction
 
-Document classification is the process of grouping documents into categories based on their content.
+8086 assembly language programs are written using instruction set commands to perform operations such as logical processing, branching, and subroutine calls.
 
 ---
 
-## What are Features?
+# Program for Logical Operation
 
-Features are important characteristics used to classify documents.
+## Example: AND Operation
 
----
-
-## Types of Features in Document Classification
-
----
-
-### 1. Word Features
-
-Uses words present in the document.
-
-#### Example
-
-Words like “sports” or “cricket” indicate sports category.
+```asm
+MOV AX, 1234H
+MOV BX, 4321H
+AND AX, BX
+```
 
 ---
 
-### 2. Frequency Features
+## Explanation
 
-Uses how often words appear.
-
-#### Example
-
-Repeated words may indicate document topic.
-
----
-
-### 3. N-gram Features
-
-Uses combinations of words.
-
-#### Example
-
-* Bigram → “machine learning”
-* Trigram → “natural language processing”
+* First instruction loads AX
+* Second loads BX
+* AND performs bitwise logical AND
+* Result stored in AX
 
 ---
 
-### 4. Syntax Features
+# Program for Branch Instruction
 
-Uses grammatical structure.
+## Example: Conditional Jump
 
-#### Includes
+```asm
+MOV AX, 0000H
+CMP AX, 0000H
+JZ LABEL1
 
-* Parts of speech
-* Sentence patterns
-
----
-
-### 5. Semantic Features
-
-Uses meaning of words and sentences.
+LABEL1:
+MOV BX, 1111H
+```
 
 ---
 
-### 6. Metadata Features
+## Explanation
 
-Uses extra information.
-
-#### Example
-
-* Author
-* Date
-* File type
+* CMP compares AX with zero
+* JZ jumps if result is zero
+* BX gets loaded
 
 ---
 
-## Applications
+# Program Using CALL Instruction
 
-* Email spam detection
-* News categorization
-* Sentiment analysis
+## Example
+
+```asm
+CALL DISPLAY
+
+DISPLAY:
+MOV AX, 1234H
+RET
+```
 
 ---
 
-## Challenges
+## Explanation
 
-* Large vocabulary
-* Ambiguous words
-* Noisy data
+* CALL transfers control to DISPLAY
+* DISPLAY executes instructions
+* RET returns control
+
+---
+
+# Importance
+
+* Logical instructions help data processing
+* Branching supports decision making
+* CALL supports modular programming
 
 ---
 
 ## Conclusion
 
-Features play an important role in document classification by helping systems identify and categorize documents accurately.
+Logical, branch, and CALL instructions are essential for efficient assembly language programming in 8086.
 
+---
+
+# 5. Write and Explain 8086 Programs for Sorting and String Manipulation
+
+## Introduction
+
+8086 processor supports programs for sorting numbers and manipulating strings using loops and string instructions.
+
+---
+
+# Sorting Program
+
+## Example: Ascending Order Sorting
+
+```asm
+MOV AX, 05H
+MOV BX, 03H
+CMP AX, BX
+JBE SKIP
+XCHG AX, BX
+
+SKIP:
+```
+
+---
+
+## Explanation
+
+* AX and BX contain numbers
+* CMP compares values
+* If AX > BX, values exchange
+* Numbers become sorted
+
+---
+
+# String Manipulation Program
+
+## Example: String Copy
+
+```asm
+MOV SI, OFFSET SRC
+MOV DI, OFFSET DEST
+MOV CX, 05H
+REP MOVSB
+```
+
+---
+
+## Explanation
+
+* SI points to source string
+* DI points to destination
+* CX stores count
+* MOVSB copies bytes
+
+---
+
+# String Instructions Used
+
+| Instruction | Function          |
+| ----------- | ----------------- |
+| MOVSB       | Move byte string  |
+| CMPSB       | Compare strings   |
+| LODSB       | Load string byte  |
+| STOSB       | Store string byte |
+
+---
+
+# Applications
+
+* Text processing
+* Array handling
+* Data organization
+
+---
+
+## Conclusion
+
+Sorting and string manipulation programs demonstrate how 8086 handles data efficiently using loops, comparisons, and string instructions.
