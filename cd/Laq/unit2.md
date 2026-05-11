@@ -1,587 +1,876 @@
-# 1. Explain Parsing Algorithms (10M)
+# 1. Explain the Architecture of 8051 Microcontroller with Neat Diagram
 
 ## Introduction
 
-Parsing algorithms are methods used in NLP to analyze the grammatical structure of sentences. They help computers understand how words are arranged in a sentence.
+8051 is an 8-bit microcontroller developed by Intel.
+It is widely used in embedded systems, automation systems, robotics, and control applications.
+
+The architecture of 8051 consists of:
+
+* CPU
+* Memory
+* I/O ports
+* Timers
+* Serial communication unit
+
+These components work together to perform control operations.
 
 ---
 
-## What is Parsing?
+# Block Diagram of 8051 Architecture
 
-Parsing is the process of:
+Main blocks of 8051 architecture are:
 
-* Breaking a sentence into parts
-* Checking grammatical correctness
-* Creating sentence structure
-
----
-
-## Purpose of Parsing Algorithms
-
-* Understand sentence meaning
-* Identify relationships between words
-* Support NLP applications
+* CPU
+* ALU
+* Registers
+* ROM
+* RAM
+* I/O Ports
+* Timers/Counters
+* Serial Port
+* Interrupt Control
 
 ---
 
-## Types of Parsing Algorithms
+# Components of 8051 Architecture
 
 ---
 
-### 1. Top-Down Parsing
+# 1. CPU (Central Processing Unit)
 
-Starts from the main grammar rule and moves toward words.
+CPU is the brain of the microcontroller.
 
-#### Working
+## Functions
 
-* Begins with the start symbol
-* Expands grammar rules step-by-step
+* Executes instructions
+* Controls all operations
+* Coordinates hardware units
 
----
+CPU contains:
 
-#### Advantages
-
-* Simple to understand
-
----
-
-#### Limitations
-
-* May repeat unnecessary steps
+* ALU
+* Registers
+* Control unit
 
 ---
 
-### 2. Bottom-Up Parsing
+# 2. ALU (Arithmetic Logic Unit)
 
-Starts from words and builds sentence structure upward.
+ALU performs:
 
-#### Working
+* Arithmetic operations
+* Logical operations
 
-* Individual words are combined into phrases
-* Phrases form complete sentence
+## Arithmetic Operations
 
----
+* Addition
+* Subtraction
+* Increment
+* Decrement
 
-#### Advantages
+## Logical Operations
 
-* More efficient for many cases
-
----
-
-#### Limitations
-
-* Complex implementation
-
----
-
-### 3. Recursive Descent Parsing
-
-Uses recursive procedures to analyze sentence structure.
-
-#### Features
-
-* Simple parsing technique
-* Based on grammar rules
+* AND
+* OR
+* XOR
+* Compare
 
 ---
 
-### 4. CYK Algorithm
+# 3. Registers
 
-A dynamic programming parsing algorithm used with CFG.
-
-#### Features
-
-* Efficient for complex parsing
-* Uses table-based processing
+Registers are small storage locations inside CPU.
 
 ---
 
-### 5. Dependency Parsing
+## Important Registers
 
-Finds relationships between words in a sentence.
+### Accumulator (A)
 
-#### Example
-
-Subject → verb → object relation
+Stores arithmetic and logical operation results.
 
 ---
 
-## Applications
+### B Register
 
-* Machine translation
-* Grammar checking
-* Question answering systems
-* Speech processing
+Used in multiplication and division.
 
 ---
 
-## Challenges
+### Program Counter (PC)
 
-* Ambiguous sentences
-* Complex grammar
-* Multiple sentence interpretations
+Stores address of next instruction.
 
 ---
 
-## Conclusion
+### Stack Pointer (SP)
 
-Parsing algorithms are important in NLP for understanding sentence structure and improving language processing systems.
+Points to stack memory.
 
 ---
 
-# 2. Explain Syntactic Structure Representation (10M)
+### Data Pointer (DPTR)
+
+Used for external memory access.
+
+---
+
+### PSW (Program Status Word)
+
+Stores status flags.
+
+---
+
+# 4. Memory Organization
+
+8051 contains:
+
+* ROM
+* RAM
+
+---
+
+## ROM (Program Memory)
+
+Stores program instructions permanently.
+
+Standard 8051 contains:
+
+* 4 KB ROM
+
+---
+
+## RAM (Data Memory)
+
+Stores temporary data.
+
+Standard 8051 contains:
+
+* 128 bytes RAM
+
+---
+
+# 5. I/O Ports
+
+8051 has four I/O ports:
+
+* Port 0
+* Port 1
+* Port 2
+* Port 3
+
+Each port has 8 pins.
+
+Total:
+
+* 32 input/output pins
+
+---
+
+## Uses
+
+* Interfacing LEDs
+* Sensors
+* Motors
+* Keyboards
+
+---
+
+# 6. Timers and Counters
+
+8051 contains:
+
+* Timer 0
+* Timer 1
+
+## Uses
+
+* Time delay generation
+* Event counting
+* Baud rate generation
+
+---
+
+# 7. Serial Communication Unit
+
+Used for serial data transfer.
+
+Supports:
+
+* Transmission
+* Reception
+
+Applications:
+
+* UART communication
+* Computer interfacing
+
+---
+
+# 8. Interrupt Control
+
+Interrupts allow processor to respond immediately to important events.
+
+8051 supports:
+
+* External interrupts
+* Timer interrupts
+* Serial interrupts
+
+---
+
+# Features of 8051 Architecture
+
+* 8-bit microcontroller
+* 4 KB ROM
+* 128 bytes RAM
+* 32 I/O pins
+* Two timers
+* Serial communication support
+* Interrupt handling
+
+---
+
+# Applications of 8051
+
+* Embedded systems
+* Traffic light systems
+* Home automation
+* Robotics
+* Industrial control
+
+---
+
+# Conclusion
+
+The 8051 architecture combines CPU, memory, I/O ports, timers, and communication modules in a single chip, making it suitable for embedded and real-time control applications.
+
+---
+
+# 2. Explain the Overview and Features of 8051 Microcontroller
 
 ## Introduction
 
-Syntactic structure representation is the method of showing how words are arranged grammatically in a sentence.
+8051 is one of the most popular microcontrollers developed by Intel in 1980.
+It is an 8-bit microcontroller mainly used in embedded systems and automation applications.
+
+A microcontroller is a compact integrated circuit that contains:
+
+* Processor
+* Memory
+* Input/output ports
+
+on a single chip.
 
 ---
 
-## What is Syntax?
+# Overview of 8051 Microcontroller
 
-Syntax is the study of:
+8051 is designed for:
 
-* Sentence structure
-* Word arrangement
-* Grammar rules
+* Real-time control
+* Embedded applications
+* Automation systems
 
----
+It can:
 
-## Purpose of Syntactic Representation
-
-* Understand grammatical relationships
-* Represent sentence structure clearly
-* Help NLP systems process language
+* Read input signals
+* Process data
+* Produce output signals
 
 ---
 
-## Types of Syntactic Structure Representation
+# Main Components of 8051
+
+* CPU
+* ALU
+* RAM
+* ROM
+* Timers
+* Counters
+* Serial communication unit
+* I/O ports
 
 ---
 
-### 1. Parse Tree Representation
-
-Represents sentence structure using a tree format.
-
-#### Features
-
-* Root node represents sentence
-* Branches represent phrases and words
+# Features of 8051 Microcontroller
 
 ---
 
-#### Example
+# 1. 8-bit Processor
 
-Sentence:
-“The boy plays cricket”
+8051 processes 8-bit data at a time.
 
-* Sentence
-
-  * Noun Phrase
-  * Verb Phrase
+This makes it simple and efficient for control applications.
 
 ---
 
-### 2. Dependency Representation
+# 2. On-Chip ROM
 
-Shows dependency relations between words.
+Contains:
 
-#### Example
+* 4 KB internal ROM
 
-* Subject connected to verb
-* Verb connected to object
-
----
-
-### 3. Phrase Structure Representation
-
-Groups words into phrases.
-
-#### Types of Phrases
-
-* Noun phrase
-* Verb phrase
-* Prepositional phrase
+Used to store program instructions.
 
 ---
 
-### 4. Bracket Notation
+# 3. On-Chip RAM
 
-Represents sentence structure using brackets.
+Contains:
 
-#### Example
+* 128 bytes RAM
 
-(S (NP Boy) (VP plays cricket))
-
----
-
-## Advantages
-
-* Improves sentence understanding
-* Helps semantic analysis
-* Supports parsing systems
+Used for temporary data storage.
 
 ---
 
-## Applications
+# 4. Four I/O Ports
 
-* Machine translation
-* Speech recognition
-* Grammar correction
-* Chatbots
+8051 has:
 
----
+* Port 0
+* Port 1
+* Port 2
+* Port 3
 
-## Challenges
+Total:
 
-* Ambiguity in sentences
-* Complex sentence structures
-* Multiple interpretations
+* 32 input/output pins
 
 ---
 
-## Conclusion
+# 5. Timers and Counters
 
-Syntactic structure representation helps NLP systems understand grammatical structure and relationships between words effectively.
+Contains:
 
+* Two 16-bit timers/counters
 
-# 3. Explain the Role of Treebanks (10M)
+Used for:
+
+* Delay generation
+* Counting operations
+
+---
+
+# 6. Serial Communication
+
+Supports serial communication using UART.
+
+Used for:
+
+* Computer interfacing
+* Device communication
+
+---
+
+# 7. Interrupt System
+
+8051 supports multiple interrupts.
+
+This improves real-time response.
+
+---
+
+# 8. Low Power Consumption
+
+Consumes less power compared to microprocessors.
+
+Suitable for battery-operated devices.
+
+---
+
+# 9. Compact Size
+
+All major components are integrated into a single chip.
+
+---
+
+# Advantages of 8051
+
+* Simple architecture
+* Low cost
+* Easy programming
+* Reliable operation
+* Widely used in embedded systems
+
+---
+
+# Applications of 8051
+
+* Washing machines
+* Traffic light systems
+* Robotics
+* Medical instruments
+* Industrial automation
+
+---
+
+# Conclusion
+
+8051 microcontroller is a compact, low-cost, and efficient controller widely used in embedded systems because of its built-in memory, I/O ports, timers, and communication features.
+
+---
+
+# 3. Explain the I/O Ports and Memory Organization of 8051 Microcontroller
 
 ## Introduction
 
-Treebanks are important resources in NLP used to store sentences along with their grammatical structure.
+8051 microcontroller contains:
+
+* Input/output ports
+* Internal memory
+
+These components help in:
+
+* Interfacing external devices
+* Storing programs and data
 
 ---
 
-## What is a Treebank?
+# I/O Ports of 8051
 
-A treebank is a collection of:
+8051 contains four 8-bit ports:
 
-* Sentences
-* Parse trees
-* Syntactic annotations
+* Port 0
+* Port 1
+* Port 2
+* Port 3
 
-It helps computers learn language structure.
+Total:
+
+* 32 I/O pins
+
+Each pin can act as:
+
+* Input
+* Output
+
+---
+
+# Port 0
+
+## Features
+
+* Dual purpose port
+* Used for I/O operations
+* Used as address/data bus
 
 ---
 
-## Purpose of Treebanks
+# Port 1
 
-* Train NLP systems
-* Study grammar patterns
-* Improve parsing accuracy
+## Features
+
+* General purpose I/O port
+* No special functions
+
+---
+
+# Port 2
+
+## Features
+
+* General I/O operations
+* Provides higher-order address bus
 
 ---
 
-## Structure of a Treebank
+# Port 3
 
-Each sentence is stored with:
+## Features
 
-* Words
-* Grammar labels
-* Tree structure
+Provides special functions.
+
+### Special functions include:
+
+* Serial communication
+* Interrupts
+* Timer input
 
 ---
+
+# Importance of I/O Ports
+
+* Connect external devices
+* Interface sensors and actuators
+* Transfer data
+
+---
+
+# Memory Organization of 8051
+
+Memory is divided into:
+
+* Program memory
+* Data memory
+
+---
+
+# 1. Program Memory (ROM)
+
+Used to store program instructions.
+
+Standard 8051 contains:
+
+* 4 KB ROM
+
+Program remains even after power OFF.
+
+---
+
+# 2. Data Memory (RAM)
+
+Used for temporary storage.
+
+Contains:
+
+* 128 bytes RAM
+
+---
+
+# RAM Organization
+
+RAM is divided into:
+
+* Register banks
+* Bit-addressable area
+* General-purpose RAM
+
+---
+
+## Register Banks
+
+Contains working registers:
+
+* R0 to R7
+
+---
+
+## Bit Addressable Area
+
+Used for bit operations.
+
+---
+
+## General Purpose RAM
+
+Used for data storage.
+
+---
+
+# Special Function Registers (SFR)
+
+Special registers control hardware functions.
+
+Examples:
+
+* Accumulator
+* Timer registers
+* Port registers
+
+---
+
+# Advantages of Memory Organization
+
+* Faster data access
+* Efficient program execution
+* Easy hardware control
+
+---
+
+# Conclusion
+
+8051 microcontroller uses organized I/O ports and memory structure to support efficient embedded system operations and hardware interfacing.
+
+---
+
+# 4. Explain Addressing Modes of 8051 with Examples
+
+## Introduction
+
+Addressing mode is the method used by the microcontroller to access data or operands.
+
+It tells the processor:
+
+* Where data is stored
+* How data should be accessed
+
+---
+
+# Types of Addressing Modes in 8051
+
+---
+
+# 1. Immediate Addressing Mode
+
+Data is directly provided in instruction.
 
 ## Example
 
-Sentence:
-“The cat sleeps”
+```asm id="7c9uqm"
+MOV A, #25H
+```
 
-Treebank stores:
+Meaning:
 
-* Noun phrase
-* Verb phrase
-* Relationships between words
-
----
-
-## Types of Treebanks
-
-### 1. Constituency Treebank
-
-Represents phrase structure.
+* Load value 25H into accumulator.
 
 ---
 
-### 2. Dependency Treebank
+# 2. Register Addressing Mode
 
-Represents word dependencies.
+Operand is stored in register.
 
----
+## Example
 
-## Role of Treebanks in NLP
+```asm id="mb3z9k"
+MOV A, R1
+```
 
-### 1. Parser Training
+Meaning:
 
-Used to train parsing algorithms.
-
----
-
-### 2. Grammar Analysis
-
-Helps identify language patterns.
+* Copy contents of R1 into A.
 
 ---
 
-### 3. Machine Translation
+# 3. Direct Addressing Mode
 
-Improves translation quality.
+Direct memory address is specified.
 
----
+## Example
 
-### 4. Speech Recognition
+```asm id="hz5gdh"
+MOV A, 30H
+```
 
-Helps understand sentence structure.
+Meaning:
 
----
-
-### 5. Research and Development
-
-Useful for NLP experiments and evaluation.
+* Copy contents of memory location 30H into A.
 
 ---
 
-## Advantages
+# 4. Register Indirect Addressing Mode
 
-* Improves parsing accuracy
-* Provides structured language data
-* Useful for machine learning
+Register contains memory address.
 
----
+## Example
 
-## Challenges
+```asm id="r8h0zi"
+MOV A, @R0
+```
 
-* Time-consuming annotation
-* Expensive to create
-* Language complexity
+Meaning:
 
----
-
-## Conclusion
-
-Treebanks play a major role in NLP by providing structured grammatical data for training and improving language processing systems.
+* R0 stores address of operand.
 
 ---
 
-# 4. Explain PCFG (Probabilistic Context-Free Grammar) (10M)
+# 5. Indexed Addressing Mode
+
+Used for accessing lookup tables.
+
+## Example
+
+```asm id="6mxr9e"
+MOVC A, @A+DPTR
+```
+
+---
+
+# Advantages of Addressing Modes
+
+* Flexible programming
+* Faster data access
+* Efficient memory usage
+
+---
+
+# Applications
+
+* Array processing
+* Table lookup
+* Data transfer operations
+
+---
+
+# Conclusion
+
+Addressing modes in 8051 define different ways to access operands and improve programming flexibility and efficiency.
+
+---
+
+# 5. Explain the Instruction Set of 8051 Microcontroller
 
 ## Introduction
 
-PCFG is an extension of Context-Free Grammar that uses probabilities for grammar rules.
+Instruction set is the collection of commands that the 8051 microcontroller can execute.
+
+These instructions help perform:
+
+* Data transfer
+* Arithmetic operations
+* Logical operations
+* Branching operations
 
 ---
 
-## What is PCFG?
-
-Probabilistic Context-Free Grammar assigns:
-
-* Grammar rules
-* Probability values
-
-This helps choose the most likely sentence structure.
+# Types of Instructions in 8051
 
 ---
 
-## Need for PCFG
+# 1. Data Transfer Instructions
 
-A sentence may have multiple parse trees due to ambiguity.
-PCFG helps identify the most probable interpretation.
-
----
-
-## Components of PCFG
-
-### 1. Non-Terminals
-
-Grammar symbols like:
-
-* Sentence (S)
-* Noun Phrase (NP)
+Used for moving data.
 
 ---
 
-### 2. Terminals
+## MOV
 
-Actual words in sentence.
+Transfers data between registers and memory.
 
----
-
-### 3. Production Rules
-
-Rules used to form sentences.
-
-Example:
-S → NP + VP
+```asm id="4i6tqm"
+MOV A, R1
+```
 
 ---
 
-### 4. Probabilities
+## PUSH
 
-Each rule has a probability value.
-
----
-
-## Working of PCFG
-
-### Step 1
-
-Apply grammar rules.
+Stores data into stack.
 
 ---
 
-### Step 2
+## POP
 
-Calculate probability of parse trees.
-
----
-
-### Step 3
-
-Select parse tree with highest probability.
+Retrieves data from stack.
 
 ---
 
-## Advantages
+# 2. Arithmetic Instructions
 
-* Handles ambiguity better
-* Improves parsing accuracy
-* Useful in statistical NLP
+Used for mathematical operations.
 
 ---
 
-## Applications
+## ADD
 
-* Speech recognition
-* Machine translation
-* Syntax parsing
+Adds data.
 
----
-
-## Limitations
-
-* Requires training data
-* Complex probability calculations
+```asm id="pjlwmj"
+ADD A, R2
+```
 
 ---
 
-## Conclusion
+## SUBB
 
-PCFG combines grammar rules with probability to improve sentence parsing and ambiguity resolution in NLP.
-
----
-
-# 5. Explain Chart Parsing (10M)
-
-## Introduction
-
-Chart parsing is an efficient parsing technique used in NLP to analyze sentence structure.
+Subtract with borrow.
 
 ---
 
-## What is Chart Parsing?
+## INC
 
-Chart parsing stores intermediate parsing results in a table called a chart to avoid repeated calculations.
-
----
-
-## Purpose
-
-* Improve parsing efficiency
-* Reduce repeated work
-* Handle ambiguity effectively
+Increment value.
 
 ---
 
-## Main Components
+## DEC
 
-### 1. Chart
-
-A data structure storing partial parsing results.
+Decrement value.
 
 ---
 
-### 2. Edges
+# 3. Logical Instructions
 
-Represent parsing progress in the chart.
-
----
-
-### 3. Grammar Rules
-
-Used for sentence analysis.
+Used for logical operations.
 
 ---
 
-## Working of Chart Parsing
+## ANL
 
-### Step 1
-
-Sentence words are entered into chart.
+Logical AND operation.
 
 ---
 
-### Step 2
+## ORL
 
-Grammar rules are applied.
-
----
-
-### Step 3
-
-Partial results are stored.
+Logical OR operation.
 
 ---
 
-### Step 4
+## XRL
 
-Final parse tree is generated.
-
----
-
-## Types of Chart Parsing
-
-### 1. Top-Down Chart Parsing
-
-Starts from grammar rules.
+Exclusive OR operation.
 
 ---
 
-### 2. Bottom-Up Chart Parsing
+## CLR
 
-Starts from words.
-
----
-
-### 3. Earley Parser
-
-A popular chart parsing algorithm.
+Clears accumulator or bit.
 
 ---
 
-## Advantages
+# 4. Branching Instructions
 
-* Avoids repeated computations
-* Efficient for long sentences
-* Handles ambiguity well
+Used for decision making.
 
 ---
 
-## Applications
+## JMP
 
-* Syntax analysis
-* Machine translation
-* Grammar checking
+Unconditional jump.
 
 ---
 
-## Challenges
+## JZ
 
-* Memory usage can be high
-* Complex implementation
+Jump if zero.
 
 ---
 
-## Conclusion
+## JNZ
 
-Chart parsing is an efficient NLP parsing method that improves sentence analysis by storing intermediate parsing results.
+Jump if not zero.
+
+---
+
+## DJNZ
+
+Decrement and jump if not zero.
+
+---
+
+# 5. Bit Manipulation Instructions
+
+Used for bit-level operations.
+
+Examples:
+
+* SETB
+* CLR
+* CPL
+
+---
+
+# Advantages of 8051 Instruction Set
+
+* Simple programming
+* Efficient hardware control
+* Supports embedded applications
+
+---
+
+# Applications
+
+* Embedded systems
+* Automation systems
+* Device control
+
+---
+
+# Conclusion
+
+The 8051 instruction set contains various instructions for arithmetic, logical, data transfer, and branching operations, making it suitable for embedded programming.
+
